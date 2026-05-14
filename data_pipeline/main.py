@@ -25,9 +25,9 @@ logger.add(
     colorize=False,
 )
 
-from .crawler import JobsdbCrawler
+from .crawler import JobsdbCrawler, LiepinCrawler, ZhaopinCrawler
 from .processor import JobProcessor
-from .config import KEYWORDS, CITIES_51JOB, PAGE_SIZE, MAX_PAGES, MAX_RECORDS
+from .config import KEYWORDS, CITIES, PAGE_SIZE, MAX_PAGES, MAX_RECORDS
 
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
@@ -36,73 +36,115 @@ INTERIM_OUTPUT = ROOT_DIR / "datasets/interim/jobs_cleaned.json"
 PROCESSED_OUTPUT = ROOT_DIR / "datasets/processed/jobs.json"
 
 
+def crawl_source(crawler, keywords, locations, max_records_per_source):
+    """通用爬取逻辑"""
+    source_results = []
+    
+    for keyword in keywords:
+        if len(source_results) >= max_records_per_source:
+            break
+            
+        for loc_info in locations:
+            loc_name, loc_51, loc_lp, loc_zp = loc_info
+            if len(source_results) >= max_records_per_source:
+                break
+            
+            for page in range(MAX_PAGES):
+                if len(source_results) >= max_records_per_source:
+                    break
+                    
+                page_to_show = page + 1 if not isinstance(crawler, LiepinCrawler) else page
+                logger.info(f"正在爬取 {crawler.__class__.__name__}: 关键词={keyword}, 地区={loc_name}, 第 {page_to_show} 页")
+                
+                # 兼容不同爬虫的参数名
+                try:
+                    if isinstance(crawler, JobsdbCrawler):
+                        raw_jobs = crawler.fetch_jobs(keyword, loc_51, page + 1, PAGE_SIZE)
+                    elif isinstance(crawler, LiepinCrawler):
+                        raw_jobs = crawler.fetch_jobs(keyword, loc_lp, page)
+                    elif isinstance(crawler, ZhaopinCrawler):
+                        raw_jobs = crawler.fetch_jobs(keyword, loc_zp, page + 1)
+                        
+                    if not raw_jobs:
+                        logger.info(f"  -> 该页无数据，跳过当前地区")
+                        break
+                        
+                    for raw in raw_jobs:
+                        if len(source_results) >= max_records_per_source:
+                            break
+                            
+                        # 抓取详情描述
+                        detail_link = raw.get("_detail_link")
+                        if detail_link:
+                            logger.info(f"  -> 抓取详情: {raw.get('jobName')} @ {raw.get('companyName')}")
+                            # 51job 使用 jobId, 其他使用 link
+                            desc_param = raw.get("_job_id") if isinstance(crawler, JobsdbCrawler) else detail_link
+                            desc = crawler.fetch_detail(desc_param)
+                            raw["jobDescribe"] = desc
+                        
+                        job = crawler.parse_job(raw)
+                        if job.get("jobName"):
+                            source_results.append(job)
+                except Exception as e:
+                    logger.error(f"抓取页面出错: {e}")
+                    break
+                    
+    return source_results
+
+
 def main():
     start = time.time()
     logger.info("=" * 50)
-    logger.info("开始抓取 AI 相关岗位...")
-    logger.info(f"关键词={KEYWORDS}，目标至少 {MAX_RECORDS} 条")
-    logger.info("可见模式：检测到验证码时需在浏览器窗口手动滑动")
+    logger.info("开始多源抓取 AI 相关岗位...")
+    logger.info(f"关键词={KEYWORDS}")
     logger.info("=" * 50)
 
-    crawler = JobsdbCrawler(headless=False)
+    all_jobs = []
+    per_source_limit = MAX_RECORDS // 3
+    
+    # 2. 猎聘
+    try:
+        crawler_lp = LiepinCrawler(headless=False)
+        jobs_lp = crawl_source(crawler_lp, KEYWORDS, CITIES, per_source_limit)
+        all_jobs.extend(jobs_lp)
+        crawler_lp.close()
+    except Exception as e:
+        logger.error(f"猎聘爬取失败: {e}")
 
-    raw_all = []      # 原始数据
-    cleaned_all = []   # 清洗后数据
 
-    page_total = 0
-    raw_total = 0
+    # 1. 前程无忧
+    try:
+        crawler_51 = JobsdbCrawler(headless=False)
+        jobs_51 = crawl_source(crawler_51, KEYWORDS, CITIES, per_source_limit)
+        all_jobs.extend(jobs_51)
+        crawler_51.close()
+    except Exception as e:
+        logger.error(f"前程无忧爬取失败: {e}")
 
-    for keyword in KEYWORDS:
-        for _city_name, city_code in CITIES_51JOB:
-            if len(cleaned_all) >= MAX_RECORDS:
-                break
+    
 
-            for page in range(1, MAX_PAGES + 1):
-                if len(cleaned_all) >= MAX_RECORDS:
-                    break
+    # 3. 智联招聘
+    try:
+        crawler_zp = ZhaopinCrawler(headless=False)
+        jobs_zp = crawl_source(crawler_zp, KEYWORDS, CITIES, per_source_limit)
+        all_jobs.extend(jobs_zp)
+        crawler_zp.close()
+    except Exception as e:
+        logger.error(f"智联招聘爬取失败: {e}")
 
-                raw_jobs = crawler.fetch_jobs(keyword, city_code, page, PAGE_SIZE)
-                page_total += 1
-                raw_total += len(raw_jobs)
-
-                for raw in raw_jobs:
-                    if not raw.get("jobName"):
-                        continue
-                    # 原始数据：保存 sensorsdata 和详情链接
-                    raw_all.append({
-                        "sensorsdata": raw.get("_sensorsdata", {}),
-                        "detail_link": raw.get("_detail_link", ""),
-                    })
-                    # 清洗后数据
-                    job = crawler.parse_job(raw)
-                    if job.get("jobName"):
-                        cleaned_all.append(job)
-
-                logger.info(f"当前累计 {len(cleaned_all)} 条清洗后数据")
-
-            if len(cleaned_all) >= MAX_RECORDS:
-                break
-
-    crawler.close()
-
-    # ========== 输出三个文件 ==========
+    # ========== 输出与处理 ==========
     processor = JobProcessor()
     RAW_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     INTERIM_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     PROCESSED_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 
-    # 1. 原始数据
-    with RAW_OUTPUT.open("w", encoding="utf-8") as f:
-        json.dump(raw_all, f, ensure_ascii=False, indent=2)
-    logger.info(f"[1/3] 原始数据已保存: {RAW_OUTPUT} ({len(raw_all)} 条)")
-
-    # 2. 清洗后数据
+    # 保存清洗后的中间数据
     with INTERIM_OUTPUT.open("w", encoding="utf-8") as f:
-        json.dump(cleaned_all, f, ensure_ascii=False, indent=2)
-    logger.info(f"[2/3] 清洗后数据已保存: {INTERIM_OUTPUT} ({len(cleaned_all)} 条)")
+        json.dump(all_jobs, f, ensure_ascii=False, indent=2)
+    logger.info(f"[1/2] 清洗后数据已保存: {INTERIM_OUTPUT} ({len(all_jobs)} 条)")
 
-    # 3. 去重数据
-    final_jobs = processor.process(cleaned_all)
+    # 去重与最终限制
+    final_jobs = processor.process(all_jobs)
     final_jobs = final_jobs[:MAX_RECORDS]
 
     with PROCESSED_OUTPUT.open("w", encoding="utf-8") as f:
@@ -111,7 +153,7 @@ def main():
     has_desc = sum(1 for j in final_jobs if j.get("jobDescribe"))
     elapsed = time.time() - start
     logger.success(
-        f"[3/3] 完成！共 {len(final_jobs)} 条（含 {has_desc} 条完整描述），"
+        f"[2/2] 完成！共 {len(final_jobs)} 条（含 {has_desc} 条完整描述），"
         f"耗时 {elapsed:.1f}s"
     )
 
