@@ -151,7 +151,14 @@ class JobsdbCrawler:
         logger.info(
             f"[前程无忧] 关键词={keyword} 城市码={city} 页={page_num} 抓到{len(jobs)}条 / DOM总数={dom_count}"
         )
-        return jobs
+        
+        parsed_jobs = []
+        for j in jobs:
+            parsed = self.parse_job(j)
+            logger.info(f"  -> 抓到岗位: {parsed['jobName']} @ {parsed['companyName']}")
+            parsed_jobs.append(parsed)
+            
+        return parsed_jobs
 
     def fetch_detail(self, job_id: str) -> str:
         """抓取岗位详情页描述"""
