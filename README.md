@@ -24,7 +24,9 @@
 | -------- | --------- | ----------------------------------------- |
 | 数据爬取 | ✅ 已完成 | 支持 51job/猎聘/智联多源爬虫，自动抓取详情 |
 | 数据清洗 | ✅ 已完成 | 统一字段格式，去重后 166 条有效记录       |
-| 知识图谱 | ✅ 已完成 | 实体抽取、关系建模、Neo4j 同步            |
+| 实体抽取 | ✅ 已完成 | 规则 NER + 模型 NER，结果合并过滤         |
+| 实体消歧 | ✅ 已完成 | 传统方法（规则词典 + 字符串聚类）/ 直接大模型消歧 |
+| 知识图谱 | ✅ 已完成 | 实体建模、关系抽取、Neo4j 同步            |
 | API 服务 | ✅ 已完成 | FastAPI 查询、推荐、子图接口              |
 | 前端展示 | ✅ 已完成 | 推荐表单、推荐结果、ECharts 子图展示      |
 
@@ -32,37 +34,40 @@
 
 ```text
 .
-├── job_kg/                     # 知识图谱推荐后端
+├── kg/                           # 知识图谱推荐后端
 │   ├── api.py
 │   ├── config.py
 │   ├── graph.py
 │   ├── models.py
 │   ├── repository.py
 │   ├── service.py
-│   └── taxonomy.py
-├── data_pipeline/              # 数据抓取与清洗流水线
+│   ├── taxonomy.py
+│   └── ned/                      # 实体消歧模块
+│       ├── main.py               # 入口
+│       ├── traditional.py        # 传统消歧（规则词典 + 字符串聚类）
+│       └── llm_direct.py         # 直接大模型消歧（DeepSeek）
+├── data_pipeline/                # 数据抓取与清洗流水线
 │   ├── crawler/
-│   │   └── jobsdb.py
 │   ├── config.py
 │   ├── main.py
 │   ├── processor.py
 │   └── requirements.txt
-├── datasets/                   # 数据产物目录
-│   ├── raw/
-│   │   └── jobs_raw.json
-│   ├── interim/
-│   │   └── jobs_cleaned.json
-│   └── processed/
-│       └── jobs.json
-├── frontend/                   # 前端页面与静态依赖
+├── datasets/                     # 数据产物目录
+│   ├── data_collect_result/      # 爬虫采集结果
+│   │   ├── raw/
+│   │   ├── interim/
+│   │   └── processed/
+│   └── knowledge_graph_result/   # 知识图谱相关结果
+│       ├── ner_result/           # NER 实体抽取结果
+│       └── ned_result/           # NED 实体消歧结果
+├── frontend/                     # 前端页面与静态依赖
 │   ├── index.html
 │   └── vendor/
-├── scripts/                    # Neo4j 运维与导入脚本
+├── scripts/                      # Neo4j 运维与导入脚本
 │   ├── import_neo4j.py
 │   ├── install_neo4j_launchd.sh
 │   └── neo4j-java-runner.sh
 ├── docs/
-│   └── repository-structure.md
 ├── Makefile
 ├── pyproject.toml
 ├── requirements.txt
@@ -109,7 +114,7 @@ bash scripts/install_neo4j_launchd.sh
 cp .env.example .env
 # 编辑 .env，把 NEO4J_PASSWORD 改成你设置的密码
 python scripts/import_neo4j.py
-uvicorn job_kg.api:app --reload
+uvicorn kg.api:app --reload
 ```
 
 或使用：
@@ -120,6 +125,18 @@ make run-api
 ```
 
 浏览器访问：`http://127.0.0.1:8000/`。Neo4j 浏览器地址：`http://localhost:7474`。如果已经设置过初始密码，跳过 `neo4j-admin dbms set-initial-password <your-password>`。
+
+### 实体消歧
+
+```bash
+# 传统方法（规则词典 + 字符串聚类）
+python kg/ned/main.py
+
+# 直接大模型消歧（需要 DEEPSEEK_API_KEY）
+python kg/ned/main.py --direct-llm
+```
+
+消歧结果保存在 `datasets/knowledge_graph_result/ned_result/`。
 
 ## 输出字段一览
 
@@ -142,6 +159,8 @@ make run-api
 - [x] 基于图谱的职位推荐算法
 - [x] FastAPI 接口
 - [x] ECharts 知识图谱可视化界面
+- [x] NER 实体抽取（规则 + 模型双路径）
+- [x] NED 实体消歧（传统方法 + 直接大模型）
 
 ## API 示例
 

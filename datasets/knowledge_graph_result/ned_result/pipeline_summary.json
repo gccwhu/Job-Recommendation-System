@@ -1,0 +1,11 @@
+{
+  "input_records": 47,
+  "output_records": 47,
+  "traditional": {
+    "total_unique_entities": 1235,
+    "rule_resolved": 61,
+    "fuzzy_merged": 31,
+    "unresolved_low_freq": 997,
+    "mapping_size": 1235
+  }
+}

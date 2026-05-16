@@ -4,3 +4,6 @@ uvicorn>=0.32
 neo4j>=5.26
 pydantic>=2.9
 python-dotenv>=1.0
+# NED 消歧模块依赖（传统方法不需要以下依赖）
+sentence-transformers>=2.2
+openai>=1.0

@@ -12,7 +12,7 @@ import-graph:
 	python3 scripts/import_neo4j.py
 
 run-api:
-	uvicorn job_kg.api:app --reload
+	uvicorn kg.api:app --reload
 
 compile:
-	python3 -m compileall job_kg data_pipeline scripts
+	python3 -m compileall kg data_pipeline scripts

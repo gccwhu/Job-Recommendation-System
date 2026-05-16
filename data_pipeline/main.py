@@ -6,9 +6,9 @@
   - 滑动完成后自动继续抓取
 
 输出三个文件：
-  - datasets/raw/jobs_raw.json           原始数据（含 sensorsdata JSON 和详情链接）
-  - datasets/interim/jobs_cleaned.json   清洗后数据（统一字段格式）
-  - datasets/processed/jobs.json         最终去重数据（最多 200 条）
+  - datasets/data_collect_result/raw/jobs_raw.json           原始数据（含 sensorsdata JSON 和详情链接）
+  - datasets/data_collect_result/interim/jobs_cleaned.json   清洗后数据（统一字段格式）
+  - datasets/data_collect_result/processed/jobs.json         最终去重数据（最多 200 条）
 """
 import json
 import sys
@@ -31,9 +31,9 @@ from .config import KEYWORDS, CITIES, PAGE_SIZE, MAX_PAGES, MAX_RECORDS
 
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
-RAW_OUTPUT = ROOT_DIR / "datasets/raw/jobs_raw.json"
-INTERIM_OUTPUT = ROOT_DIR / "datasets/interim/jobs_cleaned.json"
-PROCESSED_OUTPUT = ROOT_DIR / "datasets/processed/jobs.json"
+RAW_OUTPUT = ROOT_DIR / "datasets/data_collect_result/raw/jobs_raw.json"
+INTERIM_OUTPUT = ROOT_DIR / "datasets/data_collect_result/interim/jobs_cleaned.json"
+PROCESSED_OUTPUT = ROOT_DIR / "datasets/data_collect_result/processed/jobs.json"
 
 
 def crawl_source(crawler, keywords, locations, max_records_per_source):

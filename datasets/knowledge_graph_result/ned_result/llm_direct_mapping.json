@@ -1,0 +1,4442 @@
+{
+  "SKILL": [
+    {
+      "canonical": "BEV",
+      "variants": [
+        "BEV"
+      ]
+    },
+    {
+      "canonical": "视觉检测",
+      "variants": [
+        "视觉检测"
+      ]
+    },
+    {
+      "canonical": "后处理算法",
+      "variants": [
+        "后处理算法"
+      ]
+    },
+    {
+      "canonical": "超声波传感器",
+      "variants": [
+        "超声波传感器",
+        "超声"
+      ]
+    },
+    {
+      "canonical": "融合算法",
+      "variants": [
+        "融合算法"
+      ]
+    },
+    {
+      "canonical": "高精地图",
+      "variants": [
+        "高精地图"
+      ]
+    },
+    {
+      "canonical": "SD地图",
+      "variants": [
+        "SD地图"
+      ]
+    },
+    {
+      "canonical": "模型算法",
+      "variants": [
+        "模型算法"
+      ]
+    },
+    {
+      "canonical": "Transformer",
+      "variants": [
+        "transformer"
+      ]
+    },
+    {
+      "canonical": "管理能力",
+      "variants": [
+        "管理能力"
+      ]
+    },
+    {
+      "canonical": "英文文献检索和阅读能力",
+      "variants": [
+        "英文文献检索和阅读能力"
+      ]
+    },
+    {
+      "canonical": "数学基础",
+      "variants": [
+        "数学基础"
+      ]
+    },
+    {
+      "canonical": "多视几何",
+      "variants": [
+        "多视几何"
+      ]
+    },
+    {
+      "canonical": "机器人",
+      "variants": [
+        "机器人"
+      ]
+    },
+    {
+      "canonical": "VIO",
+      "variants": [
+        "VIO"
+      ]
+    },
+    {
+      "canonical": "SFM",
+      "variants": [
+        "SFM"
+      ]
+    },
+    {
+      "canonical": "3D视觉",
+      "variants": [
+        "3D视觉"
+      ]
+    },
+    {
+      "canonical": "C/C++",
+      "variants": [
+        "C/C++编程"
+      ]
+    },
+    {
+      "canonical": "传感器场地标定",
+      "variants": [
+        "传感器场地标定"
+      ]
+    },
+    {
+      "canonical": "自动标定",
+      "variants": [
+        "自动标定"
+      ]
+    },
+    {
+      "canonical": "Camera",
+      "variants": [
+        "Camera",
+        "摄像头"
+      ]
+    },
+    {
+      "canonical": "GNSS",
+      "variants": [
+        "GNSS"
+      ]
+    },
+    {
+      "canonical": "IMU",
+      "variants": [
+        "IMU"
+      ]
+    },
+    {
+      "canonical": "Encoder",
+      "variants": [
+        "Encoder"
+      ]
+    },
+    {
+      "canonical": "责任心",
+      "variants": [
+        "责任心"
+      ]
+    },
+    {
+      "canonical": "学习沟通能力",
+      "variants": [
+        "学习沟通能力"
+      ]
+    },
+    {
+      "canonical": "机器学习",
+      "variants": [
+        "ML"
+      ]
+    },
+    {
+      "canonical": "计算机视觉",
+      "variants": [
+        "CV"
+      ]
+    },
+    {
+      "canonical": "RO",
+      "variants": [
+        "RO"
+      ]
+    },
+    {
+      "canonical": "激光雷达",
+      "variants": [
+        "激光雷达"
+      ]
+    },
+    {
+      "canonical": "毫米波雷达",
+      "variants": [
+        "毫米波雷达"
+      ]
+    },
+    {
+      "canonical": "标定算法开发",
+      "variants": [
+        "标定算法开发"
+      ]
+    },
+    {
+      "canonical": "编程能力",
+      "variants": [
+        "编程能力"
+      ]
+    },
+    {
+      "canonical": "AOI",
+      "variants": [
+        "AOI"
+      ]
+    },
+    {
+      "canonical": "X-Ray",
+      "variants": [
+        "X-Ray"
+      ]
+    },
+    {
+      "canonical": "C#",
+      "variants": [
+        "C#"
+      ]
+    },
+    {
+      "canonical": "CLR混合编程技术",
+      "variants": [
+        "CLR混合编程技术"
+      ]
+    },
+    {
+      "canonical": "音频算法设计与开发",
+      "variants": [
+        "音频算法设计与开发"
+      ]
+    },
+    {
+      "canonical": "回声消除",
+      "variants": [
+        "回声消除 AEC"
+      ]
+    },
+    {
+      "canonical": "自动增益控制",
+      "variants": [
+        "自动增益 AGC"
+      ]
+    },
+    {
+      "canonical": "语音检测",
+      "variants": [
+        "语音检测 VAD",
+        "VAD 算法"
+      ]
+    },
+    {
+      "canonical": "均衡器",
+      "variants": [
+        "EQ 均衡"
+      ]
+    },
+    {
+      "canonical": "混响/延迟/回声特效",
+      "variants": [
+        "混响 / 延迟 / 回声特效"
+      ]
+    },
+    {
+      "canonical": "3A算法",
+      "variants": [
+        "3A 算法"
+      ]
+    },
+    {
+      "canonical": "算法库封装",
+      "variants": [
+        "算法库封装"
+      ]
+    },
+    {
+      "canonical": "嵌入式",
+      "variants": [
+        "嵌入式"
+      ]
+    },
+    {
+      "canonical": "算法仿真",
+      "variants": [
+        "算法仿真"
+      ]
+    },
+    {
+      "canonical": "代码编写",
+      "variants": [
+        "代码编写"
+      ]
+    },
+    {
+      "canonical": "移植调试",
+      "variants": [
+        "移植调试"
+      ]
+    },
+    {
+      "canonical": "指标验证",
+      "variants": [
+        "指标验证"
+      ]
+    },
+    {
+      "canonical": "VAD/ANR/AGC/AEC",
+      "variants": [
+        "VAD/ANR/AGC/AEC"
+      ]
+    },
+    {
+      "canonical": "麦克风阵列信号处理",
+      "variants": [
+        "麦克风阵列信号处理"
+      ]
+    },
+    {
+      "canonical": "音效算法",
+      "variants": [
+        "音效算法"
+      ]
+    },
+    {
+      "canonical": "XMOS",
+      "variants": [
+        "XMOS"
+      ]
+    },
+    {
+      "canonical": "STM32",
+      "variants": [
+        "STM32"
+      ]
+    },
+    {
+      "canonical": "AI音频降噪",
+      "variants": [
+        "AI 音频降噪"
+      ]
+    },
+    {
+      "canonical": "语音分离算法",
+      "variants": [
+        "语音分离算法"
+      ]
+    },
+    {
+      "canonical": "模型选型",
+      "variants": [
+        "模型选型"
+      ]
+    },
+    {
+      "canonical": "算法设计",
+      "variants": [
+        "算法设计"
+      ]
+    },
+    {
+      "canonical": "训练与评估",
+      "variants": [
+        "训练与评估"
+      ]
+    },
+    {
+      "canonical": "模型调参",
+      "variants": [
+        "模型调参"
+      ]
+    },
+    {
+      "canonical": "实验分析",
+      "variants": [
+        "实验分析"
+      ]
+    },
+    {
+      "canonical": "算法方案工程化落地",
+      "variants": [
+        "算法方案工程化落地"
+      ]
+    },
+    {
+      "canonical": "推理优化",
+      "variants": [
+        "推理优化"
+      ]
+    },
+    {
+      "canonical": "系统集成",
+      "variants": [
+        "系统集成"
+      ]
+    },
+    {
+      "canonical": "WiFi芯片通信整体性能规划",
+      "variants": [
+        "WiFi 芯片通信整体性能规划"
+      ]
+    },
+    {
+      "canonical": "算法RTL设计",
+      "variants": [
+        "算法RTL设计"
+      ]
+    },
+    {
+      "canonical": "沟通与协调能力",
+      "variants": [
+        "沟通与协调能力"
+      ]
+    },
+    {
+      "canonical": "团队合作",
+      "variants": [
+        "团队合作"
+      ]
+    },
+    {
+      "canonical": "领导力",
+      "variants": [
+        "领导力"
+      ]
+    },
+    {
+      "canonical": "问题分析和解决能力",
+      "variants": [
+        "问题分析和解决能力"
+      ]
+    },
+    {
+      "canonical": "3D打印前处理软件",
+      "variants": [
+        "3D打印前处理软件"
+      ]
+    },
+    {
+      "canonical": "二维几何图形建模",
+      "variants": [
+        "二维几何图形建模"
+      ]
+    },
+    {
+      "canonical": "二维几何图形分析",
+      "variants": [
+        "二维几何图形分析"
+      ]
+    },
+    {
+      "canonical": "二维几何图形优化算法",
+      "variants": [
+        "二维几何图形优化算法"
+      ]
+    },
+    {
+      "canonical": "二维布尔运算",
+      "variants": [
+        "二维布尔运算"
+      ]
+    },
+    {
+      "canonical": "偏移",
+      "variants": [
+        "偏移"
+      ]
+    },
+    {
+      "canonical": "轮廓简化",
+      "variants": [
+        "轮廓简化"
+      ]
+    },
+    {
+      "canonical": "多边形裁剪",
+      "variants": [
+        "多边形裁剪"
+      ]
+    },
+    {
+      "canonical": "路径生成",
+      "variants": [
+        "路径生成"
+      ]
+    },
+    {
+      "canonical": "切片引擎",
+      "variants": [
+        "切片引擎"
+      ]
+    },
+    {
+      "canonical": "运动控制",
+      "variants": [
+        "运动控制"
+      ]
+    },
+    {
+      "canonical": "用户界面",
+      "variants": [
+        "用户界面"
+      ]
+    },
+    {
+      "canonical": "STL",
+      "variants": [
+        "STL"
+      ]
+    },
+    {
+      "canonical": "SVG",
+      "variants": [
+        "SVG"
+      ]
+    },
+    {
+      "canonical": "DXF",
+      "variants": [
+        "DXF"
+      ]
+    },
+    {
+      "canonical": "二维投影",
+      "variants": [
+        "二维投影"
+      ]
+    },
+    {
+      "canonical": "剖面提取",
+      "variants": [
+        "剖面提取"
+      ]
+    },
+    {
+      "canonical": "拓扑修复",
+      "variants": [
+        "拓扑修复"
+      ]
+    },
+    {
+      "canonical": "计算机图形学",
+      "variants": [
+        "计算机图形学"
+      ]
+    },
+    {
+      "canonical": "计算几何",
+      "variants": [
+        "计算几何"
+      ]
+    },
+    {
+      "canonical": "DCEL",
+      "variants": [
+        "DCEL"
+      ]
+    },
+    {
+      "canonical": "BSP树",
+      "variants": [
+        "BSP树"
+      ]
+    },
+    {
+      "canonical": "Voronoi图",
+      "variants": [
+        "Voronoi图"
+      ]
+    },
+    {
+      "canonical": "C++14",
+      "variants": [
+        "C++14"
+      ]
+    },
+    {
+      "canonical": "多边形布尔运算",
+      "variants": [
+        "多边形布尔运算"
+      ]
+    },
+    {
+      "canonical": "环视鱼眼",
+      "variants": [
+        "环视鱼眼"
+      ]
+    },
+    {
+      "canonical": "Python",
+      "variants": [
+        "精通Python"
+      ]
+    },
+    {
+      "canonical": "Java",
+      "variants": [
+        "熟悉Java"
+      ]
+    },
+    {
+      "canonical": "PyTorch",
+      "variants": [
+        "熟练掌握PyTorch、TensorFlow、Scikit-learn"
+      ]
+    },
+    {
+      "canonical": "TensorFlow",
+      "variants": [
+        "熟练掌握PyTorch、TensorFlow、Scikit-learn"
+      ]
+    },
+    {
+      "canonical": "Scikit-learn",
+      "variants": [
+        "熟练掌握PyTorch、TensorFlow、Scikit-learn"
+      ]
+    },
+    {
+      "canonical": "Hadoop",
+      "variants": [
+        "熟悉Hadoop、Spark、Flink等大数据处理框架"
+      ]
+    },
+    {
+      "canonical": "Spark",
+      "variants": [
+        "熟悉Hadoop、Spark、Flink等大数据处理框架"
+      ]
+    },
+    {
+      "canonical": "Flink",
+      "variants": [
+        "熟悉Hadoop、Spark、Flink等大数据处理框架"
+      ]
+    },
+    {
+      "canonical": "MySQL",
+      "variants": [
+        "熟练使用MySQL、Redis、HBase等关系型与非关系型数据库"
+      ]
+    },
+    {
+      "canonical": "Redis",
+      "variants": [
+        "熟练使用MySQL、Redis、HBase等关系型与非关系型数据库"
+      ]
+    },
+    {
+      "canonical": "HBase",
+      "variants": [
+        "熟练使用MySQL、Redis、HBase等关系型与非关系型数据库"
+      ]
+    },
+    {
+      "canonical": "深度学习",
+      "variants": [
+        "有深度学习模型开发经验"
+      ]
+    },
+    {
+      "canonical": "推荐系统",
+      "variants": [
+        "深入理解推荐系统、时间序列预测、分类回归、聚类等核心算法原理",
+        "至少3年以上推荐系统、预测算法或零售供应链优化相关经验"
+      ]
+    },
+    {
+      "canonical": "时间序列预测",
+      "variants": [
+        "深入理解推荐系统、时间序列预测、分类回归、聚类等核心算法原理"
+      ]
+    },
+    {
+      "canonical": "分类回归",
+      "variants": [
+        "深入理解推荐系统、时间序列预测、分类回归、聚类等核心算法原理"
+      ]
+    },
+    {
+      "canonical": "聚类",
+      "variants": [
+        "深入理解推荐系统、时间序列预测、分类回归、聚类等核心算法原理"
+      ]
+    },
+    {
+      "canonical": "特征工程",
+      "variants": [
+        "扎实的特征工程能力"
+      ]
+    },
+    {
+      "canonical": "大模型",
+      "variants": [
+        "具备大模型（如Qwen、GPT-4）应用经验"
+      ]
+    },
+    {
+      "canonical": "RAG",
+      "variants": [
+        "熟悉RAG、Agent等技术在业务中的落地"
+      ]
+    },
+    {
+      "canonical": "Agent",
+      "variants": [
+        "熟悉RAG、Agent等技术在业务中的落地"
+      ]
+    },
+    {
+      "canonical": "高并发",
+      "variants": [
+        "具备高并发、高可用系统设计经验"
+      ]
+    },
+    {
+      "canonical": "高可用",
+      "variants": [
+        "具备高并发、高可用系统设计经验"
+      ]
+    },
+    {
+      "canonical": "项目管理",
+      "variants": [
+        "有项目管理经验"
+      ]
+    },
+    {
+      "canonical": "算法开发",
+      "variants": [
+        "5年以上算法开发或大数据开发经验",
+        "Method and algorithm development"
+      ]
+    },
+    {
+      "canonical": "大数据开发",
+      "variants": [
+        "5年以上算法开发或大数据开发经验"
+      ]
+    },
+    {
+      "canonical": "C++",
+      "variants": [
+        "C++ programming",
+        "C language programing"
+      ]
+    },
+    {
+      "canonical": "MATLAB",
+      "variants": [
+        "MATLAB/Simulink/ dSpace toolkit"
+      ]
+    },
+    {
+      "canonical": "Simulink",
+      "variants": [
+        "MATLAB/Simulink/ dSpace toolkit"
+      ]
+    },
+    {
+      "canonical": "dSpace",
+      "variants": [
+        "MATLAB/Simulink/ dSpace toolkit"
+      ]
+    },
+    {
+      "canonical": "Linux",
+      "variants": [
+        "software engineering on Linux/QNX"
+      ]
+    },
+    {
+      "canonical": "QNX",
+      "variants": [
+        "software engineering on Linux/QNX"
+      ]
+    },
+    {
+      "canonical": "自动驾驶",
+      "variants": [
+        "automated driving",
+        "autonomous driving systems",
+        "ADAS/AD software development"
+      ]
+    },
+    {
+      "canonical": "ADAS",
+      "variants": [
+        "ADAS function",
+        "ADAS/AD software development"
+      ]
+    },
+    {
+      "canonical": "AEB",
+      "variants": [
+        "AEB"
+      ]
+    },
+    {
+      "canonical": "ACC",
+      "variants": [
+        "ACC"
+      ]
+    },
+    {
+      "canonical": "LKA",
+      "variants": [
+        "LKA"
+      ]
+    },
+    {
+      "canonical": "HWA",
+      "variants": [
+        "HWA"
+      ]
+    },
+    {
+      "canonical": "路径规划",
+      "variants": [
+        "路径规划",
+        "planning algorithms",
+        "planning & control system"
+      ]
+    },
+    {
+      "canonical": "控制算法",
+      "variants": [
+        "control algorithms",
+        "vehicle control algorithm",
+        "轨迹控制"
+      ]
+    },
+    {
+      "canonical": "运动规划",
+      "variants": [
+        "运动规划"
+      ]
+    },
+    {
+      "canonical": "模型预测",
+      "variants": [
+        "模型预测"
+      ]
+    },
+    {
+      "canonical": "强化学习",
+      "variants": [
+        "RL"
+      ]
+    },
+    {
+      "canonical": "自适应控制",
+      "variants": [
+        "Adaptive Control"
+      ]
+    },
+    {
+      "canonical": "感知",
+      "variants": [
+        "感知"
+      ]
+    },
+    {
+      "canonical": "计算机视觉",
+      "variants": [
+        "Computer vision",
+        "Computer graphics"
+      ]
+    },
+    {
+      "canonical": "图像处理",
+      "variants": [
+        "影像处理",
+        "Image processing"
+      ]
+    },
+    {
+      "canonical": "模式识别",
+      "variants": [
+        "Pattern recognition"
+      ]
+    },
+    {
+      "canonical": "可视化",
+      "variants": [
+        "可视化",
+        "Visualization"
+      ]
+    },
+    {
+      "canonical": "医疗成像",
+      "variants": [
+        "医疗成像",
+        "Medical imaging"
+      ]
+    },
+    {
+      "canonical": "数据结构与算法",
+      "variants": [
+        "数据结构与算法设计",
+        "Data structure and algorithm design"
+      ]
+    },
+    {
+      "canonical": "数值计算与优化",
+      "variants": [
+        "数值计算与优化",
+        "Numerical computing and optimization"
+      ]
+    },
+    {
+      "canonical": "高性能计算",
+      "variants": [
+        "高性能计算",
+        "High performance computing"
+      ]
+    },
+    {
+      "canonical": "GPU加速",
+      "variants": [
+        "GPU加速"
+      ]
+    },
+    {
+      "canonical": "OpenCL",
+      "variants": [
+        "OpenCL"
+      ]
+    },
+    {
+      "canonical": "并行计算",
+      "variants": [
+        "并行计算"
+      ]
+    },
+    {
+      "canonical": "3D模型切片",
+      "variants": [
+        "3D模型切片",
+        "Slice Engine"
+      ]
+    },
+    {
+      "canonical": "Slic3r",
+      "variants": [
+        "Slic3r"
+      ]
+    },
+    {
+      "canonical": "CuraEngine",
+      "variants": [
+        "CuraEngine"
+      ]
+    },
+    {
+      "canonical": "信号处理",
+      "variants": [
+        "signal processing related experience"
+      ]
+    },
+    {
+      "canonical": "FMCW雷达",
+      "variants": [
+        "FMCW radar work experience"
+      ]
+    },
+    {
+      "canonical": "天线与射频系统",
+      "variants": [
+        "antenna and radio system"
+      ]
+    },
+    {
+      "canonical": "故障排除与问题解决",
+      "variants": [
+        "trouble-shooting and problem-solving skills"
+      ]
+    },
+    {
+      "canonical": "客户沟通",
+      "variants": [
+        "customer communication skills"
+      ]
+    },
+    {
+      "canonical": "中英文流利",
+      "variants": [
+        "fluent in English and Chinese speaking & writing"
+      ]
+    },
+    {
+      "canonical": "自动化",
+      "variants": [
+        "自动化"
+      ]
+    },
+    {
+      "canonical": "数字技术",
+      "variants": [
+        "数字技术"
+      ]
+    },
+    {
+      "canonical": "软件开发",
+      "variants": [
+        "软件开发"
+      ]
+    },
+    {
+      "canonical": "沟通表达",
+      "variants": [
+        "沟通表达技巧",
+        "communication and presentation skill"
+      ]
+    },
+    {
+      "canonical": "团队合作",
+      "variants": [
+        "团队合作能力",
+        "team work"
+      ]
+    },
+    {
+      "canonical": "跨文化能力",
+      "variants": [
+        "Inter-cultural competence"
+      ]
+    },
+    {
+      "canonical": "脚本语言",
+      "variants": [
+        "scripting languages"
+      ]
+    },
+    {
+      "canonical": "CGAL",
+      "variants": [
+        "CGAL"
+      ]
+    },
+    {
+      "canonical": "Clipper",
+      "variants": [
+        "Clipper"
+      ]
+    },
+    {
+      "canonical": "Boost.Geometry",
+      "variants": [
+        "Boost.Geometry"
+      ]
+    },
+    {
+      "canonical": "OpenCASCADE",
+      "variants": [
+        "OpenCASCADE"
+      ]
+    },
+    {
+      "canonical": "Minkowski sum",
+      "variants": [
+        "Minkowski sum"
+      ]
+    },
+    {
+      "canonical": "轮廓偏移",
+      "variants": [
+        "轮廓偏移",
+        "contour offsetting"
+      ]
+    },
+    {
+      "canonical": "几何容差处理",
+      "variants": [
+        "几何容差处理"
+      ]
+    },
+    {
+      "canonical": "数值鲁棒性设计",
+      "variants": [
+        "数值鲁棒性设计"
+      ]
+    },
+    {
+      "canonical": "union",
+      "variants": [
+        "union"
+      ]
+    },
+    {
+      "canonical": "difference",
+      "variants": [
+        "difference"
+      ]
+    },
+    {
+      "canonical": "intersection",
+      "variants": [
+        "intersection"
+      ]
+    },
+    {
+      "canonical": "机器人学",
+      "variants": [
+        "robotics"
+      ]
+    },
+    {
+      "canonical": "AD平台",
+      "variants": [
+        "AD platforms"
+      ]
+    },
+    {
+      "canonical": "驾驶员辅助系统",
+      "variants": [
+        "driver assistance systems"
+      ]
+    },
+    {
+      "canonical": "商品生命周期管理",
+      "variants": [
+        "熟悉商品生命周期管理、进销存、全渠道履约等场景"
+      ]
+    },
+    {
+      "canonical": "进销存",
+      "variants": [
+        "熟悉商品生命周期管理、进销存、全渠道履约等场景"
+      ]
+    },
+    {
+      "canonical": "全渠道履约",
+      "variants": [
+        "熟悉商品生命周期管理、进销存、全渠道履约等场景"
+      ]
+    },
+    {
+      "canonical": "零售行业",
+      "variants": [
+        "对零售行业（尤其是便利店、商超）业务流程有深入理解"
+      ]
+    },
+    {
+      "canonical": "便利店",
+      "variants": [
+        "有连锁便利店或生鲜电商平台工作经验"
+      ]
+    },
+    {
+      "canonical": "生鲜电商",
+      "variants": [
+        "有连锁便利店或生鲜电商平台工作经验"
+      ]
+    },
+    {
+      "canonical": "技术方案转化",
+      "variants": [
+        "能将技术方案转化为业务价值"
+      ]
+    },
+    {
+      "canonical": "沟通协调",
+      "variants": [
+        "优秀的沟通协调能力、项目推动能力与跨团队协作精神"
+      ]
+    },
+    {
+      "canonical": "项目推动",
+      "variants": [
+        "优秀的沟通协调能力、项目推动能力与跨团队协作精神"
+      ]
+    },
+    {
+      "canonical": "跨团队协作",
+      "variants": [
+        "优秀的沟通协调能力、项目推动能力与跨团队协作精神"
+      ]
+    },
+    {
+      "canonical": "从0到1构建系统",
+      "variants": [
+        "有从0到1构建推荐/预测系统平台的经验"
+      ]
+    },
+    {
+      "canonical": "带领团队",
+      "variants": [
+        "能带领团队完成复杂算法项目交付"
+      ]
+    },
+    {
+      "canonical": "算法项目落地",
+      "variants": [
+        "有完整算法项目落地经验（模型设计、开发、上线、监控、迭代全流程）"
+      ]
+    },
+    {
+      "canonical": "毫米波雷达算法",
+      "variants": [
+        "77GHz/79GHz 毫米波雷达信号处理算法开发",
+        "77GHz/79GHz 毫米波雷达数据处理算法开发",
+        "毫米波雷达测距、测速和测角等功能算法",
+        "FMCW雷达信号处理理论",
+        "雷达系统算法仿真设计"
+      ]
+    },
+    {
+      "canonical": "目标检测与跟踪",
+      "variants": [
+        "目标识别",
+        "CFAR目标检测",
+        "目标聚类",
+        "雷达目标聚类",
+        "多目标跟踪理论"
+      ]
+    },
+    {
+      "canonical": "信号处理",
+      "variants": [
+        "统计信号处理相关理论",
+        "信号处理",
+        "传感器信号处理",
+        "音频信号处理"
+      ]
+    },
+    {
+      "canonical": "MATLAB/Simulink",
+      "variants": [
+        "MATLAB Simulink / State flow /Visual C++ 软件进行算法仿真、设计和验证",
+        "Simulink"
+      ]
+    },
+    {
+      "canonical": "C语言",
+      "variants": [
+        "C语言编程"
+      ]
+    },
+    {
+      "canonical": "嵌入式系统",
+      "variants": [
+        "算法在嵌入式系统上的实现"
+      ]
+    },
+    {
+      "canonical": "主动性",
+      "variants": [
+        "Independent and proactive working style",
+        "independent and proactive working style",
+        "主动性"
+      ]
+    },
+    {
+      "canonical": "英语",
+      "variants": [
+        "fluent English language skills",
+        "Chinese native speaker"
+      ]
+    },
+    {
+      "canonical": "德语",
+      "variants": [
+        "German language beneficial"
+      ]
+    },
+    {
+      "canonical": "跨文化能力",
+      "variants": [
+        "inter-cultural competence"
+      ]
+    },
+    {
+      "canonical": "出差意愿",
+      "variants": [
+        "willingness to travel"
+      ]
+    },
+    {
+      "canonical": "图像处理",
+      "variants": [
+        "AI图像算法",
+        "传统图像处理算法",
+        "机器视觉"
+      ]
+    },
+    {
+      "canonical": "深度学习框架",
+      "variants": [
+        "深度学习框架"
+      ]
+    },
+    {
+      "canonical": "IPD",
+      "variants": [
+        "IPD"
+      ]
+    },
+    {
+      "canonical": "DevOps",
+      "variants": [
+        "DevOps"
+      ]
+    },
+    {
+      "canonical": "ONNX/TensorRT",
+      "variants": [
+        "ONNX/TensorRT"
+      ]
+    },
+    {
+      "canonical": "机器学习模型",
+      "variants": [
+        "LR",
+        "RF",
+        "Boost系列模型",
+        "DeepFM",
+        "Wide&Deep",
+        "esmm",
+        "DID",
+        "PSM",
+        "Uplift Model"
+      ]
+    },
+    {
+      "canonical": "大数据技术",
+      "variants": [
+        "Hadoop",
+        "Hive",
+        "Flink"
+      ]
+    },
+    {
+      "canonical": "音频处理",
+      "variants": [
+        "降噪算法",
+        "去混响算法",
+        "回声处理",
+        "音频codec",
+        "opus",
+        "aac"
+      ]
+    },
+    {
+      "canonical": "音频系统开发",
+      "variants": [
+        "音频系统开发",
+        "音频实时通信系统开发"
+      ]
+    },
+    {
+      "canonical": "语音技术",
+      "variants": [
+        "语音智能开发",
+        "语音识别",
+        "语音合成",
+        "语音智能算法",
+        "声纹识别"
+      ]
+    },
+    {
+      "canonical": "通信协议",
+      "variants": [
+        "webrtc",
+        "pisip",
+        "linephone",
+        "freeswitch",
+        "voip"
+      ]
+    },
+    {
+      "canonical": "git",
+      "variants": [
+        "git"
+      ]
+    },
+    {
+      "canonical": "VLA模型",
+      "variants": [
+        "VLA模型"
+      ]
+    },
+    {
+      "canonical": "AI工具",
+      "variants": [
+        "AI 工具",
+        "AI 技术",
+        "LLM 工具",
+        "AI 应用"
+      ]
+    },
+    {
+      "canonical": "智能体",
+      "variants": [
+        "智能体",
+        "AI Agent"
+      ]
+    },
+    {
+      "canonical": "信息提取",
+      "variants": [
+        "信息提取"
+      ]
+    },
+    {
+      "canonical": "知识库管理",
+      "variants": [
+        "知识库管理"
+      ]
+    },
+    {
+      "canonical": "文档处理",
+      "variants": [
+        "文档处理"
+      ]
+    },
+    {
+      "canonical": "翻译",
+      "variants": [
+        "翻译"
+      ]
+    },
+    {
+      "canonical": "垂类领域模型",
+      "variants": [
+        "垂类领域模型"
+      ]
+    },
+    {
+      "canonical": "多模态数据",
+      "variants": [
+        "多模态数据"
+      ]
+    },
+    {
+      "canonical": "数据预处理",
+      "variants": [
+        "数据预处理"
+      ]
+    },
+    {
+      "canonical": "预测/生成模型",
+      "variants": [
+        "预测/生成模型"
+      ]
+    },
+    {
+      "canonical": "NLP",
+      "variants": [
+        "NLP"
+      ]
+    },
+    {
+      "canonical": "数学",
+      "variants": [
+        "数学"
+      ]
+    },
+    {
+      "canonical": "Backend",
+      "variants": [
+        "Backend"
+      ]
+    },
+    {
+      "canonical": "结构化数据",
+      "variants": [
+        "结构化数据"
+      ]
+    },
+    {
+      "canonical": "非结构化数据",
+      "variants": [
+        "非结构化数据"
+      ]
+    },
+    {
+      "canonical": "SMILES",
+      "variants": [
+        "SMILES"
+      ]
+    },
+    {
+      "canonical": "蛋白质结构",
+      "variants": [
+        "蛋白质结构"
+      ]
+    },
+    {
+      "canonical": "基因序列",
+      "variants": [
+        "基因序列"
+      ]
+    },
+    {
+      "canonical": "大模型（LLM）",
+      "variants": [
+        "大模型（LLM）"
+      ]
+    },
+    {
+      "canonical": "卡尔曼滤波",
+      "variants": [
+        "卡尔曼滤波"
+      ]
+    },
+    {
+      "canonical": "数据融合",
+      "variants": [
+        "数据融合"
+      ]
+    },
+    {
+      "canonical": "MIMO信号处理",
+      "variants": [
+        "MIMO信号处理"
+      ]
+    },
+    {
+      "canonical": "DOA方向估计理论",
+      "variants": [
+        "DOA方向估计理论"
+      ]
+    },
+    {
+      "canonical": "ADAS功能开发算法研发设计",
+      "variants": [
+        "ADAS功能开发算法研发设计"
+      ]
+    },
+    {
+      "canonical": "实测实验数据处理",
+      "variants": [
+        "实测、实验数据的处理"
+      ]
+    },
+    {
+      "canonical": "设计应用场景和测试用例",
+      "variants": [
+        "设计应用场景和相关测试用例"
+      ]
+    },
+    {
+      "canonical": "算法软件测试",
+      "variants": [
+        "对算法和软件进行测试"
+      ]
+    },
+    {
+      "canonical": "撰写设计文档",
+      "variants": [
+        "撰写相应的设计文档"
+      ]
+    },
+    {
+      "canonical": "算法知识产权工作",
+      "variants": [
+        "算法知识产权工作"
+      ]
+    },
+    {
+      "canonical": "QNX",
+      "variants": [
+        "QNX"
+      ]
+    },
+    {
+      "canonical": "dSpace toolkit",
+      "variants": [
+        "dSpace toolkit"
+      ]
+    },
+    {
+      "canonical": "TensorFlow/PyTorch",
+      "variants": [
+        "TensorFlow/PyTorch"
+      ]
+    },
+    {
+      "canonical": "Flask/Django",
+      "variants": [
+        "Flask/Django"
+      ]
+    },
+    {
+      "canonical": "LoRA",
+      "variants": [
+        "LoRA",
+        "QLoRA"
+      ]
+    },
+    {
+      "canonical": "AutoGPT",
+      "variants": [
+        "AutoGPT"
+      ]
+    },
+    {
+      "canonical": "图像处理算法",
+      "variants": [
+        "图像处理算法"
+      ]
+    },
+    {
+      "canonical": "物体追踪",
+      "variants": [
+        "物体追踪"
+      ]
+    },
+    {
+      "canonical": "需求分析",
+      "variants": [
+        "需求分析"
+      ]
+    },
+    {
+      "canonical": "算法实现",
+      "variants": [
+        "算法实现"
+      ]
+    },
+    {
+      "canonical": "测试",
+      "variants": [
+        "测试"
+      ]
+    },
+    {
+      "canonical": "模型评估",
+      "variants": [
+        "模型评估"
+      ]
+    },
+    {
+      "canonical": "多帧图像超分辨率",
+      "variants": [
+        "多帧图像超分辨率"
+      ]
+    },
+    {
+      "canonical": "画质增强",
+      "variants": [
+        "画质增强"
+      ]
+    },
+    {
+      "canonical": "去模糊",
+      "variants": [
+        "去模糊"
+      ]
+    },
+    {
+      "canonical": "去噪声",
+      "variants": [
+        "去噪声"
+      ]
+    },
+    {
+      "canonical": "单帧图像盲超",
+      "variants": [
+        "单帧图像盲超"
+      ]
+    },
+    {
+      "canonical": "质量修复",
+      "variants": [
+        "质量修复"
+      ]
+    },
+    {
+      "canonical": "卷积神经网络",
+      "variants": [
+        "卷积神经网络"
+      ]
+    },
+    {
+      "canonical": "边缘检测",
+      "variants": [
+        "边缘检测"
+      ]
+    },
+    {
+      "canonical": "PIL",
+      "variants": [
+        "PIL"
+      ]
+    },
+    {
+      "canonical": "scikit-image",
+      "variants": [
+        "scikit-image"
+      ]
+    },
+    {
+      "canonical": "嵌入式系统",
+      "variants": [
+        "嵌入式系统"
+      ]
+    },
+    {
+      "canonical": "实时处理",
+      "variants": [
+        "实时处理"
+      ]
+    },
+    {
+      "canonical": "线性代数",
+      "variants": [
+        "线性代数"
+      ]
+    },
+    {
+      "canonical": "随机过程",
+      "variants": [
+        "随机过程"
+      ]
+    },
+    {
+      "canonical": "数字电路基础",
+      "variants": [
+        "数字电路基础"
+      ]
+    },
+    {
+      "canonical": "计算机体系结构",
+      "variants": [
+        "计算机体系结构"
+      ]
+    },
+    {
+      "canonical": "硬件描述语言",
+      "variants": [
+        "硬件描述语言"
+      ]
+    },
+    {
+      "canonical": "数据挖掘",
+      "variants": [
+        "数据挖掘"
+      ]
+    },
+    {
+      "canonical": "R",
+      "variants": [
+        "R"
+      ]
+    },
+    {
+      "canonical": "大语言模型",
+      "variants": [
+        "大语言模型",
+        "LLM"
+      ]
+    },
+    {
+      "canonical": "多模态模型",
+      "variants": [
+        "多模态模型",
+        "VLM"
+      ]
+    },
+    {
+      "canonical": "预训练",
+      "variants": [
+        "预训练"
+      ]
+    },
+    {
+      "canonical": "微调",
+      "variants": [
+        "微调",
+        "指令微调"
+      ]
+    },
+    {
+      "canonical": "对齐",
+      "variants": [
+        "对齐",
+        "RLHF"
+      ]
+    },
+    {
+      "canonical": "Agent",
+      "variants": [
+        "Agent"
+      ]
+    },
+    {
+      "canonical": "模型架构优化",
+      "variants": [
+        "模型架构优化"
+      ]
+    },
+    {
+      "canonical": "推理加速",
+      "variants": [
+        "推理加速"
+      ]
+    },
+    {
+      "canonical": "量化蒸馏",
+      "variants": [
+        "量化蒸馏"
+      ]
+    },
+    {
+      "canonical": "稀疏化",
+      "variants": [
+        "稀疏化"
+      ]
+    },
+    {
+      "canonical": "DeepSpeed",
+      "variants": [
+        "DeepSpeed"
+      ]
+    },
+    {
+      "canonical": "FSDP",
+      "variants": [
+        "FSDP"
+      ]
+    },
+    {
+      "canonical": "Megatron",
+      "variants": [
+        "Megatron"
+      ]
+    },
+    {
+      "canonical": "MoE",
+      "variants": [
+        "MoE"
+      ]
+    },
+    {
+      "canonical": "生物数据AI建模经验",
+      "variants": [
+        "生物数据AI建模经验"
+      ]
+    },
+    {
+      "canonical": "机器学习/深度学习算法及模型优化流程",
+      "variants": [
+        "机器学习/深度学习算法及模型优化流程"
+      ]
+    },
+    {
+      "canonical": "特征工程与模型可解释性分析能力",
+      "variants": [
+        "特征工程与模型可解释性分析能力"
+      ]
+    },
+    {
+      "canonical": "科研产出经验",
+      "variants": [
+        "科研产出经验"
+      ]
+    },
+    {
+      "canonical": "语音增强",
+      "variants": [
+        "语音增强"
+      ]
+    },
+    {
+      "canonical": "波束成形",
+      "variants": [
+        "波束成形"
+      ]
+    },
+    {
+      "canonical": "声学围栏",
+      "variants": [
+        "声学围栏"
+      ]
+    },
+    {
+      "canonical": "距离检测",
+      "variants": [
+        "距离检测"
+      ]
+    },
+    {
+      "canonical": "FFT",
+      "variants": [
+        "FFT"
+      ]
+    },
+    {
+      "canonical": "滤波器",
+      "variants": [
+        "滤波器"
+      ]
+    },
+    {
+      "canonical": "自适应滤波",
+      "variants": [
+        "自适应滤波"
+      ]
+    },
+    {
+      "canonical": "阵列信号处理",
+      "variants": [
+        "阵列信号处理"
+      ]
+    },
+    {
+      "canonical": "时频分析",
+      "variants": [
+        "时频分析"
+      ]
+    },
+    {
+      "canonical": "Python/MATLAB",
+      "variants": [
+        "Python/MATLAB"
+      ]
+    },
+    {
+      "canonical": "ARM/Linux",
+      "variants": [
+        "ARM/Linux"
+      ]
+    },
+    {
+      "canonical": "激光雷达信号处理",
+      "variants": [
+        "激光雷达信号处理"
+      ]
+    },
+    {
+      "canonical": "激光雷达三维点云",
+      "variants": [
+        "激光雷达三维点云"
+      ]
+    },
+    {
+      "canonical": "深度神经网络模型",
+      "variants": [
+        "深度神经网络模型"
+      ]
+    },
+    {
+      "canonical": "激光雷达点云数据集",
+      "variants": [
+        "激光雷达点云数据集"
+      ]
+    },
+    {
+      "canonical": "激光雷达系统建模与仿真",
+      "variants": [
+        "激光雷达系统建模与仿真"
+      ]
+    },
+    {
+      "canonical": "链路分析",
+      "variants": [
+        "链路分析"
+      ]
+    },
+    {
+      "canonical": "信噪比评估",
+      "variants": [
+        "信噪比评估"
+      ]
+    },
+    {
+      "canonical": "功能参数量化研究",
+      "variants": [
+        "功能参数量化研究"
+      ]
+    },
+    {
+      "canonical": "相干探测系统",
+      "variants": [
+        "相干探测系统"
+      ]
+    },
+    {
+      "canonical": "信号处理流程",
+      "variants": [
+        "信号处理流程"
+      ]
+    },
+    {
+      "canonical": "仿真模型",
+      "variants": [
+        "仿真模型"
+      ]
+    },
+    {
+      "canonical": "点云处理",
+      "variants": [
+        "点云处理"
+      ]
+    },
+    {
+      "canonical": "匹配",
+      "variants": [
+        "匹配"
+      ]
+    },
+    {
+      "canonical": "分类",
+      "variants": [
+        "分类"
+      ]
+    },
+    {
+      "canonical": "雷达信号处理",
+      "variants": [
+        "雷达信号处理"
+      ]
+    },
+    {
+      "canonical": "数学功底",
+      "variants": [
+        "数学功底"
+      ]
+    },
+    {
+      "canonical": "系统建模",
+      "variants": [
+        "系统建模"
+      ]
+    },
+    {
+      "canonical": "算法与数据结构",
+      "variants": [
+        "算法与数据结构"
+      ]
+    },
+    {
+      "canonical": "算法设计与研发",
+      "variants": [
+        "算法设计与研发"
+      ]
+    },
+    {
+      "canonical": "计算机图像视觉核心算法",
+      "variants": [
+        "计算机图像视觉核心算法"
+      ]
+    },
+    {
+      "canonical": "语义分割",
+      "variants": [
+        "语义分割"
+      ]
+    },
+    {
+      "canonical": "实例分割",
+      "variants": [
+        "实例分割"
+      ]
+    },
+    {
+      "canonical": "全景分割",
+      "variants": [
+        "全景分割"
+      ]
+    },
+    {
+      "canonical": "图像生成",
+      "variants": [
+        "图像生成"
+      ]
+    },
+    {
+      "canonical": "AIGC",
+      "variants": [
+        "AIGC"
+      ]
+    },
+    {
+      "canonical": "光学字符识别",
+      "variants": [
+        "光学字符识别",
+        "OCR"
+      ]
+    },
+    {
+      "canonical": "超分辨率",
+      "variants": [
+        "超分辨率"
+      ]
+    },
+    {
+      "canonical": "工程化",
+      "variants": [
+        "工程化"
+      ]
+    },
+    {
+      "canonical": "部署",
+      "variants": [
+        "部署"
+      ]
+    },
+    {
+      "canonical": "上线",
+      "variants": [
+        "上线"
+      ]
+    },
+    {
+      "canonical": "监控",
+      "variants": [
+        "监控"
+      ]
+    },
+    {
+      "canonical": "图像数据采集",
+      "variants": [
+        "图像数据采集"
+      ]
+    },
+    {
+      "canonical": "清洗",
+      "variants": [
+        "清洗"
+      ]
+    },
+    {
+      "canonical": "标注",
+      "variants": [
+        "标注"
+      ]
+    },
+    {
+      "canonical": "数据增强策略设计",
+      "variants": [
+        "数据增强策略设计"
+      ]
+    },
+    {
+      "canonical": "训练数据集构建",
+      "variants": [
+        "训练数据集构建"
+      ]
+    },
+    {
+      "canonical": "NumPy",
+      "variants": [
+        "NumPy"
+      ]
+    },
+    {
+      "canonical": "LightGBM",
+      "variants": [
+        "LightGBM"
+      ]
+    },
+    {
+      "canonical": "XGBoost",
+      "variants": [
+        "XGBoost"
+      ]
+    },
+    {
+      "canonical": "CNN",
+      "variants": [
+        "CNN"
+      ]
+    },
+    {
+      "canonical": "SHAP",
+      "variants": [
+        "SHAP"
+      ]
+    },
+    {
+      "canonical": "LIME",
+      "variants": [
+        "LIME"
+      ]
+    },
+    {
+      "canonical": "TensorRT",
+      "variants": [
+        "TensorRT"
+      ]
+    },
+    {
+      "canonical": "ROS2",
+      "variants": [
+        "ROS2"
+      ]
+    },
+    {
+      "canonical": "Pandas",
+      "variants": [
+        "Pandas"
+      ]
+    },
+    {
+      "canonical": "GeoPandas",
+      "variants": [
+        "GeoPandas"
+      ]
+    },
+    {
+      "canonical": "PyG",
+      "variants": [
+        "PyG"
+      ]
+    },
+    {
+      "canonical": "GNN",
+      "variants": [
+        "GNN"
+      ]
+    },
+    {
+      "canonical": "Diffusion Model",
+      "variants": [
+        "Diffusion Model"
+      ]
+    },
+    {
+      "canonical": "SEM",
+      "variants": [
+        "SEM"
+      ]
+    },
+    {
+      "canonical": "TEM",
+      "variants": [
+        "TEM"
+      ]
+    },
+    {
+      "canonical": "Scikit-learn",
+      "variants": [
+        "Scikit-learn"
+      ]
+    },
+    {
+      "canonical": "NOI",
+      "variants": [
+        "NOI"
+      ]
+    },
+    {
+      "canonical": "IOI",
+      "variants": [
+        "IOI"
+      ]
+    },
+    {
+      "canonical": "ACM",
+      "variants": [
+        "ACM"
+      ]
+    },
+    {
+      "canonical": "GPT",
+      "variants": [
+        "GPT"
+      ]
+    },
+    {
+      "canonical": "Qwen",
+      "variants": [
+        "Qwen",
+        "Qwen-VL"
+      ]
+    },
+    {
+      "canonical": "LLaMA",
+      "variants": [
+        "LLaMA"
+      ]
+    },
+    {
+      "canonical": "GLM系列",
+      "variants": [
+        "GLM系列"
+      ]
+    },
+    {
+      "canonical": "InternVL",
+      "variants": [
+        "InternVL"
+      ]
+    },
+    {
+      "canonical": "Kubernetes",
+      "variants": [
+        "Kubernetes"
+      ]
+    },
+    {
+      "canonical": "ACT",
+      "variants": [
+        "ACT"
+      ]
+    },
+    {
+      "canonical": "OpenVLA",
+      "variants": [
+        "OpenVLA"
+      ]
+    },
+    {
+      "canonical": "pi0",
+      "variants": [
+        "pi0"
+      ]
+    },
+    {
+      "canonical": "RT2",
+      "variants": [
+        "RT2"
+      ]
+    },
+    {
+      "canonical": "指令微调",
+      "variants": [
+        "指令微调(SFT)",
+        "SFT"
+      ]
+    },
+    {
+      "canonical": "强化学习",
+      "variants": [
+        "强化学习(RLHF/DPO)"
+      ]
+    },
+    {
+      "canonical": "Transformer架构",
+      "variants": [
+        "Transformer架构"
+      ]
+    },
+    {
+      "canonical": "LLM原理",
+      "variants": [
+        "LLM原理"
+      ]
+    },
+    {
+      "canonical": "大规模数据处理",
+      "variants": [
+        "大规模数据处理"
+      ]
+    },
+    {
+      "canonical": "特征工程",
+      "variants": [
+        "特征工程",
+        "特征筛选"
+      ]
+    },
+    {
+      "canonical": "深度学习模型",
+      "variants": [
+        "深度学习模型",
+        "AI模型开发"
+      ]
+    },
+    {
+      "canonical": "模型优化",
+      "variants": [
+        "模型优化",
+        "模型优化流程",
+        "模型泛化能力"
+      ]
+    },
+    {
+      "canonical": "异常检测",
+      "variants": [
+        "异常检测",
+        "异常识别"
+      ]
+    },
+    {
+      "canonical": "论文撰写",
+      "variants": [
+        "论文撰写",
+        "专利撰写",
+        "技术文档撰写",
+        "设计方案撰写"
+      ]
+    },
+    {
+      "canonical": "数据分析",
+      "variants": [
+        "数据分析工具",
+        "统计分析实践"
+      ]
+    },
+    {
+      "canonical": "算法",
+      "variants": [
+        "算法",
+        "算法工程"
+      ]
+    },
+    {
+      "canonical": "计算机图形学算法",
+      "variants": [
+        "计算机图形学算法",
+        "几何变换",
+        "拓扑分析",
+        "自动对齐"
+      ]
+    },
+    {
+      "canonical": "时空序列预测",
+      "variants": [
+        "时空序列预测",
+        "轨迹预测",
+        "行为建模"
+      ]
+    },
+    {
+      "canonical": "概率论",
+      "variants": [
+        "概率论"
+      ]
+    },
+    {
+      "canonical": "优化理论",
+      "variants": [
+        "优化理论",
+        "运筹优化"
+      ]
+    },
+    {
+      "canonical": "分布式计算",
+      "variants": [
+        "分布式计算"
+      ]
+    },
+    {
+      "canonical": "跨团队协作",
+      "variants": [
+        "跨团队协作",
+        "组织协调与沟通能力",
+        "项目管理经验"
+      ]
+    },
+    {
+      "canonical": "学习能力",
+      "variants": [
+        "学习能力",
+        "创新意识"
+      ]
+    },
+    {
+      "canonical": "AI工具",
+      "variants": [
+        "AI工具",
+        "机器学习平台"
+      ]
+    },
+    {
+      "canonical": "数据驱动模型",
+      "variants": [
+        "数据驱动模型"
+      ]
+    },
+    {
+      "canonical": "因果推断",
+      "variants": [
+        "因果推断"
+      ]
+    },
+    {
+      "canonical": "统计建模",
+      "variants": [
+        "统计建模"
+      ]
+    },
+    {
+      "canonical": "问题抽象",
+      "variants": [
+        "问题抽象"
+      ]
+    },
+    {
+      "canonical": "科研产出",
+      "variants": [
+        "科研产出"
+      ]
+    },
+    {
+      "canonical": "生物数据AI建模",
+      "variants": [
+        "生物数据AI建模"
+      ]
+    },
+    {
+      "canonical": "基因组数据",
+      "variants": [
+        "基因组数据",
+        "宏基因组数据"
+      ]
+    },
+    {
+      "canonical": "耐药表型预测",
+      "variants": [
+        "耐药表型预测"
+      ]
+    },
+    {
+      "canonical": "物种识别",
+      "variants": [
+        "物种识别"
+      ]
+    },
+    {
+      "canonical": "Bad Case分析",
+      "variants": [
+        "Bad Case分析",
+        "数据问题挖掘",
+        "数据迭代方向指导"
+      ]
+    },
+    {
+      "canonical": "可解释性分析",
+      "variants": [
+        "可解释性分析",
+        "特征重要性矩阵"
+      ]
+    },
+    {
+      "canonical": "临床适用性",
+      "variants": [
+        "临床适用性"
+      ]
+    },
+    {
+      "canonical": "数据增强策略",
+      "variants": [
+        "数据增强策略"
+      ]
+    },
+    {
+      "canonical": "图像数据",
+      "variants": [
+        "图像数据",
+        "图像诊断闭环系统",
+        "GPU加速的图像处理流水线"
+      ]
+    },
+    {
+      "canonical": "设计版图数据",
+      "variants": [
+        "设计版图数据",
+        "超大规模版图数据"
+      ]
+    },
+    {
+      "canonical": "版图图形检查规则优化",
+      "variants": [
+        "版图图形检查规则优化",
+        "DRC规则库",
+        "AI增强的规则引擎"
+      ]
+    },
+    {
+      "canonical": "精确表征",
+      "variants": [
+        "精确表征"
+      ]
+    },
+    {
+      "canonical": "Web前后端技术",
+      "variants": [
+        "Web前后端技术"
+      ]
+    },
+    {
+      "canonical": "大数据系统技术",
+      "variants": [
+        "大数据系统技术"
+      ]
+    },
+    {
+      "canonical": "英语",
+      "variants": [
+        "英语",
+        "oral and written communication skills",
+        "中英文口语及书面沟通能力优秀",
+        "英语可作为工作语言"
+      ]
+    },
+    {
+      "canonical": "沟通协调",
+      "variants": [
+        "沟通协调",
+        "沟通交流能力",
+        "ability to build relationships and collaborate with others"
+      ]
+    },
+    {
+      "canonical": "团队协作",
+      "variants": [
+        "团队协作",
+        "团队管理"
+      ]
+    },
+    {
+      "canonical": "业务理解能力",
+      "variants": [
+        "业务理解能力",
+        "技术理解能力"
+      ]
+    },
+    {
+      "canonical": "市场拓展能力",
+      "variants": [
+        "市场拓展能力",
+        "市场开拓",
+        "客户开发",
+        "客户维护",
+        "关系维护"
+      ]
+    },
+    {
+      "canonical": "商务谈判",
+      "variants": [
+        "商务谈判",
+        "商务谈判能力和技巧",
+        "商业谈判"
+      ]
+    },
+    {
+      "canonical": "营销方案",
+      "variants": [
+        "营销方案",
+        "营销"
+      ]
+    },
+    {
+      "canonical": "项目招投标",
+      "variants": [
+        "项目招投标",
+        "项目分析"
+      ]
+    },
+    {
+      "canonical": "尽职调查",
+      "variants": [
+        "尽职调查",
+        "业务尽调"
+      ]
+    },
+    {
+      "canonical": "数字化转型",
+      "variants": [
+        "数字化转型",
+        "数字化",
+        "数字化咨询"
+      ]
+    },
+    {
+      "canonical": "AI技术",
+      "variants": [
+        "AI技术",
+        "应用人工智能",
+        "生成式人工智能",
+        "智能体人工智能"
+      ]
+    },
+    {
+      "canonical": "机器学习",
+      "variants": [
+        "主流机器学习框架",
+        "掌握网络安全、人工智能 / 机器学习、软件系统基础知识"
+      ]
+    },
+    {
+      "canonical": "网络安全",
+      "variants": [
+        "网络安全",
+        "熟悉国家网信办、工信部在网络安全、人工智能领域的法规合规要求，有相关实操经验"
+      ]
+    },
+    {
+      "canonical": "语音技术",
+      "variants": [
+        "语音技术",
+        "语音转文字",
+        "文字转语音"
+      ]
+    },
+    {
+      "canonical": "提示工程",
+      "variants": [
+        "提示工程",
+        "工作流设计",
+        "工作流自动化"
+      ]
+    },
+    {
+      "canonical": "快速学习",
+      "variants": [
+        "快速学习",
+        "自我学习能力",
+        "自主学习能力",
+        "主观能动性"
+      ]
+    },
+    {
+      "canonical": "逻辑思维能力",
+      "variants": [
+        "逻辑思维能力",
+        "系统性思维"
+      ]
+    },
+    {
+      "canonical": "行业调研能力",
+      "variants": [
+        "行业调研能力",
+        "research skills",
+        "research methodologies and techniques"
+      ]
+    },
+    {
+      "canonical": "执行力",
+      "variants": [
+        "执行力",
+        "结果导向"
+      ]
+    },
+    {
+      "canonical": "策划组织",
+      "variants": [
+        "策划组织",
+        "业务策划能力"
+      ]
+    },
+    {
+      "canonical": "咨询顾问",
+      "variants": [
+        "咨询顾问",
+        "咨询方法论"
+      ]
+    },
+    {
+      "canonical": "大数据",
+      "variants": [
+        "大数据"
+      ]
+    },
+    {
+      "canonical": "金融科技",
+      "variants": [
+        "金融科技"
+      ]
+    },
+    {
+      "canonical": "云计算平台",
+      "variants": [
+        "云计算平台"
+      ]
+    },
+    {
+      "canonical": "Claude Code",
+      "variants": [
+        "Claude Code"
+      ]
+    },
+    {
+      "canonical": "DIFY",
+      "variants": [
+        "DIFY"
+      ]
+    },
+    {
+      "canonical": "谷歌ADK",
+      "variants": [
+        "谷歌ADK"
+      ]
+    },
+    {
+      "canonical": "Claude Agent SDK",
+      "variants": [
+        "Claude Agent SDK"
+      ]
+    },
+    {
+      "canonical": "OAuth授权",
+      "variants": [
+        "OAuth授权"
+      ]
+    },
+    {
+      "canonical": "权限管理",
+      "variants": [
+        "权限管理",
+        "数据访问控制"
+      ]
+    },
+    {
+      "canonical": "微软365",
+      "variants": [
+        "微软365"
+      ]
+    },
+    {
+      "canonical": "谷歌Workspace",
+      "variants": [
+        "谷歌Workspace"
+      ]
+    },
+    {
+      "canonical": "视频生成",
+      "variants": [
+        "视频生成"
+      ]
+    },
+    {
+      "canonical": "企业级系统",
+      "variants": [
+        "企业级系统"
+      ]
+    },
+    {
+      "canonical": "技术评估",
+      "variants": [
+        "技术评估"
+      ]
+    },
+    {
+      "canonical": "方案设计",
+      "variants": [
+        "方案设计"
+      ]
+    },
+    {
+      "canonical": "行业及产品竞争力",
+      "variants": [
+        "行业及产品竞争力"
+      ]
+    },
+    {
+      "canonical": "价值创造",
+      "variants": [
+        "价值创造"
+      ]
+    },
+    {
+      "canonical": "亲和力",
+      "variants": [
+        "亲和力"
+      ]
+    },
+    {
+      "canonical": "文字表达能力",
+      "variants": [
+        "文字表达能力"
+      ]
+    },
+    {
+      "canonical": "改革创新意识",
+      "variants": [
+        "改革创新意识"
+      ]
+    },
+    {
+      "canonical": "电网调度",
+      "variants": [
+        "电网调度"
+      ]
+    },
+    {
+      "canonical": "设备",
+      "variants": [
+        "设备"
+      ]
+    },
+    {
+      "canonical": "AI项目规划与落地",
+      "variants": [
+        "AI项目规划与落地"
+      ]
+    },
+    {
+      "canonical": "AI技术体系和发展趋势",
+      "variants": [
+        "AI技术体系和发展趋势"
+      ]
+    },
+    {
+      "canonical": "协同智能",
+      "variants": [
+        "协同智能"
+      ]
+    },
+    {
+      "canonical": "视觉-语言-导航大模型",
+      "variants": [
+        "视觉-语言-导航大模型"
+      ]
+    },
+    {
+      "canonical": "Analytical ability",
+      "variants": [
+        "Analytical ability"
+      ]
+    },
+    {
+      "canonical": "specialist skills approaches and techniques",
+      "variants": [
+        "specialist skills approaches and techniques"
+      ]
+    }
+  ],
+  "DEGREE": [
+    {
+      "canonical": "硕士",
+      "variants": [
+        "硕士",
+        "硕士及以上学历",
+        "硕士及以上",
+        "硕士以上学历",
+        "硕士生",
+        "硕士研究生及以上学历",
+        "硕士研究生及以上",
+        "研究生",
+        "Master",
+        "Master's degree",
+        "Master’s Degree"
+      ]
+    },
+    {
+      "canonical": "博士",
+      "variants": [
+        "博士",
+        "博士生",
+        "PhD"
+      ]
+    },
+    {
+      "canonical": "本科",
+      "variants": [
+        "本科及以上学历",
+        "本科",
+        "学士",
+        "Bachelor",
+        "Bachelor’s/Master’s degree"
+      ]
+    },
+    {
+      "canonical": "学历不限",
+      "variants": [
+        "学历不限"
+      ]
+    },
+    {
+      "canonical": "统招",
+      "variants": [
+        "统招"
+      ]
+    },
+    {
+      "canonical": "全日制研究生以上学历",
+      "variants": [
+        "全日制研究生以上学历"
+      ]
+    },
+    {
+      "canonical": "计算机科学及相关专业",
+      "variants": [
+        "计算机科学及相关专业"
+      ]
+    },
+    {
+      "canonical": "学历",
+      "variants": [
+        "学历"
+      ]
+    },
+    {
+      "canonical": "Degree",
+      "variants": [
+        "Degree"
+      ]
+    }
+  ],
+  "MAJOR": [
+    {
+      "canonical": "计算机科学",
+      "variants": [
+        "计算机",
+        "计算机科学",
+        "计算机科学与技术",
+        "Computer Science",
+        "CS",
+        "计算机类"
+      ]
+    },
+    {
+      "canonical": "人工智能",
+      "variants": [
+        "人工智能",
+        "AI",
+        "Artificial Intelligence",
+        "人工智能方向"
+      ]
+    },
+    {
+      "canonical": "数学",
+      "variants": [
+        "数学",
+        "应用数学",
+        "mathematics",
+        "Math",
+        "统计数学"
+      ]
+    },
+    {
+      "canonical": "自动化",
+      "variants": [
+        "自动化",
+        "控制"
+      ]
+    },
+    {
+      "canonical": "电子工程",
+      "variants": [
+        "电子工程",
+        "电子",
+        "electrical engineering",
+        "EE",
+        "Electrical/Electronics Engineering"
+      ]
+    },
+    {
+      "canonical": "统计学",
+      "variants": [
+        "统计学",
+        "统计"
+      ]
+    },
+    {
+      "canonical": "通信工程",
+      "variants": [
+        "通信",
+        "通信工程",
+        "通信与电子工程"
+      ]
+    },
+    {
+      "canonical": "微电子",
+      "variants": [
+        "微电子"
+      ]
+    },
+    {
+      "canonical": "软件工程",
+      "variants": [
+        "软件工程",
+        "Software Engineering",
+        "软件"
+      ]
+    },
+    {
+      "canonical": "机器人",
+      "variants": [
+        "机器人",
+        "robotics"
+      ]
+    },
+    {
+      "canonical": "数据科学",
+      "variants": [
+        "数据科学"
+      ]
+    },
+    {
+      "canonical": "图像处理",
+      "variants": [
+        "图像处理",
+        "Image Processing",
+        "图像识别"
+      ]
+    },
+    {
+      "canonical": "电子信息工程",
+      "variants": [
+        "电子信息工程",
+        "电子信息类"
+      ]
+    },
+    {
+      "canonical": "声学",
+      "variants": [
+        "声学"
+      ]
+    },
+    {
+      "canonical": "数字信号处理",
+      "variants": [
+        "数字信号处理",
+        "DSP",
+        "信号处理",
+        "信号与信息处理"
+      ]
+    },
+    {
+      "canonical": "物理",
+      "variants": [
+        "物理"
+      ]
+    },
+    {
+      "canonical": "机械工程",
+      "variants": [
+        "机械工程",
+        "机械电子"
+      ]
+    },
+    {
+      "canonical": "vehicle engineering",
+      "variants": [
+        "vehicle engineering"
+      ]
+    },
+    {
+      "canonical": "生物信息学",
+      "variants": [
+        "生物信息",
+        "生物信息学",
+        "Bioinformatics",
+        "计算生物学",
+        "Computational Biology"
+      ]
+    },
+    {
+      "canonical": "计算机视觉",
+      "variants": [
+        "计算机视觉"
+      ]
+    },
+    {
+      "canonical": "光学工程",
+      "variants": [
+        "Optical Engineering"
+      ]
+    },
+    {
+      "canonical": "力学",
+      "variants": [
+        "力学"
+      ]
+    },
+    {
+      "canonical": "生物医药",
+      "variants": [
+        "生物医药",
+        "Biotech",
+        "Pharma"
+      ]
+    },
+    {
+      "canonical": "交通工程",
+      "variants": [
+        "交通工程"
+      ]
+    },
+    {
+      "canonical": "电力系统自动化",
+      "variants": [
+        "电力系统自动化"
+      ]
+    },
+    {
+      "canonical": "机器学习",
+      "variants": [
+        "机器学习"
+      ]
+    },
+    {
+      "canonical": "油气相关领域",
+      "variants": [
+        "油气相关领域"
+      ]
+    },
+    {
+      "canonical": "新能源",
+      "variants": [
+        "新能源"
+      ]
+    },
+    {
+      "canonical": "无人机智能巡检",
+      "variants": [
+        "无人机智能巡检",
+        "无人机智能运维",
+        "无人机智慧巡检"
+      ]
+    },
+    {
+      "canonical": "运维解决方案",
+      "variants": [
+        "运维解决方案",
+        "智能运维",
+        "自动化清洁"
+      ]
+    },
+    {
+      "canonical": "工程",
+      "variants": [
+        "工程"
+      ]
+    },
+    {
+      "canonical": "IT",
+      "variants": [
+        "IT"
+      ]
+    },
+    {
+      "canonical": "理工科",
+      "variants": [
+        "理工科"
+      ]
+    },
+    {
+      "canonical": "电子通信",
+      "variants": [
+        "电子通信"
+      ]
+    }
+  ],
+  "RESPONSIBILITY": [
+    {
+      "canonical": "WiFi通信算法开发",
+      "variants": [
+        "负责WiFi 通信算法需求，选型，实现，仿真，优化，及性能验证",
+        "负责WiFi 芯片通信整体性能规划，对模拟，射频和ASIC提出相关设计指标要求",
+        "带领算法团队，和其他团队密切合作，确保达到WiFi 芯片的各项性能指标",
+        "评估算法实现可行性，配合ASIC工程师完成算法RTL设计和验证",
+        "协助系统和软件团队完成WiFi性能测试，持续对算法进行修改和优化"
+      ]
+    },
+    {
+      "canonical": "自动驾驶规划控制算法开发",
+      "variants": [
+        "Method and algorithm development, integration and validation with strong focus on trajectory planning and vehicle control for both highway and urban driving",
+        "Development on vehicle control algorithm from planned trajectory to chassis control interface for series product",
+        "Build up data-driven based development framework to iteratively improve planning & control system",
+        "Cooperation with relevant internal and external algorithm experts mainly in China and Germany for automated driving and driver assistance systems",
+        "Working with the onsite project team and counter-teams in Germany and the supplier requirements for autonomous driving systems"
+      ]
+    },
+    {
+      "canonical": "智驾感知算法开发",
+      "variants": [
+        "负责开发多传感器融合的智驾感知系统",
+        "负责智驾感知算法问题分析、解决"
+      ]
+    },
+    {
+      "canonical": "智驾数据闭环建设",
+      "variants": [
+        "负责智驾数据闭环的建设"
+      ]
+    },
+    {
+      "canonical": "AOI/X-Ray光学检测算法开发",
+      "variants": [
+        "负责AOI/X-Ray光学检测设备的算法开发与优化",
+        "使用OpenCV、Halcon等视觉算法库进行图像处理算法开发，提升检测精度和效率",
+        "与机械、光学、软件及硬件团队协作，提供技术支持并推动算法产品化",
+        "跟踪行业内最新的视觉技术发展动态，引入新算法提升产品竞争力"
+      ]
+    },
+    {
+      "canonical": "音频算法开发",
+      "variants": [
+        "音频算法设计与开发",
+        "算法嵌入式落地与调试",
+        "需求对接与方案输出",
+        "算法优化与问题攻坚",
+        "软硬件协同与技术支持",
+        "技术沉淀与文档规范"
+      ]
+    },
+    {
+      "canonical": "核心算法设计与优化",
+      "variants": [
+        "负责核心算法的设计、实现与优化",
+        "基于业务/产品需求，完成模型选型、算法设计、训练与评估，并持续优化效果",
+        "能独立完成模型调参与实验分析，对结果有清晰的判断与总结能力",
+        "将算法方案工程化落地，参与模型的部署、推理优化与系统集成",
+        "跟踪 AI 领域前沿技术，结合实际业务场景进行技术创新与落地",
+        "与产品、工程等团队协作，推动算法在真实场景中的稳定应用"
+      ]
+    },
+    {
+      "canonical": "3D打印几何算法开发",
+      "variants": [
+        "负责3D打印前处理软件中二维几何图形（如轮廓、填充路径、支撑结构等）的建模、分析与优化算法的设计与实现",
+        "开发高精度、高效率的二维布尔运算、偏移（offsetting）、轮廓简化、多边形裁剪、路径生成等核心几何算法",
+        "与切片引擎、运动控制及用户界面团队紧密协作，确保几何算法在实际打印流程中的稳定性与性能",
+        "对复杂模型（如STL、SVG、DXF等格式）进行二维投影、剖面提取与拓扑修复",
+        "持续优化算法在内存占用、计算速度和数值鲁棒性方面的表现，适配嵌入式或桌面端部署需求",
+        "编写高质量、可维护、可测试的C++/Python代码，并撰写相关技术文档",
+        "跟踪计算机图形学、计算几何领域的前沿进展，评估并引入适合工业场景的新方法"
+      ]
+    },
+    {
+      "canonical": "客户技术支持",
+      "variants": [
+        "Promote Calterah products and system-level solutions to customers based on their requirements",
+        "Support top customers in Calterah products evaluation & design-in activities",
+        "Reproduce and verify reported issues from customers, including on-site support in identification and debugging software issues",
+        "Track key project status and coordinate resources to drive projects forward through mass production",
+        "Gather customers’ feedback on Calterah products and information of industry technical trends for product optimization",
+        "Build and maintain relationships with key decision makers on the technical side at our customers"
+      ]
+    },
+    {
+      "canonical": "挖掘机智能辅助系统规划控制算法开发",
+      "variants": [
+        "负责挖掘机智能辅助系统的规划控制（P&C）算法整体方案设计",
+        "覆盖路径规划、轨迹优化、运动控制、稳定性控制等核心环节",
+        "推进基于模型与数据的控制方法（MPC / RL / Adaptive Control 等）的创新与落地",
+        "主导算法从原型到量产的全流程落地",
+        "建立算法的测试评估体系",
+        "组建并管理算法团队",
+        "深入参与核心算法攻坚",
+        "与软件、硬件、系统工程师和PO紧密协作",
+        "跟踪竞品技术路线"
+      ]
+    },
+    {
+      "canonical": "三维重建算法开发",
+      "variants": [
+        "关于结构光三维重建的算法开发工作",
+        "包括图像处理、相机标定、三维重建等算法的开发和性能评估",
+        "关于三维数据处理的算法开发工作",
+        "包括对点云处理、数据拼接、数据融合、三维网格生成、三维模型纹理和颜色处理等",
+        "关于深度学习的算法开发工作",
+        "包括数据清理、模型训练和模型部署等",
+        "关于高性能分布式计算的开发工作",
+        "其他的算法开发和评估工作"
+      ]
+    },
+    {
+      "canonical": "智能订购算法开发",
+      "variants": [
+        "负责设计、开发和迭代智能订购算法模型，实现对门店商品（尤其鲜食、面包、饮料等短保商品）的精准需求预测，支撑“智能订购”业务场景，优化库存周转与缺货率",
+        "深入分析商品生命周期、销量趋势、门店特性等多维度特征，构建基于时间序列与机器学习的销量预测模型（如FF销量预测模型）",
+        "建立并持续优化订购推荐规则与倍数计算逻辑，依据商品等级（A/B/C）、毛利率、保质期等因素，动态生成科学订购建议，供门店决策",
+        "构建面向线下门店与线上平台的个性化推荐系统，提升商品连带率与客单价",
+        "基于购物篮分析（如Apriori、FP-Growth）挖掘商品关联规则，计算支持度、置信度与提升度（Lift），识别“引流品”与“利润品”搭配",
+        "设计并实现协同过滤、内容特征或混合模型的推荐算法，提供个性化商品推荐",
+        "将算法模型工程化，集成至业务中台或核心系统，保障高并发、低延迟的服务调用能力",
+        "建立算法效果评估体系，通过A/B测试、离线评估等方式持续监控与优化模型指标（预测准确率、推荐点击率、转化率等）",
+        "负责算法模型的迭代与维护，根据业务反馈与数据变化持续调优模型参数与策略",
+        "与产品、运营、供应链等团队紧密协作，将算法能力转化为可落地的业务解决方案",
+        "构建“人—货—场”指标体系，通过数据看板提供实时业务洞察，支持MM会议等决策场景",
+        "推动数据创新，探索算法在智能选址、用户画像、定价与促销优化等场景中的应用"
+      ]
+    },
+    {
+      "canonical": "雷达算法开发",
+      "variants": [
+        "负责雷达系统算法仿真设计",
+        "负责雷达目标聚类、跟踪、目标识别以及ADAS功能开发算法研发设计",
+        "负责毫米波雷达测距、测速和测角等功能算法",
+        "负责实测、实验数据的处理",
+        "设计应用场景和相关测试用例，并针对各种应用场景对算法和软件进行测试",
+        "撰写相应的设计文档，负责算法知识产权工作"
+      ]
+    },
+    {
+      "canonical": "工业检测系统算法开发",
+      "variants": [
+        "Design and develop next-generation industry inspection system.",
+        "Algorithm design including 2D/3D image reconstruction, imaging system calibration, image post processing.",
+        "Image chain design and modeling.",
+        "Image quality assessment, algorithm parameters tunning for best image quality",
+        "Co-work with cross function engineer to design and implement cross function features.",
+        "设计和开发下一代工业检测设备。",
+        "负责2D/3D图像重建算法设计，成像系统校正算法，图像后处理算法设计。",
+        "负责影像链部件选型设计，成像模型设计。",
+        "负责图像质量评估，算法参数调整。",
+        "与其他部门工程师进行协同工作，完成系统和子系统的设计与实现。"
+      ]
+    },
+    {
+      "canonical": "半导体量检测算法开发",
+      "variants": [
+        "与新型显示和半导体量检测设备的产品团队协作，深度参与设备的光学量测、缺陷检测与识别、亚微米级引导对位等相关的算法开发、难点攻关和调试交付工作",
+        "深度参与量检测设备与线体相关的算法研发工作， 包括缺陷数据生成、多模态大模型、小样本学习、超大分辨率图像的复杂背景极小目标检测等",
+        "输出开发技术文档和专利，参与产品线AI相关产品和技术的发展路线制定"
+      ]
+    },
+    {
+      "canonical": "光学算法优化与迭代",
+      "variants": [
+        "Continuously optimize algorithms based on product characteristics and complete iterative upgrades",
+        "Track cutting-edge algorithm theories, develop high-value optical algorithms, and enhance the company’s core competitiveness through technological innovation",
+        "Assist in training team members",
+        "Research new alignment and coupling algorithms for various optical components",
+        "Provide on-site support for troubleshooting algorithm anomalies",
+        "Collaborate with mechanical/optical/electrical engineers and other team members to deploy automation",
+        "Draft automation technical reports or white papers as required"
+      ]
+    },
+    {
+      "canonical": "推荐系统算法开发",
+      "variants": [
+        "设计并实现推荐全链路算法模型",
+        "包括召回粗排、精排、重排及端智能等模块"
+      ]
+    },
+    {
+      "canonical": "与生信、实验组协作",
+      "variants": [
+        "与生信、实验组协作，推动模型临床验证与性能评估"
+      ]
+    },
+    {
+      "canonical": "算法设计与开发",
+      "variants": [
+        "算法设计与开发",
+        "负责核心算法的方案设计、理论推导与数学建模",
+        "负责计算机图像视觉核心算法的研发与实现",
+        "开展激光雷达信号处理核心模块的算法研发与性能优化工作",
+        "负责开发和优化图像处理算法",
+        "负责语音增强、降噪、回声消除、声源定位、波束成形、声学围栏、距离检测等算法研发与优化",
+        "负责大语言模型 / 多模态模型的预训练、微调、对齐、RAG、Agent等全链路研发",
+        "负责开发、优化和部署机器学习和深度学习算法",
+        "设计/实现机器学习（ML）、深度学习（DL）及大模型（LLM）算法，解决业务场景问题",
+        "负责基于宏基因组与耐药数据库的AI模型开发，包括物种识别、耐药表型预测、特征筛选",
+        "负责基于宏基因组与耐药数据库的AI模型开发",
+        "开展多模态交通参与者（机动车、两轮车、行人等）行为意图与长时域轨迹预测核心算法研发与性能优化"
+      ]
+    },
+    {
+      "canonical": "模型训练与优化",
+      "variants": [
+        "模型训练与优化",
+        "主导模型训练、调参、评估及部署全流程（如分类、预测、NLP任务）",
+        "参与模型架构优化、分布式训练、推理加速、量化蒸馏、稀疏化等性能提升工作",
+        "设计并实现机器学习与深度学习模型（LightGBM、XGBoost、CNN、Transformer 等）",
+        "设计并实现机器学习与深度学习模型",
+        "研发基于激光雷达三维点云的目标检测、识别与分割等关键算法，并推动相关技术难点攻关",
+        "结合自动驾驶场景的激光雷达感知需求，完成深度神经网络模型的设计、训练与验证",
+        "基于深度学习模型处理多帧图像超分辨率、画质增强、去模糊、去噪声等工作",
+        "基于深度学习模型处理单帧图像基于真实世界的盲超工作、画质增强、质量修复",
+        "构建预测/生成模型",
+        "模型微调"
+      ]
+    },
+    {
+      "canonical": "数据处理与挖掘",
+      "variants": [
+        "数据处理与挖掘",
+        "数据处理与分析",
+        "数据预处理",
+        "独立进行大规模数据处理和分析，提取有价值的信息，并开发预测模型",
+        "构建高效数据管道，处理多源异构数据（文本/图像/时序数据）",
+        "开发特征工程方案，提升模型泛化能力",
+        "优化特征工程与数据增强策略，提升模型泛化能力与临床适用性",
+        "优化特征工程与数据增强策略",
+        "参与图像数据的采集、清洗、标注和数据增强策略的设计，构建高质量的训练数据集",
+        "负责传感器数据采集、处理、标注及相关工具链开发，将触觉传感器与机器人应用相结合并可落地",
+        "负责算法指标定义、数据集构建、客观评测与主观听评体系建设",
+        "参与激光雷达点云数据集的标注流程，为模型训练提供高质量数据支持"
+      ]
+    },
+    {
+      "canonical": "模型评估与测试",
+      "variants": [
+        "模型评估与测试",
+        "进行性能仿真、评估与优化迭代",
+        "量化算法在不同场景下的表现",
+        "分析算法在真实场景下的Bad Case，挖掘数据问题，并指导数据迭代方向",
+        "负责对传感器产品算法及软件进行测试，调试，性能分析及故障排查，确保产品实际运行效果符合预期",
+        "负责算法指标定义、客观评测与主观听评体系建设",
+        "设计实验、复现前沿论文、推动 SOTA 技术落地产品"
+      ]
+    },
+    {
+      "canonical": "工程落地与部署",
+      "variants": [
+        "工程落地",
+        "将算法封装为API服务，对接前后端系统（TensorFlow/PyTorch + Flask/Django）",
+        "将算法模型工程化，与工程团队协作，推动算法在产品中的落地应用",
+        "负责模型的部署、上线和监控，解决实际部署中遇到的问题，保障线上服务的稳定性和高效性",
+        "设计并部署企业级 AI 应用",
+        "负责音频算法原型设计、仿真验证、工程化移植（ARM/Linux）、性能与功耗优化",
+        "与产品 / 工程团队协作，完成模型从训练到上线的完整闭环",
+        "与团队合作，将算法和模型集成到公司的产品和服务中，持续优化和改进"
+      ]
+    },
+    {
+      "canonical": "跨部门协作",
+      "variants": [
+        "跨部门协作",
+        "与产品/运营/数据等相关团队密切合作",
+        "与内部科学家及业务专家协作定义问题并迭代产品",
+        "与结构设计、硬件工程师协作，参与视触觉传感器的设计与优化，从源头把控产品质量",
+        "与前端设计工程师紧密协作",
+        "与产品、开发、测试等团队紧密沟通，共同推进项目进展",
+        "参与整个开发周期，从需求分析到算法实现和测试"
+      ]
+    },
+    {
+      "canonical": "文档编写",
+      "variants": [
+        "文档编写",
+        "编写清晰的算法设计文档和硬件实现指南",
+        "输出算法设计文档、接口说明、测试报告与专利 / 技术沉淀",
+        "撰写清晰的技术文档、设计方案",
+        "输出可解释性分析报告（SHAP、LIME、特征重要性矩阵）并支撑论文与专利撰写",
+        "输出可解释性分析报告并支撑论文与专利撰写"
+      ]
+    },
+    {
+      "canonical": "前沿技术探索",
+      "variants": [
+        "前沿技术探索",
+        "跟踪AI领域最新进展（如多模态、强化学习、Agent技术），推进技术迭代",
+        "持续学习和探索新的算法和技术，保持对行业的了解",
+        "跟踪前沿音频 / 语音 AI 技术，完成技术预研与产品化落地",
+        "时刻跟踪触觉感知、计算机视觉及机器人领域前沿技术，探索强化学习、VLA模型等多模态感知应用，保持技术领先性",
+        "探索与 AI 科技公司或学术机构的外部合作"
+      ]
+    },
+    {
+      "canonical": "性能优化",
+      "variants": [
+        "性能优化",
+        "量化提升工作效率",
+        "简化工作流",
+        "在PPA之间取得平衡",
+        "进行算法硬件架构设计",
+        "探索不同架构与实现方案"
+      ]
+    },
+    {
+      "canonical": "推荐算法研发",
+      "variants": [
+        "负责推荐核心算法研发",
+        "驱动推荐业务快速迭代",
+        "持续迭代提升业务效果"
+      ]
+    },
+    {
+      "canonical": "提升用户体验",
+      "variants": [
+        "提升用户体验",
+        "提高业务转化效率"
+      ]
+    },
+    {
+      "canonical": "音频信号处理",
+      "variants": [
+        "音频信号处理相关工作",
+        "音频系统开发",
+        "语音智能开发"
+      ]
+    },
+    {
+      "canonical": "视触觉传感器算法",
+      "variants": [
+        "负责视触觉传感器产品相关的算法研发",
+        "负责开发高效易用的传感器信号处理算法、优化产品接口及SDK"
+      ]
+    },
+    {
+      "canonical": "构建垂类领域模型",
+      "variants": [
+        "构建垂类领域模型",
+        "解决专项业务需求",
+        "增强核心业务能力"
+      ]
+    },
+    {
+      "canonical": "开发Agent",
+      "variants": [
+        "开发具备规划与自主执行能力的 Agent",
+        "融合激光雷达、摄像头、毫米波雷达及高精地图语义，研发基于时空 Transformer、GNN、Diffusion Model 等前沿架构的交互式预测模型，持续提升复杂城口场景预测准确率"
+      ]
+    },
+    {
+      "canonical": "芯片系统定义",
+      "variants": [
+        "参与芯片系统定义",
+        "结合芯片实现进行可行性分析",
+        "支持RTL实现"
+      ]
+    },
+    {
+      "canonical": "仿真建模",
+      "variants": [
+        "使用 MATLAB、Python 或 C/C++ 搭建算法仿真平台",
+        "进行复杂算法的建模",
+        "进行仿真与数据分析",
+        "根据局部设计的功能和特性开发高精度、可配置的仿真模型",
+        "提升后续验证工作的精度和效率",
+        "负责激光雷达系统建模与仿真，开展链路分析、信噪比评估及功能参数量化研究，为各模块指标设定提供依据",
+        "熟悉相干探测系统的信号处理流程，具备根据系统架构搭建仿真模型的能力"
+      ]
+    },
+    {
+      "canonical": "推动AI技术落地",
+      "variants": [
+        "推动 AI 技术的落地应用",
+        "探索与 AI 科技公司或学术机构的外部合作"
+      ]
+    },
+    {
+      "canonical": "构建数据闭环",
+      "variants": [
+        "构建数据闭环：设计自动标注与难例挖掘流程，搭建千万级交互场景数据集，支持模型周级迭代"
+      ]
+    },
+    {
+      "canonical": "预测不确定性建模与风险评估",
+      "variants": [
+        "负责预测不确定性建模与风险评估，输出预测置信度、碰撞概率及可行驶区域，为下游决策规划提供安全约束"
+      ]
+    },
+    {
+      "canonical": "预测-规划一体化联合优化",
+      "variants": [
+        "参与预测-规划一体化联合优化，将预测结果直接嵌入 MPC/强化学习代价函数，实现“预测即决策”的端到端验证"
+      ]
+    },
+    {
+      "canonical": "跟踪前沿技术",
+      "variants": [
+        "跟踪 CV/ML/Robotics 会议最新成果，快速完成原型验证并推动量产落地"
+      ]
+    },
+    {
+      "canonical": "半导体图像异常识别",
+      "variants": [
+        "基于半导体SEM/TEM等图像数据，与设计版图数据，实现图像中的异常识别，精确表征，版图图形检查规则优化"
+      ]
+    },
+    {
+      "canonical": "开发数据驱动模型分析版图差异",
+      "variants": [
+        "开发数据驱动模型和算法，分析半导体版图设计与实际晶圆图像的差异，识别光刻畸变、缺陷热点等制造风险"
+      ]
+    },
+    {
+      "canonical": "构建计算机图形学算法",
+      "variants": [
+        "构建计算机图形学算法（如几何变换、拓扑分析、特征提取），实现版图与SEM/TEM图像的自动对齐，精确表征，异常检测等"
+      ]
+    },
+    {
+      "canonical": "设计AI增强规则引擎",
+      "variants": [
+        "设计AI增强的规则引擎，结合机器学习优化DRC规则库，提升对图形边缘失真、层间偏移等复杂问题的预测准确性"
+      ]
+    },
+    {
+      "canonical": "建立图像诊断闭环系统",
+      "variants": [
+        "建立图像诊断闭环系统，将识别结果反馈至工艺设计，驱动版图优化与制程改进"
+      ]
+    },
+    {
+      "canonical": "开发GPU加速图像处理流水线",
+      "variants": [
+        "开发GPU加速的图像处理流水线，处理超大规模版图数据（TB级）"
+      ]
+    },
+    {
+      "canonical": "游戏场景建模",
+      "variants": [
+        "负责游戏场景下的用户分层、商品推荐、生命周期预测、流失预警与价值评估等建模任务"
+      ]
+    },
+    {
+      "canonical": "研发优化匹配机制与策略",
+      "variants": [
+        "研发并优化匹配机制、平衡性算法及动态定价策略，提升游戏体验与变现效率"
+      ]
+    },
+    {
+      "canonical": "构建可复用算法框架与服务部署",
+      "variants": [
+        "构建可复用的算法框架与服务部署，支持多游戏项目的规模化应用"
+      ]
+    },
+    {
+      "canonical": "探索前沿AI应用",
+      "variants": [
+        "探索LLM，机器学习，因果推断等在游戏实验与智能运营中的前沿应用"
+      ]
+    },
+    {
+      "canonical": "运营管理联合创新中心",
+      "variants": [
+        "负责人工智能应用联合创新中心的日常运营与管理"
+      ]
+    },
+    {
+      "canonical": "协调资源对接与项目推进",
+      "variants": [
+        "协调各合作单位的资源对接与项目推进"
+      ]
+    },
+    {
+      "canonical": "组织策划技术交流活动",
+      "variants": [
+        "组织策划技术交流、项目对接、成果展示等各类活动"
+      ]
+    },
+    {
+      "canonical": "统筹建立AI工具包与技术能力清单",
+      "variants": [
+        "统筹建立“AI工具包”与“技术能力清单”"
+      ]
+    },
+    {
+      "canonical": "系统梳理AI技术与产品",
+      "variants": [
+        "系统梳理合作企业的AI技术与产品"
+      ]
+    },
+    {
+      "canonical": "推动AI在内部管理中的应用",
+      "variants": [
+        "推动AI技术在研究院内部管理中的应用落地"
+      ]
+    },
+    {
+      "canonical": "挖掘制造业智能化需求",
+      "variants": [
+        "联合技术经理人团队，深入挖掘东莞本地制造业企业的智能化转型需求"
+      ]
+    },
+    {
+      "canonical": "推动AI与场景精准匹配",
+      "variants": [
+        "推动AI技术与应用场景的精准匹配"
+      ]
+    },
+    {
+      "canonical": "促成项目合作与成果转化",
+      "variants": [
+        "促成项目合作与成果转化"
+      ]
+    },
+    {
+      "canonical": "设计和构建大模型AI应用系统",
+      "variants": [
+        "设计和构建基于大模型的AI应用系统"
+      ]
+    },
+    {
+      "canonical": "运用指令微调与强化学习优化模型",
+      "variants": [
+        "运用指令微调(SFT)、强化学习(RLHF/DPO)等技术优化模型在特定场景的表现"
+      ]
+    },
+    {
+      "canonical": "构建完整AI应用架构",
+      "variants": [
+        "构建完整的AI应用架构"
+      ]
+    },
+    {
+      "canonical": "参与大模型基座研发与优化",
+      "variants": [
+        "参与大模型基座研发与优化"
+      ]
+    },
+    {
+      "canonical": "构建多模态基座大模型",
+      "variants": [
+        "构建面向具身，特别是低空领域的多模态基座大模型"
+      ]
+    },
+    {
+      "canonical": "设计和实现智能Agent系统",
+      "variants": [
+        "设计和实现智能Agent系统"
+      ]
+    },
+    {
+      "canonical": "构建多Agent协同框架",
+      "variants": [
+        "构建多Agent协同框架"
+      ]
+    },
+    {
+      "canonical": "探索Agent在复杂业务中的应用",
+      "variants": [
+        "探索Agent在复杂业务场景中的应用模式"
+      ]
+    },
+    {
+      "canonical": "深入理解业务需求结合AI",
+      "variants": [
+        "深入理解业务需求，将AI技术与实际场景深度结合"
+      ]
+    },
+    {
+      "canonical": "优化AI应用效果与效率",
+      "variants": [
+        "优化AI应用在多轮对话、知识问答、决策支持等场景的效果和效率"
+      ]
+    },
+    {
+      "canonical": "与团队协作推动AI落地",
+      "variants": [
+        "与产品和工程团队协作，推动AI应用从原型到生产的完整落地"
+      ]
+    },
+    {
+      "canonical": "conduct research using appropriate methodologies",
+      "variants": [
+        "conduct work using approaches or methodologies and techniques appropriate to the type of research"
+      ]
+    },
+    {
+      "canonical": "writing up work for publication",
+      "variants": [
+        "writing up their work for publication"
+      ]
+    },
+    {
+      "canonical": "develop research methods and extend portfolio",
+      "variants": [
+        "develop research methods and extend their research portfolio"
+      ]
+    },
+    {
+      "canonical": "undertake supervised research",
+      "variants": [
+        "undertake supervised research which may include planning, preparing, setting up, conducting and recording the outcome of experiments and fieldwork, developing questionnaires and conducting surveys within the framework of an agreed programme"
+      ]
+    },
+    {
+      "canonical": "conduct literature and database searches",
+      "variants": [
+        "Conduct literature and database searches and carry out analyses and/or tests and/or critical evaluations using specified and agreed techniques, approaches and/or models and document findings"
+      ]
+    },
+    {
+      "canonical": "contribute to research reports and publications",
+      "variants": [
+        "Contribute to the production of research reports and publications"
+      ]
+    },
+    {
+      "canonical": "prepare and present papers",
+      "variants": [
+        "Prepare and present papers on research progress and outcomes to relevant groups including external bodies"
+      ]
+    },
+    {
+      "canonical": "develop skills in research methods",
+      "variants": [
+        "continue to develop skills in and knowledge of research methods and techniques and contribute to the development of/or choice of techniques, models, methods, critiques and approaches"
+      ]
+    },
+    {
+      "canonical": "communicate information and ideas",
+      "variants": [
+        "Communicate information and ideas to other staff and advise and assist other staff within area of expertise"
+      ]
+    },
+    {
+      "canonical": "build relationships for collaboration",
+      "variants": [
+        "Build relationships with internal and external contacts to develop knowledge and understanding and form relationships for future collaborations"
+      ]
+    },
+    {
+      "canonical": "work in research team to achieve objectives",
+      "variants": [
+        "Work in conjunction with others in the research team, achieve objectives and deadlines of the research project"
+      ]
+    },
+    {
+      "canonical": "participate in training and development",
+      "variants": [
+        "Participate in training and staff development events, as trainer or trainee, as appropriate"
+      ]
+    },
+    {
+      "canonical": "maintain professional development",
+      "variants": [
+        "Maintain appropriate professional development, expertise and awareness"
+      ]
+    },
+    {
+      "canonical": "undertake other tasks as required",
+      "variants": [
+        "Undertake other tasks and responsibilities as may reasonably be required"
+      ]
+    },
+    {
+      "canonical": "开展人工智能政策产业前沿研究",
+      "variants": [
+        "负责开展人工智能政策、产业的前沿研究工作，定期提供专项研究报告，为集团人工智能发展提供决策支撑"
+      ]
+    },
+    {
+      "canonical": "参与人工智能平台建设与战略研究",
+      "variants": [
+        "参与人工智能平台建设，承担平台发展战略研究等工作"
+      ]
+    },
+    {
+      "canonical": "负责人工智能平台运营模式研究",
+      "variants": [
+        "负责人工智能平台运营模式研究，包括商业模式设计、产品模式设计以及生态圈构建等内容"
+      ]
+    },
+    {
+      "canonical": "提供人工智能专业咨询策划",
+      "variants": [
+        "负责提供人工智能方面的专业咨询策划方案，并对AI应用场景提出建设性意见"
+      ]
+    },
+    {
+      "canonical": "快速理解电力业务并挖掘需求",
+      "variants": [
+        "对电力业务具备较强的学习能力，能快速理解电网特定专业领域，掌握电力行业前沿趋势，深入挖掘并引导用户需求"
+      ]
+    },
+    {
+      "canonical": "对接客户需求并参与技术沟通",
+      "variants": [
+        "能负责行业客户需求的对接并参与和技术团队的深度沟通，为客户提供咨询策划方案并顺利落地负责，能够独立撰写相关规划、调研报告、分析报告等文件"
+      ]
+    },
+    {
+      "canonical": "讲解咨询设计方案并向客户汇报",
+      "variants": [
+        "具有较强的沟通表达能力，能够讲解咨询设计方案，向客户进行工作汇报"
+      ]
+    },
+    {
+      "canonical": "适应不定期出差",
+      "variants": [
+        "能够适应不定期出差"
+      ]
+    },
+    {
+      "canonical": "编制人工智能总体规划及年度要点",
+      "variants": [
+        "负责围绕公司战略编制人工智能总体规划及年度工作要点"
+      ]
+    },
+    {
+      "canonical": "制定人工智能管理体系和架构",
+      "variants": [
+        "负责制定人工智能管理体系和架构"
+      ]
+    },
+    {
+      "canonical": "指导监督各单位AI实施计划",
+      "variants": [
+        "负责各单位人工智能实施计划的指导、监督及结果管理"
+      ]
+    },
+    {
+      "canonical": "负责人工智能投资管理",
+      "variants": [
+        "负责人工智能投资管理，包括项目从立项、交付到项目后评估及成果转化，统筹搭建相关管理平台"
+      ]
+    },
+    {
+      "canonical": "牵头AI文化宣贯和人才培养",
+      "variants": [
+        "负责牵头人工智能文化宣贯和人才培养工作"
+      ]
+    },
+    {
+      "canonical": "负责上级交办的其他工作",
+      "variants": [
+        "负责上级交办的其他工作"
+      ]
+    },
+    {
+      "canonical": "制定校企合作专业共建方案",
+      "variants": [
+        "负责人工智能专业方向的校企合作专业共建整体方案的制定"
+      ]
+    },
+    {
+      "canonical": "制定人才培养方案",
+      "variants": [
+        "负责人工智能专业方向的人才培养方案的制定"
+      ]
+    },
+    {
+      "canonical": "牵头制定营销方案",
+      "variants": [
+        "牵头制定人工智能专业方向的营销方案"
+      ]
+    },
+    {
+      "canonical": "组织开发相关方案模块",
+      "variants": [
+        "负责相关方案模块的组织开发"
+      ]
+    },
+    {
+      "canonical": "参与教师选拔",
+      "variants": [
+        "参与教师选拔"
+      ]
+    },
+    {
+      "canonical": "负责产品法规合规工作",
+      "variants": [
+        "负责网络安全、人工智能及其他服务领域的产品法规合规相关工作"
+      ]
+    },
+    {
+      "canonical": "与团队协同办公",
+      "variants": [
+        "与资深项目经理、法规合规工程师、厂商及第三方供应商团队协同办公"
+      ]
+    },
+    {
+      "canonical": "研究分析法律法规政策",
+      "variants": [
+        "研究分析中国境内网络安全、人工智能相关法律法规、政策及行业标准"
+      ]
+    },
+    {
+      "canonical": "编制合规文件资料",
+      "variants": [
+        "协同跨部门团队，编制监管机构要求的合规文件资料"
+      ]
+    },
+    {
+      "canonical": "制定并执行AI应用战略",
+      "variants": [
+        "制定并执行公司人工智能应用战略与发展路线图，确保与公司整体业务战略对齐"
+      ]
+    },
+    {
+      "canonical": "领导团队设计交付智能化方案",
+      "variants": [
+        "领导团队深入分析相关领域业务场景与痛点，设计并交付具有行业竞争力的智能化应用方案"
+      ]
+    },
+    {
+      "canonical": "支持子公司探索外部合作",
+      "variants": [
+        "支持集团子公司，海外分行及相关总分行机构探索，建立与外部企业客户的合作模式，推动AI解决方案的外部商业化，开拓新的增长点"
+      ]
+    },
+    {
+      "canonical": "跟踪全球AI技术趋势",
+      "variants": [
+        "跟踪全球人工智能技术发展趋势，确保公司技术栈与应用实践处于行业前沿"
+      ]
+    },
+    {
+      "canonical": "负责研发中心日常运营管理",
+      "variants": [
+        "负责研发中心的日常运营管理，包括团队搭建，人才培养，绩效管理，技术文化建设及研发效能的持续提升"
+      ]
+    },
+    {
+      "canonical": "制定集团AI发展战略与实施路径",
+      "variants": [
+        "负责制定安东集团整体人工智能技术与应用的发展战略与实施路径"
+      ]
+    },
+    {
+      "canonical": "制定研究院长期发展路线",
+      "variants": [
+        "负责制定人工智能研究院长期发展路线"
+      ]
+    },
+    {
+      "canonical": "主导油气与AI融合技术平台建设",
+      "variants": [
+        "主导油气与AI深度融合的技术平台建设"
+      ]
+    },
+    {
+      "canonical": "构建技术生态与专利壁垒",
+      "variants": [
+        "通过构建外部技术生态和布局高价值专利，构筑公司的核心技术壁垒与行业标准话语权"
+      ]
+    },
+    {
+      "canonical": "领导团队转化技术为标准化产品",
+      "variants": [
+        "领导团队将技术转化为覆盖油气全场景的标准化AI产品与解决方案"
+      ]
+    },
+    {
+      "canonical": "打造AI应用平台推动商业化",
+      "variants": [
+        "核心打造多个安东人工智能应用平台，推动产品的快速复制与商业化"
+      ]
+    },
+    {
+      "canonical": "制定并执行全球市场拓展策略",
+      "variants": [
+        "制定并执行全球市场拓展策略"
+      ]
+    },
+    {
+      "canonical": "通过渠道品牌营销实现商业成功",
+      "variants": [
+        "通过渠道建设、品牌发声和线上营销，将创新产品和解决方案转化为全球市场的商业成功"
+      ]
+    },
+    {
+      "canonical": "制定区域市场开拓计划",
+      "variants": [
+        "制定所负责区域的市场开拓和客户开发计划、营销方案，并有效落地以实现公司市场占有率和业绩增长目标"
+      ]
+    },
+    {
+      "canonical": "了解新能源市场提供解决方案",
+      "variants": [
+        "了解新能源市场和行业发展动态，深入洞察客户需求，为目标客户提供无人机新能源“发电界面”智能巡检和运维解决方案"
+      ]
+    },
+    {
+      "canonical": "负责行业客户开拓与商务谈判",
+      "variants": [
+        "负责新能源/安防/电网/管网等目标行业客户的开拓、商务谈判和关系维护工作，及项目招投标、推进和落地工作，确保项目有效验收、交付和及时回款"
+      ]
+    },
+    {
+      "canonical": "负责产品销售跟踪与客户维护",
+      "variants": [
+        "负责产品销售跟踪及持续的客户维护工作，定期拜访客户，收集有效信息、分析客户潜在需求，实现二次甚至多次的老客户新增"
+      ]
+    },
+    {
+      "canonical": "提供全生命周期服务提高客户满意度",
+      "variants": [
+        "组织和协调内外部资源，为客户提供全生命周期服务，提高客户满意度，建立长期、良好、稳固的客户关系"
+      ]
+    },
+    {
+      "canonical": "主导DTC领域技术战略制定",
+      "variants": [
+        "主导DTC领域未来就绪技术的技术战略制定与执行"
+      ]
+    },
+    {
+      "canonical": "主导部门AI战略规划与执行",
+      "variants": [
+        "主导部门应用人工智能战略的规划与执行"
+      ]
+    },
+    {
+      "canonical": "将大模型应用于核心业务",
+      "variants": [
+        "将大模型能力应用于核心业务及内部效能场景"
+      ]
+    },
+    {
+      "canonical": "推动产品研发持续创新",
+      "variants": [
+        "推动产品与服务研发过程中的持续创新"
+      ]
+    },
+    {
+      "canonical": "探索利用外部合作资源",
+      "variants": [
+        "持续探索并利用外部合作资源"
+      ]
+    },
+    {
+      "canonical": "保障技术平台稳定性与安全性",
+      "variants": [
+        "保障未来就绪技术领域内技术平台的稳定性、可扩展性及安全性"
+      ]
+    },
+    {
+      "canonical": "推动技术协同与优化",
+      "variants": [
+        "推动技术协同与优化"
+      ]
+    },
+    {
+      "canonical": "改善客户及员工体验",
+      "variants": [
+        "改善客户及员工的全流程体验"
+      ]
+    },
+    {
+      "canonical": "负责AI智能体平台技术方向",
+      "variants": [
+        "负责AI智能体平台及开发系统的技术方向与落地工作"
+      ]
+    },
+    {
+      "canonical": "推动AI驱动流程自动化",
+      "variants": [
+        "推动人工智能驱动的流程自动化及数字化工作流系统落地"
+      ]
+    },
+    {
+      "canonical": "设计企业级AI安全架构",
+      "variants": [
+        "设计并落地企业级人工智能安全架构"
+      ]
+    },
+    {
+      "canonical": "人工智能治理与风险管理",
+      "variants": [
+        "主导人工智能治理及风险管理相关工作",
+        "建立人工智能系统可观测性、可追溯性及评估机制"
+      ]
+    },
+    {
+      "canonical": "人工智能战略规划",
+      "variants": [
+        "负责集团人工智能战略规划体系建设，组织有关单位开展人工智能在场景规划及技术规划的编制",
+        "站在集团全局视角，深入研究各产业板块经营管理模式，制定差异化人工智能转型策略"
+      ]
+    },
+    {
+      "canonical": "人工智能项目管理",
+      "variants": [
+        "负责集团人工智能重大项目监督管理，组织开展人工智能专项调研检查，定期编制整体运营报告及向主要领导汇报的材料"
+      ]
+    },
+    {
+      "canonical": "人工智能政策与技术研究",
+      "variants": [
+        "负责国家部委人工智能相关政策、人工智能行业进展、人工智能技术趋势等方面开展跟踪研究",
+        "参与人工智能领域的研究工作"
+      ]
+    },
+    {
+      "canonical": "人工智能投资",
+      "variants": [
+        "对接和维护AGI、AI infra、LLM、GenAI、智能硬件等人工智能领域的渠道人脉",
+        "主动开发潜在的优质投资项目和新渠道资源",
+        "对潜在投资项目开展技术评估、业务尽调、行业及产品竞争力等尽职调查工作",
+        "配合推进项目分析、方案设计、商业谈判、交割与投后等环节的执行"
+      ]
+    },
+    {
+      "canonical": "团队领导与协作",
+      "variants": [
+        "领导、指导并培养一支高效的技术专业团队",
+        "带领技术团队，与新加坡团队紧密协作"
+      ]
+    },
+    {
+      "canonical": "知识共享与交流",
+      "variants": [
+        "推动DTC内部及集团技术部门间的知识共享与经验交流"
+      ]
+    },
+    {
+      "canonical": "人工智能与工具融合",
+      "variants": [
+        "推动人工智能与协同工具的融合"
+      ]
+    },
+    {
+      "canonical": "语音人工智能",
+      "variants": [
+        "负责语音相关人工智能技术方向"
+      ]
+    },
+    {
+      "canonical": "其他工作",
+      "variants": [
+        "完成领导交办的其他工作"
+      ]
+    },
+    {
+      "canonical": "AI应用与产品跟踪",
+      "variants": [
+        "定期更新国内外热门AI应用、智能硬件、大厂新产品、科研院所及高校实验室、完成融资项目的mapping"
+      ]
+    }
+  ],
+  "COMPANY": [
+    {
+      "canonical": "Calterah",
+      "variants": [
+        "Calterah Semiconductor Technology Co., Ltd",
+        "Calterah"
+      ]
+    },
+    {
+      "canonical": "三一重工",
+      "variants": [
+        "三一重工",
+        "SANY"
+      ]
+    }
+  ],
+  "LOCATION": [],
+  "BENEFIT": [
+    {
+      "canonical": "经验不限",
+      "variants": [
+        "经验不限",
+        "不限",
+        "学历不限"
+      ]
+    },
+    {
+      "canonical": "有管理能力的优先",
+      "variants": [
+        "有管理能力的优先",
+        "有小规模研发团队的带队经历是加分项"
+      ]
+    },
+    {
+      "canonical": "顶会论文或竞赛获奖优先",
+      "variants": [
+        "有AI/ML/CV/RO顶会论文或可展示作品者优先",
+        "编程能力竞赛优异或得奖者优先",
+        "较高质量的论文和AI大赛奖项是加分项",
+        "顶会论文 / 开源项目贡献者优先"
+      ]
+    },
+    {
+      "canonical": "有相关工作经验优先",
+      "variants": [
+        "有摄像头、激光雷达、超声、毫米波雷达标定算法开发工作经验者优先",
+        "参与的智能驾驶产品规模量产者优先",
+        "实习工作经历"
+      ]
+    },
+    {
+      "canonical": "专利",
+      "variants": [
+        "专利",
+        "核心技术成果"
+      ]
+    },
+    {
+      "canonical": "有竞争力的薪酬与激励",
+      "variants": [
+        "具备竞争力的薪酬与激励",
+        "项目奖金",
+        "长期激励",
+        "底薪+绩效+TC"
+      ]
+    },
+    {
+      "canonical": "硕士优先",
+      "variants": [
+        "硕士优先"
+      ]
+    },
+    {
+      "canonical": "统招",
+      "variants": [
+        "统招"
+      ]
+    },
+    {
+      "canonical": "英语",
+      "variants": [
+        "英语"
+      ]
+    },
+    {
+      "canonical": "普通话",
+      "variants": [
+        "普通话"
+      ]
+    },
+    {
+      "canonical": "willingness to travel inside China and abroad to conduct system testing",
+      "variants": [
+        "willingness to travel inside China and abroad to conduct system testing"
+      ]
+    },
+    {
+      "canonical": "独特的技术挑战",
+      "variants": [
+        "独特的技术挑战"
+      ]
+    },
+    {
+      "canonical": "完整的算法闭环",
+      "variants": [
+        "完整的算法闭环"
+      ]
+    },
+    {
+      "canonical": "充足的资源支持",
+      "variants": [
+        "充足的资源支持"
+      ]
+    },
+    {
+      "canonical": "高含金量的团队",
+      "variants": [
+        "高含金量的团队"
+      ]
+    },
+    {
+      "canonical": "核心成员",
+      "variants": [
+        "核心成员"
+      ]
+    },
+    {
+      "canonical": "全部行业",
+      "variants": [
+        "全部行业"
+      ]
+    },
+    {
+      "canonical": "其他信息",
+      "variants": [
+        "其他信息"
+      ]
+    },
+    {
+      "canonical": "无违纪违规记录",
+      "variants": [
+        "无违纪违规记录"
+      ]
+    }
+  ],
+  "WORKTIME": [],
+  "DEPARTMENT": [
+    {
+      "canonical": "设计部",
+      "variants": [
+        "设计部"
+      ]
+    }
+  ]
+}
