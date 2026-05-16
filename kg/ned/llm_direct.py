@@ -27,7 +27,7 @@ def _call_deepseek(messages: list[dict], model: str = "") -> str:
     """调用 DeepSeek API（OpenAI 兼容接口）"""
     from openai import OpenAI
 
-    api_key = os.getenv("DEEPSEEK_API_KEY", "sk-1bd431a4b5c04c2fbf7a778938d30e88")
+    api_key = os.getenv("DEEPSEEK_API_KEY", "your_api_key_here")
     base_url = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
     if not model:
         model = os.getenv("NED_LLM_MODEL", "deepseek-chat")
