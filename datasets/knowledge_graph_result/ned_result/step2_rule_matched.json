@@ -1,0 +1,7053 @@
+[
+  {
+    "jobName": "招聘自动驾驶感知算法工程师",
+    "companyName": "重庆长线智能科技有限责任公司",
+    "matched": [
+      {
+        "entity": "DEGREE",
+        "original": "硕士",
+        "canonical": "硕士"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机科学",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "软件工程",
+        "canonical": "软件工程"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机视觉",
+        "canonical": "计算机视觉"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "人工智能",
+        "canonical": "人工智能"
+      },
+      {
+        "entity": "SKILL",
+        "original": "计算机视觉",
+        "canonical": "计算机视觉"
+      },
+      {
+        "entity": "SKILL",
+        "original": "机器人",
+        "canonical": "机器人"
+      },
+      {
+        "entity": "SKILL",
+        "original": "AI",
+        "canonical": "人工智能"
+      },
+      {
+        "entity": "SKILL",
+        "original": "ML",
+        "canonical": "机器学习"
+      },
+      {
+        "entity": "SKILL",
+        "original": "CV",
+        "canonical": "计算机视觉"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "SKILL",
+        "word": "多传感器融合"
+      },
+      {
+        "entity": "SKILL",
+        "word": "前视"
+      },
+      {
+        "entity": "SKILL",
+        "word": "环视鱼眼"
+      },
+      {
+        "entity": "SKILL",
+        "word": "BEV"
+      },
+      {
+        "entity": "SKILL",
+        "word": "视觉检测"
+      },
+      {
+        "entity": "SKILL",
+        "word": "跟踪"
+      },
+      {
+        "entity": "SKILL",
+        "word": "分割"
+      },
+      {
+        "entity": "SKILL",
+        "word": "后处理算法"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Lidar"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Radar"
+      },
+      {
+        "entity": "SKILL",
+        "word": "超声波传感器"
+      },
+      {
+        "entity": "SKILL",
+        "word": "融合算法"
+      },
+      {
+        "entity": "SKILL",
+        "word": "高精地图"
+      },
+      {
+        "entity": "SKILL",
+        "word": "SD地图"
+      },
+      {
+        "entity": "SKILL",
+        "word": "模型算法"
+      },
+      {
+        "entity": "SKILL",
+        "word": "transformer"
+      },
+      {
+        "entity": "SKILL",
+        "word": "管理能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "英文文献检索和阅读能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数学基础"
+      },
+      {
+        "entity": "SKILL",
+        "word": "多视几何"
+      },
+      {
+        "entity": "SKILL",
+        "word": "VIO"
+      },
+      {
+        "entity": "SKILL",
+        "word": "SLAM"
+      },
+      {
+        "entity": "SKILL",
+        "word": "SFM"
+      },
+      {
+        "entity": "SKILL",
+        "word": "3D视觉"
+      },
+      {
+        "entity": "SKILL",
+        "word": "C/C++编程"
+      },
+      {
+        "entity": "SKILL",
+        "word": "传感器场地标定"
+      },
+      {
+        "entity": "SKILL",
+        "word": "自动标定"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Lidar"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Radar"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Camera"
+      },
+      {
+        "entity": "SKILL",
+        "word": "GNSS"
+      },
+      {
+        "entity": "SKILL",
+        "word": "IMU"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Encoder"
+      },
+      {
+        "entity": "SKILL",
+        "word": "责任心"
+      },
+      {
+        "entity": "SKILL",
+        "word": "学习沟通能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "团队合作精神"
+      },
+      {
+        "entity": "SKILL",
+        "word": "RO"
+      },
+      {
+        "entity": "SKILL",
+        "word": "摄像头"
+      },
+      {
+        "entity": "SKILL",
+        "word": "激光雷达"
+      },
+      {
+        "entity": "SKILL",
+        "word": "超声"
+      },
+      {
+        "entity": "SKILL",
+        "word": "毫米波雷达"
+      },
+      {
+        "entity": "SKILL",
+        "word": "标定算法开发"
+      },
+      {
+        "entity": "SKILL",
+        "word": "编程能力"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责开发多传感器融合的智驾感知系统"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责智驾感知算法问题分析、解决"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责智驾数据闭环的建设"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "感知与定位部"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "普通话"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "有管理能力的优先"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "有AI/ML/CV/RO顶会论文或可展示作品者优先"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "有摄像头、激光雷达、超声、毫米波雷达标定算法开发工作经验者优先"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "参与的智能驾驶产品规模量产者优先"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "编程能力竞赛优异或得奖者优先"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "全部行业"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘图像算法工程师",
+    "companyName": "Flytake复力克",
+    "matched": [
+      {
+        "entity": "MAJOR",
+        "original": "计算机科学",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "电子工程",
+        "canonical": "电子信息工程"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "自动化",
+        "canonical": "自动化"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "图像处理",
+        "canonical": "计算机视觉"
+      },
+      {
+        "entity": "SKILL",
+        "original": "C++",
+        "canonical": "C++"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "DEGREE",
+        "word": "本科及以上学历"
+      },
+      {
+        "entity": "SKILL",
+        "word": "AOI"
+      },
+      {
+        "entity": "SKILL",
+        "word": "X-Ray"
+      },
+      {
+        "entity": "SKILL",
+        "word": "OpenCV"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Halcon"
+      },
+      {
+        "entity": "SKILL",
+        "word": "C#"
+      },
+      {
+        "entity": "SKILL",
+        "word": "CLR混合编程技术"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责AOI/X-Ray光学检测设备的算法开发与优化"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "使用OpenCV、Halcon等视觉算法库进行图像处理算法开发，提升检测精度和效率"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "与机械、光学、软件及硬件团队协作，提供技术支持并推动算法产品化"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "跟踪行业内最新的视觉技术发展动态，引入新算法提升产品竞争力"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "英语"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "普通话"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "计算机软件"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "电子/半导体/集成电路"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "仪器仪表"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "工业自动化"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "医疗器械"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘音频算法工程师",
+    "companyName": "深圳摩罗志远科技有限公司",
+    "matched": [
+      {
+        "entity": "SKILL",
+        "original": "Matlab",
+        "canonical": "MATLAB"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Python",
+        "canonical": "Python"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Linux",
+        "canonical": "Linux"
+      },
+      {
+        "entity": "SKILL",
+        "original": "TensorFlow",
+        "canonical": "TensorFlow"
+      },
+      {
+        "entity": "SKILL",
+        "original": "PyTorch",
+        "canonical": "PyTorch"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "电子信息工程",
+        "canonical": "电子信息工程"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "声学",
+        "canonical": "声学"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "通信",
+        "canonical": "通信工程"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "SKILL",
+        "word": "音频算法设计与开发"
+      },
+      {
+        "entity": "SKILL",
+        "word": "降噪"
+      },
+      {
+        "entity": "SKILL",
+        "word": "人声增强"
+      },
+      {
+        "entity": "SKILL",
+        "word": "回声消除 AEC"
+      },
+      {
+        "entity": "SKILL",
+        "word": "自动增益 AGC"
+      },
+      {
+        "entity": "SKILL",
+        "word": "语音检测 VAD"
+      },
+      {
+        "entity": "SKILL",
+        "word": "麦克风阵列"
+      },
+      {
+        "entity": "SKILL",
+        "word": "声源定位"
+      },
+      {
+        "entity": "SKILL",
+        "word": "EQ 均衡"
+      },
+      {
+        "entity": "SKILL",
+        "word": "混响 / 延迟 / 回声特效"
+      },
+      {
+        "entity": "SKILL",
+        "word": "3A 算法"
+      },
+      {
+        "entity": "SKILL",
+        "word": "VAD 算法"
+      },
+      {
+        "entity": "SKILL",
+        "word": "算法库封装"
+      },
+      {
+        "entity": "SKILL",
+        "word": "嵌入式"
+      },
+      {
+        "entity": "SKILL",
+        "word": "算法仿真"
+      },
+      {
+        "entity": "SKILL",
+        "word": "代码编写"
+      },
+      {
+        "entity": "SKILL",
+        "word": "移植调试"
+      },
+      {
+        "entity": "SKILL",
+        "word": "指标验证"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数字信号处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "VAD/ANR/AGC/AEC"
+      },
+      {
+        "entity": "SKILL",
+        "word": "麦克风阵列信号处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "声源定位"
+      },
+      {
+        "entity": "SKILL",
+        "word": "人声增强"
+      },
+      {
+        "entity": "SKILL",
+        "word": "音效算法"
+      },
+      {
+        "entity": "SKILL",
+        "word": "C/C++"
+      },
+      {
+        "entity": "SKILL",
+        "word": "XMOS"
+      },
+      {
+        "entity": "SKILL",
+        "word": "STM32"
+      },
+      {
+        "entity": "SKILL",
+        "word": "AI 音频降噪"
+      },
+      {
+        "entity": "SKILL",
+        "word": "语音分离算法"
+      },
+      {
+        "entity": "DEGREE",
+        "word": "硕士及以上学历"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "数字信号处理"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "音频算法设计与开发"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "算法嵌入式落地与调试"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "需求对接与方案输出"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "算法优化与问题攻坚"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "软硬件协同与技术支持"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "技术沉淀与文档规范"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "研发中心"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "英语"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "普通话"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "专利"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "核心技术成果"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "3 年及以上"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘算法工程师（Algorithm Engineer）",
+    "companyName": "宁波如动科技有限公司",
+    "matched": [
+      {
+        "entity": "SKILL",
+        "original": "深度学习",
+        "canonical": "深度学习"
+      },
+      {
+        "entity": "SKILL",
+        "original": "机器学习",
+        "canonical": "机器学习"
+      },
+      {
+        "entity": "SKILL",
+        "original": "AI",
+        "canonical": "人工智能"
+      },
+      {
+        "entity": "SKILL",
+        "original": "PyTorch",
+        "canonical": "PyTorch"
+      },
+      {
+        "entity": "SKILL",
+        "original": "TensorFlow",
+        "canonical": "TensorFlow"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机科学与技术",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "数学",
+        "canonical": "数学"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "物理",
+        "canonical": "物理学"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "自动化",
+        "canonical": "自动化"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "SKILL",
+        "word": "模型选型"
+      },
+      {
+        "entity": "SKILL",
+        "word": "算法设计"
+      },
+      {
+        "entity": "SKILL",
+        "word": "训练与评估"
+      },
+      {
+        "entity": "SKILL",
+        "word": "模型调参"
+      },
+      {
+        "entity": "SKILL",
+        "word": "实验分析"
+      },
+      {
+        "entity": "SKILL",
+        "word": "算法方案工程化落地"
+      },
+      {
+        "entity": "SKILL",
+        "word": "模型部署"
+      },
+      {
+        "entity": "SKILL",
+        "word": "推理优化"
+      },
+      {
+        "entity": "SKILL",
+        "word": "系统集成"
+      },
+      {
+        "entity": "DEGREE",
+        "word": "本科及以上学历"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责核心算法的设计、实现与优化"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "基于业务/产品需求，完成模型选型、算法设计、训练与评估，并持续优化效果"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "能独立完成模型调参与实验分析，对结果有清晰的判断与总结能力"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "将算法方案工程化落地，参与模型的部署、推理优化与系统集成"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "跟踪 AI 领域前沿技术，结合实际业务场景进行技术创新与落地"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "与产品、工程等团队协作，推动算法在真实场景中的稳定应用"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "3-5 年"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘WiFi Algorithm Design Lead 通信算法主管",
+    "companyName": "某上海电子/半导体/集成电路上市公司",
+    "matched": [
+      {
+        "entity": "MAJOR",
+        "original": "电子工程",
+        "canonical": "电子信息工程"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "微电子",
+        "canonical": "微电子学"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "通信",
+        "canonical": "通信工程"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Matlab",
+        "canonical": "MATLAB"
+      },
+      {
+        "entity": "SKILL",
+        "original": "C++",
+        "canonical": "C++"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "DEGREE",
+        "word": "硕士及以上学历"
+      },
+      {
+        "entity": "SKILL",
+        "word": "WiFi 通信算法"
+      },
+      {
+        "entity": "SKILL",
+        "word": "WiFi 芯片通信整体性能规划"
+      },
+      {
+        "entity": "SKILL",
+        "word": "算法RTL设计"
+      },
+      {
+        "entity": "SKILL",
+        "word": "无线通信原理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "PHY基本算法原理和流程"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数字信号处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "信道编译码"
+      },
+      {
+        "entity": "SKILL",
+        "word": "调制解调"
+      },
+      {
+        "entity": "SKILL",
+        "word": "信道估计"
+      },
+      {
+        "entity": "SKILL",
+        "word": "IEEE 802.11a/b/g/n/ac/ax/be 协议"
+      },
+      {
+        "entity": "SKILL",
+        "word": "C"
+      },
+      {
+        "entity": "SKILL",
+        "word": "MU-MIMO"
+      },
+      {
+        "entity": "SKILL",
+        "word": "OFDMA"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Beamforming"
+      },
+      {
+        "entity": "SKILL",
+        "word": "DPD"
+      },
+      {
+        "entity": "SKILL",
+        "word": "PAPR reduction"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Rx Sensitivity"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Tx Power control"
+      },
+      {
+        "entity": "SKILL",
+        "word": "沟通与协调能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "团队合作"
+      },
+      {
+        "entity": "SKILL",
+        "word": "领导力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "问题分析和解决能力"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责WiFi 通信算法需求，选型，实现，仿真，优化，及性能验证"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责WiFi 芯片通信整体性能规划，对模拟，射频和ASIC提出相关设计指标要求"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "带领算法团队，和其他团队密切合作，确保达到WiFi 芯片的各项性能指标"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "评估算法实现可行性，配合ASIC工程师完成算法RTL设计和验证"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "协助系统和软件团队完成WiFi性能测试，持续对算法进行修改和优化"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "电子/半导体/集成电路"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "物联网"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "8年及以上"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘二维几何图形算法工程师（2D Geometry Algorithm Engineer）",
+    "companyName": "某国内专业技术服务公司",
+    "matched": [
+      {
+        "entity": "SKILL",
+        "original": "C++",
+        "canonical": "C++"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Python",
+        "canonical": "Python"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机科学",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "数学",
+        "canonical": "数学"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "机械工程",
+        "canonical": "机械工程"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "自动化",
+        "canonical": "自动化"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "SKILL",
+        "word": "3D打印前处理软件"
+      },
+      {
+        "entity": "SKILL",
+        "word": "二维几何图形建模"
+      },
+      {
+        "entity": "SKILL",
+        "word": "二维几何图形分析"
+      },
+      {
+        "entity": "SKILL",
+        "word": "二维几何图形优化算法"
+      },
+      {
+        "entity": "SKILL",
+        "word": "二维布尔运算"
+      },
+      {
+        "entity": "SKILL",
+        "word": "偏移"
+      },
+      {
+        "entity": "SKILL",
+        "word": "轮廓简化"
+      },
+      {
+        "entity": "SKILL",
+        "word": "多边形裁剪"
+      },
+      {
+        "entity": "SKILL",
+        "word": "路径生成"
+      },
+      {
+        "entity": "SKILL",
+        "word": "切片引擎"
+      },
+      {
+        "entity": "SKILL",
+        "word": "运动控制"
+      },
+      {
+        "entity": "SKILL",
+        "word": "用户界面"
+      },
+      {
+        "entity": "SKILL",
+        "word": "STL"
+      },
+      {
+        "entity": "SKILL",
+        "word": "SVG"
+      },
+      {
+        "entity": "SKILL",
+        "word": "DXF"
+      },
+      {
+        "entity": "SKILL",
+        "word": "二维投影"
+      },
+      {
+        "entity": "SKILL",
+        "word": "剖面提取"
+      },
+      {
+        "entity": "SKILL",
+        "word": "拓扑修复"
+      },
+      {
+        "entity": "SKILL",
+        "word": "计算机图形学"
+      },
+      {
+        "entity": "SKILL",
+        "word": "计算几何"
+      },
+      {
+        "entity": "SKILL",
+        "word": "DCEL"
+      },
+      {
+        "entity": "SKILL",
+        "word": "BSP树"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Voronoi图"
+      },
+      {
+        "entity": "SKILL",
+        "word": "C++14"
+      },
+      {
+        "entity": "SKILL",
+        "word": "多边形布尔运算"
+      },
+      {
+        "entity": "SKILL",
+        "word": "union"
+      },
+      {
+        "entity": "SKILL",
+        "word": "difference"
+      },
+      {
+        "entity": "SKILL",
+        "word": "intersection"
+      },
+      {
+        "entity": "SKILL",
+        "word": "轮廓偏移"
+      },
+      {
+        "entity": "SKILL",
+        "word": "contour offsetting"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Minkowski sum"
+      },
+      {
+        "entity": "SKILL",
+        "word": "路径规划"
+      },
+      {
+        "entity": "SKILL",
+        "word": "几何容差处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数值鲁棒性设计"
+      },
+      {
+        "entity": "SKILL",
+        "word": "CGAL"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Clipper"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Boost.Geometry"
+      },
+      {
+        "entity": "SKILL",
+        "word": "OpenCASCADE"
+      },
+      {
+        "entity": "SKILL",
+        "word": "GPU加速"
+      },
+      {
+        "entity": "SKILL",
+        "word": "CUDA"
+      },
+      {
+        "entity": "SKILL",
+        "word": "OpenCL"
+      },
+      {
+        "entity": "SKILL",
+        "word": "并行计算"
+      },
+      {
+        "entity": "SKILL",
+        "word": "3D模型切片"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Slice Engine"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Slic3r"
+      },
+      {
+        "entity": "SKILL",
+        "word": "CuraEngine"
+      },
+      {
+        "entity": "DEGREE",
+        "word": "本科及以上学历"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责3D打印前处理软件中二维几何图形（如轮廓、填充路径、支撑结构等）的建模、分析与优化算法的设计与实现"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "开发高精度、高效率的二维布尔运算、偏移（offsetting）、轮廓简化、多边形裁剪、路径生成等核心几何算法"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "与切片引擎、运动控制及用户界面团队紧密协作，确保几何算法在实际打印流程中的稳定性与性能"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "对复杂模型（如STL、SVG、DXF等格式）进行二维投影、剖面提取与拓扑修复"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "持续优化算法在内存占用、计算速度和数值鲁棒性方面的表现，适配嵌入式或桌面端部署需求"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "编写高质量、可维护、可测试的C++/Python代码，并撰写相关技术文档"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "跟踪计算机图形学、计算几何领域的前沿进展，评估并引入适合工业场景的新方法"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "专业技术服务"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "不限"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "不限"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "不限"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘Algorithm Field Application Engineer (FAE)-算法",
+    "companyName": "加特兰微电子科技",
+    "matched": [
+      {
+        "entity": "SKILL",
+        "original": "Matlab",
+        "canonical": "MATLAB"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "COMPANY",
+        "word": "Calterah Semiconductor Technology Co., Ltd"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "Calterah"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Promote Calterah products and system-level solutions to customers based on their requirements"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Support top customers in Calterah products evaluation & design-in activities"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Reproduce and verify reported issues from customers, including on-site support in identification and debugging software issues"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Track key project status and coordinate resources to drive projects forward through mass production"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Gather customers’ feedback on Calterah products and information of industry technical trends for product optimization"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Build and maintain relationships with key decision makers on the technical side at our customers"
+      },
+      {
+        "entity": "DEGREE",
+        "word": "Bachelor’s/Master’s degree"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "Electrical/Electronics Engineering"
+      },
+      {
+        "entity": "SKILL",
+        "word": "signal processing related experience"
+      },
+      {
+        "entity": "SKILL",
+        "word": "FMCW radar work experience"
+      },
+      {
+        "entity": "SKILL",
+        "word": "C language programing"
+      },
+      {
+        "entity": "SKILL",
+        "word": "antenna and radio system"
+      },
+      {
+        "entity": "SKILL",
+        "word": "trouble-shooting and problem-solving skills"
+      },
+      {
+        "entity": "SKILL",
+        "word": "customer communication skills"
+      },
+      {
+        "entity": "SKILL",
+        "word": "fluent in English and Chinese speaking & writing"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "global"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "经验不限"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "学历不限"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘主任算法工程师 Principle Algorithm Engineer",
+    "companyName": "三一集团",
+    "matched": [
+      {
+        "entity": "SKILL",
+        "original": "AI",
+        "canonical": "人工智能"
+      },
+      {
+        "entity": "SKILL",
+        "original": "自动化",
+        "canonical": "自动化"
+      },
+      {
+        "entity": "SKILL",
+        "original": "机器学习",
+        "canonical": "机器学习"
+      },
+      {
+        "entity": "SKILL",
+        "original": "C++",
+        "canonical": "C++"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "自动化",
+        "canonical": "自动化"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机",
+        "canonical": "计算机科学与技术"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "COMPANY",
+        "word": "三一重工"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "SANY"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数字技术"
+      },
+      {
+        "entity": "SKILL",
+        "word": "运动规划"
+      },
+      {
+        "entity": "SKILL",
+        "word": "轨迹控制"
+      },
+      {
+        "entity": "SKILL",
+        "word": "模型预测"
+      },
+      {
+        "entity": "SKILL",
+        "word": "MPC"
+      },
+      {
+        "entity": "SKILL",
+        "word": "RL"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Adaptive Control"
+      },
+      {
+        "entity": "SKILL",
+        "word": "SLAM"
+      },
+      {
+        "entity": "SKILL",
+        "word": "感知"
+      },
+      {
+        "entity": "SKILL",
+        "word": "强化学习"
+      },
+      {
+        "entity": "DEGREE",
+        "word": "硕士及以上学历"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "控制"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "机器人"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "机械电子"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责挖掘机智能辅助系统的规划控制（P&C）算法整体方案设计"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "覆盖路径规划、轨迹优化、运动控制、稳定性控制等核心环节"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "推进基于模型与数据的控制方法（MPC / RL / Adaptive Control 等）的创新与落地"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "主导算法从原型到量产的全流程落地"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "建立算法的测试评估体系"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "组建并管理算法团队"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "深入参与核心算法攻坚"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "与软件、硬件、系统工程师和PO紧密协作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "跟踪竞品技术路线"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "180+ 个国家与地区"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "独特的技术挑战"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "完整的算法闭环"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "充足的资源支持"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "高含金量的团队"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "具备竞争力的薪酬与激励"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "项目奖金"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "长期激励"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "5 年以上算法研发经验"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘Algorithm Engineer 算法工程师",
+    "companyName": "英迈杰牙科技术(上海)有限公司",
+    "matched": [
+      {
+        "entity": "SKILL",
+        "original": "算法开发",
+        "canonical": "算法开发"
+      },
+      {
+        "entity": "SKILL",
+        "original": "图像处理",
+        "canonical": "计算机视觉"
+      },
+      {
+        "entity": "SKILL",
+        "original": "人工智能",
+        "canonical": "人工智能"
+      },
+      {
+        "entity": "SKILL",
+        "original": "计算机视觉",
+        "canonical": "计算机视觉"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "图像处理",
+        "canonical": "计算机视觉"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "软件工程",
+        "canonical": "软件工程"
+      },
+      {
+        "entity": "DEGREE",
+        "original": "硕士",
+        "canonical": "硕士"
+      },
+      {
+        "entity": "DEGREE",
+        "original": "博士",
+        "canonical": "博士"
+      },
+      {
+        "entity": "SKILL",
+        "original": "计算机视觉",
+        "canonical": "计算机视觉"
+      },
+      {
+        "entity": "SKILL",
+        "original": "C++",
+        "canonical": "C++"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "SKILL",
+        "word": "软件开发"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "通信与电子工程"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "Computer Science"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "Image Processing"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "EE"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "Software Engineering"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "关于结构光三维重建的算法开发工作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "包括图像处理、相机标定、三维重建等算法的开发和性能评估"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "关于三维数据处理的算法开发工作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "包括对点云处理、数据拼接、数据融合、三维网格生成、三维模型纹理和颜色处理等"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "关于深度学习的算法开发工作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "包括数据清理、模型训练和模型部署等"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "关于高性能分布式计算的开发工作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "其他的算法开发和评估工作"
+      },
+      {
+        "entity": "SKILL",
+        "word": "影像处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Image processing"
+      },
+      {
+        "entity": "SKILL",
+        "word": "模式识别"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Pattern recognition"
+      },
+      {
+        "entity": "SKILL",
+        "word": "计算机绘图"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Computer graphics"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Computer vision"
+      },
+      {
+        "entity": "SKILL",
+        "word": "可视化"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Visualization"
+      },
+      {
+        "entity": "SKILL",
+        "word": "医疗成像"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Medical imaging"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数据结构与算法设计"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Data structure and algorithm design"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数值计算与优化"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Numerical computing and optimization"
+      },
+      {
+        "entity": "SKILL",
+        "word": "高性能计算"
+      },
+      {
+        "entity": "SKILL",
+        "word": "High performance computing"
+      },
+      {
+        "entity": "SKILL",
+        "word": "沟通表达技巧"
+      },
+      {
+        "entity": "SKILL",
+        "word": "communication and presentation skill"
+      },
+      {
+        "entity": "SKILL",
+        "word": "团队合作能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "team work"
+      },
+      {
+        "entity": "DEGREE",
+        "word": "硕士生"
+      },
+      {
+        "entity": "DEGREE",
+        "word": "博士生"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "2年以上的相关工作经历"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "2+ years of related experience"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘算法工程师",
+    "companyName": "上海福满家便利有限公司",
+    "matched": [],
+    "unmatched": [
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责设计、开发和迭代智能订购算法模型，实现对门店商品（尤其鲜食、面包、饮料等短保商品）的精准需求预测，支撑“智能订购”业务场景，优化库存周转与缺货率"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "深入分析商品生命周期、销量趋势、门店特性等多维度特征，构建基于时间序列与机器学习的销量预测模型（如FF销量预测模型）"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "建立并持续优化订购推荐规则与倍数计算逻辑，依据商品等级（A/B/C）、毛利率、保质期等因素，动态生成科学订购建议，供门店决策"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "构建面向线下门店与线上平台的个性化推荐系统，提升商品连带率与客单价"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "基于购物篮分析（如Apriori、FP-Growth）挖掘商品关联规则，计算支持度、置信度与提升度（Lift），识别“引流品”与“利润品”搭配"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "设计并实现协同过滤、内容特征或混合模型的推荐算法，提供个性化商品推荐"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "将算法模型工程化，集成至业务中台或核心系统，保障高并发、低延迟的服务调用能力"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "建立算法效果评估体系，通过A/B测试、离线评估等方式持续监控与优化模型指标（预测准确率、推荐点击率、转化率等）"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责算法模型的迭代与维护，根据业务反馈与数据变化持续调优模型参数与策略"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "与产品、运营、供应链等团队紧密协作，将算法能力转化为可落地的业务解决方案"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "构建“人—货—场”指标体系，通过数据看板提供实时业务洞察，支持MM会议等决策场景"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "推动数据创新，探索算法在智能选址、用户画像、定价与促销优化等场景中的应用"
+      },
+      {
+        "entity": "DEGREE",
+        "word": "本科及以上学历"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "计算机、数学、统计学等相关专业"
+      },
+      {
+        "entity": "SKILL",
+        "word": "5年以上算法开发或大数据开发经验"
+      },
+      {
+        "entity": "SKILL",
+        "word": "至少3年以上推荐系统、预测算法或零售供应链优化相关经验"
+      },
+      {
+        "entity": "SKILL",
+        "word": "精通Python"
+      },
+      {
+        "entity": "SKILL",
+        "word": "熟悉Java"
+      },
+      {
+        "entity": "SKILL",
+        "word": "熟练掌握PyTorch、TensorFlow、Scikit-learn"
+      },
+      {
+        "entity": "SKILL",
+        "word": "有深度学习模型开发经验"
+      },
+      {
+        "entity": "SKILL",
+        "word": "熟悉Hadoop、Spark、Flink等大数据处理框架"
+      },
+      {
+        "entity": "SKILL",
+        "word": "熟练使用MySQL、Redis、HBase等关系型与非关系型数据库"
+      },
+      {
+        "entity": "SKILL",
+        "word": "深入理解推荐系统、时间序列预测、分类回归、聚类等核心算法原理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "扎实的特征工程能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "有完整算法项目落地经验（模型设计、开发、上线、监控、迭代全流程）"
+      },
+      {
+        "entity": "SKILL",
+        "word": "对零售行业（尤其是便利店、商超）业务流程有深入理解"
+      },
+      {
+        "entity": "SKILL",
+        "word": "熟悉商品生命周期管理、进销存、全渠道履约等场景"
+      },
+      {
+        "entity": "SKILL",
+        "word": "优秀的沟通协调能力、项目推动能力与跨团队协作精神"
+      },
+      {
+        "entity": "SKILL",
+        "word": "能将技术方案转化为业务价值"
+      },
+      {
+        "entity": "SKILL",
+        "word": "具备大模型（如Qwen、GPT-4）应用经验"
+      },
+      {
+        "entity": "SKILL",
+        "word": "熟悉RAG、Agent等技术在业务中的落地"
+      },
+      {
+        "entity": "SKILL",
+        "word": "有连锁便利店或生鲜电商平台工作经验"
+      },
+      {
+        "entity": "SKILL",
+        "word": "具备高并发、高可用系统设计经验"
+      },
+      {
+        "entity": "SKILL",
+        "word": "有从0到1构建推荐/预测系统平台的经验"
+      },
+      {
+        "entity": "SKILL",
+        "word": "有项目管理经验"
+      },
+      {
+        "entity": "SKILL",
+        "word": "能带领团队完成复杂算法项目交付"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "新零售"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "5年以上"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "至少3年以上"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘Plan& Control Algorithm Engineer 控制规划算法工程师",
+    "companyName": "梅赛德斯-奔驰",
+    "matched": [
+      {
+        "entity": "SKILL",
+        "original": "Python",
+        "canonical": "Python"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "SKILL",
+        "word": "Method and algorithm development"
+      },
+      {
+        "entity": "SKILL",
+        "word": "trajectory planning"
+      },
+      {
+        "entity": "SKILL",
+        "word": "vehicle control"
+      },
+      {
+        "entity": "SKILL",
+        "word": "vehicle control algorithm"
+      },
+      {
+        "entity": "SKILL",
+        "word": "data-driven based development framework"
+      },
+      {
+        "entity": "SKILL",
+        "word": "planning & control system"
+      },
+      {
+        "entity": "SKILL",
+        "word": "automated driving"
+      },
+      {
+        "entity": "SKILL",
+        "word": "driver assistance systems"
+      },
+      {
+        "entity": "SKILL",
+        "word": "autonomous driving systems"
+      },
+      {
+        "entity": "DEGREE",
+        "word": "Master"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "vehicle engineering"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "robotics"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "electrical engineering"
+      },
+      {
+        "entity": "SKILL",
+        "word": "robotics"
+      },
+      {
+        "entity": "SKILL",
+        "word": "ADAS/AD software development"
+      },
+      {
+        "entity": "SKILL",
+        "word": "ADAS function"
+      },
+      {
+        "entity": "SKILL",
+        "word": "AEB"
+      },
+      {
+        "entity": "SKILL",
+        "word": "ACC"
+      },
+      {
+        "entity": "SKILL",
+        "word": "LKA"
+      },
+      {
+        "entity": "SKILL",
+        "word": "HWA"
+      },
+      {
+        "entity": "SKILL",
+        "word": "planning algorithms"
+      },
+      {
+        "entity": "SKILL",
+        "word": "A*"
+      },
+      {
+        "entity": "SKILL",
+        "word": "EM"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Lattice"
+      },
+      {
+        "entity": "SKILL",
+        "word": "control algorithms"
+      },
+      {
+        "entity": "SKILL",
+        "word": "MPC"
+      },
+      {
+        "entity": "SKILL",
+        "word": "LQR"
+      },
+      {
+        "entity": "SKILL",
+        "word": "PID"
+      },
+      {
+        "entity": "SKILL",
+        "word": "AD platforms"
+      },
+      {
+        "entity": "SKILL",
+        "word": "ROS"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Autoware"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Apollo"
+      },
+      {
+        "entity": "SKILL",
+        "word": "software engineering on Linux/QNX"
+      },
+      {
+        "entity": "SKILL",
+        "word": "MBD"
+      },
+      {
+        "entity": "SKILL",
+        "word": "MATLAB/Simulink/ dSpace toolkit"
+      },
+      {
+        "entity": "SKILL",
+        "word": "C++ programming"
+      },
+      {
+        "entity": "SKILL",
+        "word": "scripting languages"
+      },
+      {
+        "entity": "SKILL",
+        "word": "source code management"
+      },
+      {
+        "entity": "SKILL",
+        "word": "unit testing"
+      },
+      {
+        "entity": "SKILL",
+        "word": "code review"
+      },
+      {
+        "entity": "SKILL",
+        "word": "issue tracking systems"
+      },
+      {
+        "entity": "SKILL",
+        "word": "ADAS Chassis control interface"
+      },
+      {
+        "entity": "SKILL",
+        "word": "ESP"
+      },
+      {
+        "entity": "SKILL",
+        "word": "EPS"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Inter-cultural competence"
+      },
+      {
+        "entity": "SKILL",
+        "word": "communication skills"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Independent and proactive working style"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "China"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "Germany"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "China"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "abroad"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "onsite project team"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "counter-teams in Germany"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Method and algorithm development, integration and validation with strong focus on trajectory planning and vehicle control for both highway and urban driving"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Development on vehicle control algorithm from planned trajectory to chassis control interface for series product"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Build up data-driven based development framework to iteratively improve planning & control system"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Cooperation with relevant internal and external algorithm experts mainly in China and Germany for automated driving and driver assistance systems"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Working with the onsite project team and counter-teams in Germany and the supplier requirements for autonomous driving systems"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "Industrial experience"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "Development experience"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "Hands on development experience"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "willingness to travel inside China and abroad to conduct system testing"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘Radar Algorithm Engineer（AUTO）/雷达算法工程师",
+    "companyName": "加特兰微电子科技",
+    "matched": [
+      {
+        "entity": "MAJOR",
+        "original": "应用数学",
+        "canonical": "数学"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "SKILL",
+        "word": "77GHz/79GHz 毫米波雷达信号处理算法开发"
+      },
+      {
+        "entity": "SKILL",
+        "word": "雷达系统算法仿真设计"
+      },
+      {
+        "entity": "SKILL",
+        "word": "77GHz/79GHz 毫米波雷达数据处理算法开发"
+      },
+      {
+        "entity": "SKILL",
+        "word": "雷达目标聚类"
+      },
+      {
+        "entity": "SKILL",
+        "word": "跟踪"
+      },
+      {
+        "entity": "SKILL",
+        "word": "目标识别"
+      },
+      {
+        "entity": "SKILL",
+        "word": "ADAS功能开发算法研发设计"
+      },
+      {
+        "entity": "SKILL",
+        "word": "毫米波雷达测距、测速和测角等功能算法"
+      },
+      {
+        "entity": "SKILL",
+        "word": "实测、实验数据的处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "设计应用场景和相关测试用例"
+      },
+      {
+        "entity": "SKILL",
+        "word": "对算法和软件进行测试"
+      },
+      {
+        "entity": "SKILL",
+        "word": "撰写相应的设计文档"
+      },
+      {
+        "entity": "SKILL",
+        "word": "算法知识产权工作"
+      },
+      {
+        "entity": "SKILL",
+        "word": "FMCW雷达信号处理理论"
+      },
+      {
+        "entity": "SKILL",
+        "word": "CFAR目标检测"
+      },
+      {
+        "entity": "SKILL",
+        "word": "MIMO信号处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "DOA方向估计理论"
+      },
+      {
+        "entity": "SKILL",
+        "word": "卡尔曼滤波"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数据融合"
+      },
+      {
+        "entity": "SKILL",
+        "word": "目标聚类"
+      },
+      {
+        "entity": "SKILL",
+        "word": "多目标跟踪理论"
+      },
+      {
+        "entity": "SKILL",
+        "word": "统计信号处理相关理论"
+      },
+      {
+        "entity": "SKILL",
+        "word": "MATLAB Simulink / State flow /Visual C++ 软件进行算法仿真、设计和验证"
+      },
+      {
+        "entity": "SKILL",
+        "word": "C语言编程"
+      },
+      {
+        "entity": "SKILL",
+        "word": "算法在嵌入式系统上的实现"
+      },
+      {
+        "entity": "SKILL",
+        "word": "人际沟通能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "主动性"
+      },
+      {
+        "entity": "SKILL",
+        "word": "团队合作精神"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "计算机类"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "电子信息类"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "人工智能方向"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责雷达系统算法仿真设计"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责雷达目标聚类、跟踪、目标识别以及ADAS功能开发算法研发设计"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责毫米波雷达测距、测速和测角等功能算法"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责实测、实验数据的处理"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "设计应用场景和相关测试用例，并针对各种应用场景对算法和软件进行测试"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "撰写相应的设计文档，负责算法知识产权工作"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘Plan& Control Algorithm Engineer 控制规划算法工程师 ID185857",
+    "companyName": "梅赛德斯-奔驰",
+    "matched": [
+      {
+        "entity": "SKILL",
+        "original": "Linux",
+        "canonical": "Linux"
+      },
+      {
+        "entity": "SKILL",
+        "original": "MATLAB",
+        "canonical": "MATLAB"
+      },
+      {
+        "entity": "SKILL",
+        "original": "C++",
+        "canonical": "C++"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Python",
+        "canonical": "Python"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "DEGREE",
+        "word": "Master"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "vehicle engineering"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "robotics"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "electrical engineering"
+      },
+      {
+        "entity": "SKILL",
+        "word": "trajectory planning"
+      },
+      {
+        "entity": "SKILL",
+        "word": "vehicle control"
+      },
+      {
+        "entity": "SKILL",
+        "word": "data-driven based development framework"
+      },
+      {
+        "entity": "SKILL",
+        "word": "A*"
+      },
+      {
+        "entity": "SKILL",
+        "word": "EM"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Lattice"
+      },
+      {
+        "entity": "SKILL",
+        "word": "MPC"
+      },
+      {
+        "entity": "SKILL",
+        "word": "LQR"
+      },
+      {
+        "entity": "SKILL",
+        "word": "PID"
+      },
+      {
+        "entity": "SKILL",
+        "word": "ROS"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Autoware"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Apollo"
+      },
+      {
+        "entity": "SKILL",
+        "word": "QNX"
+      },
+      {
+        "entity": "SKILL",
+        "word": "MBD"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Simulink"
+      },
+      {
+        "entity": "SKILL",
+        "word": "dSpace toolkit"
+      },
+      {
+        "entity": "SKILL",
+        "word": "source code management"
+      },
+      {
+        "entity": "SKILL",
+        "word": "unit testing"
+      },
+      {
+        "entity": "SKILL",
+        "word": "code review"
+      },
+      {
+        "entity": "SKILL",
+        "word": "issue tracking systems"
+      },
+      {
+        "entity": "SKILL",
+        "word": "ADAS Chassis control interface"
+      },
+      {
+        "entity": "SKILL",
+        "word": "ESP"
+      },
+      {
+        "entity": "SKILL",
+        "word": "EPS"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Chinese native speaker"
+      },
+      {
+        "entity": "SKILL",
+        "word": "fluent English language skills"
+      },
+      {
+        "entity": "SKILL",
+        "word": "German language beneficial"
+      },
+      {
+        "entity": "SKILL",
+        "word": "inter-cultural competence"
+      },
+      {
+        "entity": "SKILL",
+        "word": "communication skills"
+      },
+      {
+        "entity": "SKILL",
+        "word": "independent and proactive working style"
+      },
+      {
+        "entity": "SKILL",
+        "word": "willingness to travel"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Method and algorithm development, integration and validation with strong focus on trajectory planning and vehicle control for both highway and urban driving"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Development on vehicle control algorithm from planned trajectory to chassis control interface for series product"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Build up data-driven based development framework to iteratively improve planning & control system"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Cooperation with relevant internal and external algorithm experts mainly in China and Germany for automated driving and driver assistance systems"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Working with the onsite project team and counter-teams in Germany and the supplier requirements for autonomous driving systems"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "China"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "Germany"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "onsite project team"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "counter-teams in Germany"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "full-time"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "willingness to travel inside China and abroad to conduct system testing"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘Image Algorithm Engineer/图像算法工程师",
+    "companyName": "苏州一目万相科技有限公司",
+    "matched": [
+      {
+        "entity": "DEGREE",
+        "original": "Bachelor",
+        "canonical": "本科"
+      },
+      {
+        "entity": "DEGREE",
+        "original": "本科",
+        "canonical": "本科"
+      },
+      {
+        "entity": "DEGREE",
+        "original": "硕士",
+        "canonical": "硕士"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "数学",
+        "canonical": "数学"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Matlab",
+        "canonical": "MATLAB"
+      },
+      {
+        "entity": "SKILL",
+        "original": "python",
+        "canonical": "Python"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Matlab",
+        "canonical": "MATLAB"
+      },
+      {
+        "entity": "SKILL",
+        "original": "python",
+        "canonical": "Python"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Design and develop next-generation industry inspection system."
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Algorithm design including 2D/3D image reconstruction, imaging system calibration, image post processing."
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Image chain design and modeling."
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Image quality assessment, algorithm parameters tunning for best image quality"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Co-work with cross function engineer to design and implement cross function features."
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "设计和开发下一代工业检测设备。"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责2D/3D图像重建算法设计，成像系统校正算法，图像后处理算法设计。"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责影像链部件选型设计，成像模型设计。"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责图像质量评估，算法参数调整。"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "与其他部门工程师进行协同工作，完成系统和子系统的设计与实现。"
+      },
+      {
+        "entity": "DEGREE",
+        "word": "Master"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "CS"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "DSP"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "mathematics"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "数字信号处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "C/C++"
+      },
+      {
+        "entity": "SKILL",
+        "word": "CUDA"
+      },
+      {
+        "entity": "SKILL",
+        "word": "C/C++"
+      },
+      {
+        "entity": "SKILL",
+        "word": "CUDA"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "3+ years"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "2+ years"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "3年以上"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "2年以上"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘高级算法工程师（AI深度学习）",
+    "companyName": "镁伽科技",
+    "matched": [
+      {
+        "entity": "MAJOR",
+        "original": "计算机",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "人工智能",
+        "canonical": "人工智能"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Pytorch",
+        "canonical": "PyTorch"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Python",
+        "canonical": "Python"
+      },
+      {
+        "entity": "SKILL",
+        "original": "C++",
+        "canonical": "C++"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "DEGREE",
+        "word": "硕士研究生及以上学历"
+      },
+      {
+        "entity": "SKILL",
+        "word": "AI图像算法"
+      },
+      {
+        "entity": "SKILL",
+        "word": "传统图像处理算法"
+      },
+      {
+        "entity": "SKILL",
+        "word": "机器视觉"
+      },
+      {
+        "entity": "SKILL",
+        "word": "深度学习框架"
+      },
+      {
+        "entity": "SKILL",
+        "word": "OpenCV"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Halcon"
+      },
+      {
+        "entity": "SKILL",
+        "word": "IPD"
+      },
+      {
+        "entity": "SKILL",
+        "word": "DevOps"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "与新型显示和半导体量检测设备的产品团队协作，深度参与设备的光学量测、缺陷检测与识别、亚微米级引导对位等相关的算法开发、难点攻关和调试交付工作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "深度参与量检测设备与线体相关的算法研发工作， 包括缺陷数据生成、多模态大模型、小样本学习、超大分辨率图像的复杂背景极小目标检测等"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "输出开发技术文档和专利，参与产品线AI相关产品和技术的发展路线制定"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "新型显示和半导体量检测设备的产品团队"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "较高质量的论文和AI大赛奖项是加分项"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "有小规模研发团队的带队经历是加分项"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "8年以上智能硬件/设备相关的AI算法工作经验"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘Automation Algorithm Design Engineer/自动化算法设计工程师",
+    "companyName": "高意科技",
+    "matched": [
+      {
+        "entity": "DEGREE",
+        "original": "PhD",
+        "canonical": "博士"
+      },
+      {
+        "entity": "SKILL",
+        "original": "PyTorch",
+        "canonical": "PyTorch"
+      },
+      {
+        "entity": "SKILL",
+        "original": "TensorFlow",
+        "canonical": "TensorFlow"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "DEGREE",
+        "word": "Master's degree"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "Optical Engineering"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "Artificial Intelligence"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "Software Engineering"
+      },
+      {
+        "entity": "SKILL",
+        "word": "C/C++/Python"
+      },
+      {
+        "entity": "SKILL",
+        "word": "ONNX/TensorRT"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Continuously optimize algorithms based on product characteristics and complete iterative upgrades"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Track cutting-edge algorithm theories, develop high-value optical algorithms, and enhance the company’s core competitiveness through technological innovation"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Assist in training team members"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Research new alignment and coupling algorithms for various optical components"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Provide on-site support for troubleshooting algorithm anomalies"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Collaborate with mechanical/optical/electrical engineers and other team members to deploy automation"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Draft automation technical reports or white papers as required"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘Principal Algorithm Engineer 算法工程师(资深)",
+    "companyName": "趣车智能科技",
+    "matched": [
+      {
+        "entity": "SKILL",
+        "original": "TensorFlow",
+        "canonical": "TensorFlow"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Pytorch",
+        "canonical": "PyTorch"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机科学",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "电子信息工程",
+        "canonical": "电子信息工程"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "SKILL",
+        "word": "LR"
+      },
+      {
+        "entity": "SKILL",
+        "word": "RF"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Boost系列模型"
+      },
+      {
+        "entity": "SKILL",
+        "word": "DeepFM"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Wide&Deep"
+      },
+      {
+        "entity": "SKILL",
+        "word": "esmm"
+      },
+      {
+        "entity": "SKILL",
+        "word": "DID"
+      },
+      {
+        "entity": "SKILL",
+        "word": "PSM"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Uplift Model"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Hadoop"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Hive"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Spark"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Flink"
+      },
+      {
+        "entity": "DEGREE",
+        "word": "计算机科学及相关专业"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "统计数学"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "设计并实现推荐全链路算法模型"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "包括召回粗排、精排、重排及端智能等模块"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "持续迭代提升业务效果"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责推荐核心算法研发"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "提升用户体验"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "提高业务转化效率"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "与产品/运营/数据等相关团队密切合作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "驱动推荐业务快速迭代"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "6年以上算法相关工作经验"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘（杭州研发中心）音频算法工程师",
+    "companyName": "厦门亿联网络技术股份有限公司",
+    "matched": [
+      {
+        "entity": "SKILL",
+        "original": "C++",
+        "canonical": "C++"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "SKILL",
+        "word": "音频信号处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "回声消除"
+      },
+      {
+        "entity": "SKILL",
+        "word": "降噪算法"
+      },
+      {
+        "entity": "SKILL",
+        "word": "去混响算法"
+      },
+      {
+        "entity": "SKILL",
+        "word": "麦克风阵列"
+      },
+      {
+        "entity": "SKILL",
+        "word": "音频系统开发"
+      },
+      {
+        "entity": "SKILL",
+        "word": "音频实时通信系统开发"
+      },
+      {
+        "entity": "SKILL",
+        "word": "语音智能开发"
+      },
+      {
+        "entity": "SKILL",
+        "word": "语音识别"
+      },
+      {
+        "entity": "SKILL",
+        "word": "语音合成"
+      },
+      {
+        "entity": "SKILL",
+        "word": "C"
+      },
+      {
+        "entity": "SKILL",
+        "word": "webrtc"
+      },
+      {
+        "entity": "SKILL",
+        "word": "pisip"
+      },
+      {
+        "entity": "SKILL",
+        "word": "linephone"
+      },
+      {
+        "entity": "SKILL",
+        "word": "freeswitch"
+      },
+      {
+        "entity": "SKILL",
+        "word": "voip"
+      },
+      {
+        "entity": "SKILL",
+        "word": "回声处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "声源定位"
+      },
+      {
+        "entity": "SKILL",
+        "word": "音频codec"
+      },
+      {
+        "entity": "SKILL",
+        "word": "opus"
+      },
+      {
+        "entity": "SKILL",
+        "word": "aac"
+      },
+      {
+        "entity": "SKILL",
+        "word": "信号处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "语音智能算法"
+      },
+      {
+        "entity": "SKILL",
+        "word": "声纹识别"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "音频信号处理相关工作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "音频系统开发"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "语音智能开发"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘传感器算法工程师",
+    "companyName": "上海纬钛科技有限公司",
+    "matched": [
+      {
+        "entity": "SKILL",
+        "original": "C++",
+        "canonical": "C++"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Python",
+        "canonical": "Python"
+      },
+      {
+        "entity": "SKILL",
+        "original": "PyTorch",
+        "canonical": "PyTorch"
+      },
+      {
+        "entity": "SKILL",
+        "original": "深度学习",
+        "canonical": "深度学习"
+      },
+      {
+        "entity": "SKILL",
+        "original": "计算机视觉",
+        "canonical": "计算机视觉"
+      },
+      {
+        "entity": "SKILL",
+        "original": "图像处理",
+        "canonical": "计算机视觉"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机",
+        "canonical": "计算机科学与技术"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "SKILL",
+        "word": "git"
+      },
+      {
+        "entity": "SKILL",
+        "word": "强化学习"
+      },
+      {
+        "entity": "SKILL",
+        "word": "VLA模型"
+      },
+      {
+        "entity": "SKILL",
+        "word": "传感器信号处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数学建模"
+      },
+      {
+        "entity": "DEGREE",
+        "word": "本科及以上学历"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "机器人"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "力学"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责视触觉传感器产品相关的算法研发"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责开发高效易用的传感器信号处理算法、优化产品接口及SDK"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "与结构设计、硬件工程师协作，参与视触觉传感器的设计与优化，从源头把控产品质量"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责传感器数据采集、处理、标注及相关工具链开发，将触觉传感器与机器人应用相结合并可落地"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责对传感器产品算法及软件进行测试，调试，性能分析及故障排查，确保产品实际运行效果符合预期"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "时刻跟踪触觉感知、计算机视觉及机器人领域前沿技术，探索强化学习、VLA模型等多模态感知应用，保持技术领先性"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "研发部"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "全部行业"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "经验不限"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "经验不限"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘高级算法工程师 (Senior Algorithm Engineer)",
+    "companyName": "豪森药业",
+    "matched": [
+      {
+        "entity": "SKILL",
+        "original": "深度学习",
+        "canonical": "深度学习"
+      },
+      {
+        "entity": "SKILL",
+        "original": "NLP",
+        "canonical": "NLP"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Python",
+        "canonical": "Python"
+      },
+      {
+        "entity": "SKILL",
+        "original": "PyTorch",
+        "canonical": "PyTorch"
+      },
+      {
+        "entity": "SKILL",
+        "original": "TensorFlow",
+        "canonical": "TensorFlow"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Docker",
+        "canonical": "Docker"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机科学",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "人工智能",
+        "canonical": "人工智能"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "数学",
+        "canonical": "数学"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "SKILL",
+        "word": "AI 工具"
+      },
+      {
+        "entity": "SKILL",
+        "word": "智能体"
+      },
+      {
+        "entity": "SKILL",
+        "word": "AI 技术"
+      },
+      {
+        "entity": "SKILL",
+        "word": "LLM 工具"
+      },
+      {
+        "entity": "SKILL",
+        "word": "信息提取"
+      },
+      {
+        "entity": "SKILL",
+        "word": "知识库管理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "文档处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "翻译"
+      },
+      {
+        "entity": "SKILL",
+        "word": "AI 应用"
+      },
+      {
+        "entity": "SKILL",
+        "word": "垂类领域模型"
+      },
+      {
+        "entity": "SKILL",
+        "word": "多模态数据"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数据预处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "模型微调"
+      },
+      {
+        "entity": "SKILL",
+        "word": "预测/生成模型"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数学"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Transformer"
+      },
+      {
+        "entity": "SKILL",
+        "word": "RAG"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Prompt Engineering"
+      },
+      {
+        "entity": "SKILL",
+        "word": "模型微调"
+      },
+      {
+        "entity": "SKILL",
+        "word": "LangChain"
+      },
+      {
+        "entity": "SKILL",
+        "word": "LangGraph"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Git"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Backend"
+      },
+      {
+        "entity": "SKILL",
+        "word": "结构化数据"
+      },
+      {
+        "entity": "SKILL",
+        "word": "非结构化数据"
+      },
+      {
+        "entity": "SKILL",
+        "word": "SMILES"
+      },
+      {
+        "entity": "SKILL",
+        "word": "蛋白质结构"
+      },
+      {
+        "entity": "SKILL",
+        "word": "基因序列"
+      },
+      {
+        "entity": "DEGREE",
+        "word": "硕士及以上学历"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "生物信息学"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "CS"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "AI"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "Math"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "Bioinformatics"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "生物医药"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "计算生物学"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "Biotech"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "Pharma"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "Computational Biology"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "设计并部署企业级 AI 应用"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "简化工作流"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "量化提升工作效率"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "构建垂类领域模型"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "解决专项业务需求"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "增强核心业务能力"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "开发具备规划与自主执行能力的 Agent"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "数据预处理"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "模型微调"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "构建预测/生成模型"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "与内部科学家及业务专家协作定义问题并迭代产品"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "探索与 AI 科技公司或学术机构的外部合作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "推动 AI 技术的落地应用"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "AI 科技公司"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "学术机构"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "全部行业"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "核心成员"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "全职"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘芯片AI算法工程师-Chip AI Algorithm Engineer(J19467)",
+    "companyName": "长鑫存储技术有限公司",
+    "matched": [
+      {
+        "entity": "MAJOR",
+        "original": "计算机",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "微电子",
+        "canonical": "微电子学"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "数学",
+        "canonical": "数学"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "统计",
+        "canonical": "统计学"
+      },
+      {
+        "entity": "SKILL",
+        "original": "机器学习",
+        "canonical": "机器学习"
+      },
+      {
+        "entity": "SKILL",
+        "original": "深度学习",
+        "canonical": "深度学习"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "DEGREE",
+        "word": "硕士研究生及以上"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "AI"
+      },
+      {
+        "entity": "SKILL",
+        "word": "C/C++/Python"
+      },
+      {
+        "entity": "SKILL",
+        "word": "大模型（LLM）"
+      },
+      {
+        "entity": "SKILL",
+        "word": "AI Agent"
+      },
+      {
+        "entity": "SKILL",
+        "word": "TensorFlow/PyTorch"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Flask/Django"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Transformer"
+      },
+      {
+        "entity": "SKILL",
+        "word": "LoRA"
+      },
+      {
+        "entity": "SKILL",
+        "word": "QLoRA"
+      },
+      {
+        "entity": "SKILL",
+        "word": "LangChain"
+      },
+      {
+        "entity": "SKILL",
+        "word": "AutoGPT"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "模型开发与优化"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "设计/实现机器学习（ML）、深度学习（DL）及大模型（LLM）算法，解决业务场景问题"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "主导模型训练、调参、评估及部署全流程（如分类、预测、NLP任务）"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "数据处理与挖掘"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "构建高效数据管道，处理多源异构数据（文本/图像/时序数据）"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "开发特征工程方案，提升模型泛化能力"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "工程落地"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "将算法封装为API服务，对接前后端系统（TensorFlow/PyTorch + Flask/Django）"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "前沿技术探索"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "跟踪AI领域最新进展（如多模态、强化学习、Agent技术），推进技术迭代"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "电子/半导体/集成电路"
+      },
+      {
+        "entity": "DEPARTMENT",
+        "word": "设计部"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘WiFi Algorithm Design Lead (通信算法主管）",
+    "companyName": "某知名公司",
+    "matched": [
+      {
+        "entity": "MAJOR",
+        "original": "电子工程",
+        "canonical": "电子信息工程"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "微电子",
+        "canonical": "微电子学"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "通信",
+        "canonical": "通信工程"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Matlab",
+        "canonical": "MATLAB"
+      },
+      {
+        "entity": "SKILL",
+        "original": "C++",
+        "canonical": "C++"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "DEGREE",
+        "word": "硕士及以上学历"
+      },
+      {
+        "entity": "SKILL",
+        "word": "WiFi 通信算法"
+      },
+      {
+        "entity": "SKILL",
+        "word": "无线通信原理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "PHY基本算法原理和流程"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数字信号处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "信道编译码"
+      },
+      {
+        "entity": "SKILL",
+        "word": "调制解调"
+      },
+      {
+        "entity": "SKILL",
+        "word": "信道估计"
+      },
+      {
+        "entity": "SKILL",
+        "word": "IEEE 802.11a/b/g/n/ac/ax/be 协议"
+      },
+      {
+        "entity": "SKILL",
+        "word": "C"
+      },
+      {
+        "entity": "SKILL",
+        "word": "MU-MIMO"
+      },
+      {
+        "entity": "SKILL",
+        "word": "OFDMA"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Beamforming"
+      },
+      {
+        "entity": "SKILL",
+        "word": "DPD"
+      },
+      {
+        "entity": "SKILL",
+        "word": "PAPR reduction"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Rx Sensitivity"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Tx Power control"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责WiFi 通信算法需求，选型，实现，仿真，优化，及性能验证"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责WiFi 芯片通信整体性能规划，对模拟，射频和ASIC提出相关设计指标要求"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "带领算法团队，和其他团队密切合作，确保达到WiFi 芯片的各项性能指标"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "评估算法实现可行性，配合ASIC工程师完成算法RTL设计和验证"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "协助系统和软件团队完成WiFi性能测试，持续对算法进行修改和优化"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "人力资源服务"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "8年及以上"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘图像处理算法工程师（Image Processing Algorithm Engineer）",
+    "companyName": "最终前沿",
+    "matched": [
+      {
+        "entity": "SKILL",
+        "original": "需求分析",
+        "canonical": "软件工程"
+      },
+      {
+        "entity": "SKILL",
+        "original": "测试",
+        "canonical": "软件工程"
+      },
+      {
+        "entity": "SKILL",
+        "original": "数据分析",
+        "canonical": "数据分析"
+      },
+      {
+        "entity": "SKILL",
+        "original": "深度学习",
+        "canonical": "深度学习"
+      },
+      {
+        "entity": "SKILL",
+        "original": "图像分割",
+        "canonical": "计算机视觉"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Python",
+        "canonical": "Python"
+      },
+      {
+        "entity": "SKILL",
+        "original": "C++",
+        "canonical": "C++"
+      },
+      {
+        "entity": "SKILL",
+        "original": "TensorFlow",
+        "canonical": "TensorFlow"
+      },
+      {
+        "entity": "SKILL",
+        "original": "PyTorch",
+        "canonical": "PyTorch"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机科学",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "电子工程",
+        "canonical": "电子信息工程"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "应用数学",
+        "canonical": "数学"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "SKILL",
+        "word": "图像处理算法"
+      },
+      {
+        "entity": "SKILL",
+        "word": "图像增强"
+      },
+      {
+        "entity": "SKILL",
+        "word": "特征提取"
+      },
+      {
+        "entity": "SKILL",
+        "word": "目标检测"
+      },
+      {
+        "entity": "SKILL",
+        "word": "识别"
+      },
+      {
+        "entity": "SKILL",
+        "word": "图像分类"
+      },
+      {
+        "entity": "SKILL",
+        "word": "物体追踪"
+      },
+      {
+        "entity": "SKILL",
+        "word": "算法实现"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数据处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "模式识别"
+      },
+      {
+        "entity": "SKILL",
+        "word": "性能优化"
+      },
+      {
+        "entity": "SKILL",
+        "word": "模型评估"
+      },
+      {
+        "entity": "SKILL",
+        "word": "多帧图像超分辨率"
+      },
+      {
+        "entity": "SKILL",
+        "word": "画质增强"
+      },
+      {
+        "entity": "SKILL",
+        "word": "去模糊"
+      },
+      {
+        "entity": "SKILL",
+        "word": "去噪声"
+      },
+      {
+        "entity": "SKILL",
+        "word": "单帧图像盲超"
+      },
+      {
+        "entity": "SKILL",
+        "word": "质量修复"
+      },
+      {
+        "entity": "SKILL",
+        "word": "卷积神经网络"
+      },
+      {
+        "entity": "SKILL",
+        "word": "边缘检测"
+      },
+      {
+        "entity": "SKILL",
+        "word": "OpenCV"
+      },
+      {
+        "entity": "SKILL",
+        "word": "PIL"
+      },
+      {
+        "entity": "SKILL",
+        "word": "scikit-image"
+      },
+      {
+        "entity": "SKILL",
+        "word": "嵌入式系统"
+      },
+      {
+        "entity": "SKILL",
+        "word": "实时处理"
+      },
+      {
+        "entity": "DEGREE",
+        "word": "硕士及以上学历"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责开发和优化图像处理算法"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "参与整个开发周期，从需求分析到算法实现和测试"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "算法设计与开发"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "数据处理与分析"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "性能优化"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "模型评估与测试"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "跨部门协作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "文档编写"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "基于深度学习模型处理多帧图像超分辨率、画质增强、去模糊、去噪声等工作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "基于深度学习模型处理单帧图像基于真实世界的盲超工作、画质增强、质量修复"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "全部行业"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘芯片算法建模工程师-Chip Algorithm Modeling Engineer(J19398)",
+    "companyName": "长鑫存储技术有限公司",
+    "matched": [
+      {
+        "entity": "SKILL",
+        "original": "MATLAB",
+        "canonical": "MATLAB"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Python",
+        "canonical": "Python"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "微电子",
+        "canonical": "微电子学"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "电子工程",
+        "canonical": "电子信息工程"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "通信工程",
+        "canonical": "通信工程"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "信号与信息处理",
+        "canonical": "信号与信息处理"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "应用数学",
+        "canonical": "数学"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "SKILL",
+        "word": "C/C++"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数字信号处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "线性代数"
+      },
+      {
+        "entity": "SKILL",
+        "word": "随机过程"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数字电路基础"
+      },
+      {
+        "entity": "SKILL",
+        "word": "计算机体系结构"
+      },
+      {
+        "entity": "SKILL",
+        "word": "硬件描述语言"
+      },
+      {
+        "entity": "DEGREE",
+        "word": "学历"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "参与芯片系统定义"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责核心算法的方案设计、理论推导与数学建模"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "使用 MATLAB、Python 或 C/C++ 搭建算法仿真平台"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "进行性能仿真、评估与优化迭代"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "深入理解算法原理"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "结合芯片实现进行可行性分析"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "量化算法在不同场景下的表现"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "进行算法硬件架构设计"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "探索不同架构与实现方案"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "在PPA之间取得平衡"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "编写清晰的算法设计文档和硬件实现指南"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "与前端设计工程师紧密协作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "支持RTL实现"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "根据局部设计的功能和特性开发高精度、可配置的仿真模型"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "提升后续验证工作的精度和效率"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "进行复杂算法的建模"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "进行仿真与数据分析"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "设计部"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "全部行业"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "职位介绍"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘算法工程师-Algorithm Engineer(J19023)",
+    "companyName": "长鑫存储技术有限公司",
+    "matched": [
+      {
+        "entity": "DEGREE",
+        "original": "学士",
+        "canonical": "本科"
+      },
+      {
+        "entity": "DEGREE",
+        "original": "硕士",
+        "canonical": "硕士"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "数学",
+        "canonical": "数学"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "统计学",
+        "canonical": "统计学"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机科学",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "SKILL",
+        "original": "机器学习",
+        "canonical": "机器学习"
+      },
+      {
+        "entity": "SKILL",
+        "original": "深度学习",
+        "canonical": "深度学习"
+      },
+      {
+        "entity": "SKILL",
+        "original": "数据分析",
+        "canonical": "数据分析"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Python",
+        "canonical": "Python"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "SKILL",
+        "word": "数据挖掘"
+      },
+      {
+        "entity": "SKILL",
+        "word": "R"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责开发、优化和部署机器学习和深度学习算法"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "独立进行大规模数据处理和分析，提取有价值的信息，并开发预测模型"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "与团队合作，将算法和模型集成到公司的产品和服务中，持续优化和改进"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "持续学习和探索新的算法和技术，保持对行业的了解"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘大模型算法工程师AI Algorithm Engineer  Large Model / LLM",
+    "companyName": "某知名公司",
+    "matched": [
+      {
+        "entity": "SKILL",
+        "original": "Agent",
+        "canonical": "Agent"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Python",
+        "canonical": "Python"
+      },
+      {
+        "entity": "SKILL",
+        "original": "PyTorch",
+        "canonical": "PyTorch"
+      },
+      {
+        "entity": "SKILL",
+        "original": "LLM",
+        "canonical": "大模型"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "数学",
+        "canonical": "数学"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "SKILL",
+        "word": "大语言模型"
+      },
+      {
+        "entity": "SKILL",
+        "word": "多模态模型"
+      },
+      {
+        "entity": "SKILL",
+        "word": "预训练"
+      },
+      {
+        "entity": "SKILL",
+        "word": "微调"
+      },
+      {
+        "entity": "SKILL",
+        "word": "对齐"
+      },
+      {
+        "entity": "SKILL",
+        "word": "RAG"
+      },
+      {
+        "entity": "SKILL",
+        "word": "模型架构优化"
+      },
+      {
+        "entity": "SKILL",
+        "word": "分布式训练"
+      },
+      {
+        "entity": "SKILL",
+        "word": "推理加速"
+      },
+      {
+        "entity": "SKILL",
+        "word": "量化蒸馏"
+      },
+      {
+        "entity": "SKILL",
+        "word": "稀疏化"
+      },
+      {
+        "entity": "SKILL",
+        "word": "DeepSpeed"
+      },
+      {
+        "entity": "SKILL",
+        "word": "FSDP"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Megatron"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Transformer"
+      },
+      {
+        "entity": "SKILL",
+        "word": "VLM"
+      },
+      {
+        "entity": "SKILL",
+        "word": "MoE"
+      },
+      {
+        "entity": "SKILL",
+        "word": "指令微调"
+      },
+      {
+        "entity": "SKILL",
+        "word": "RLHF"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Prompt Engineering"
+      },
+      {
+        "entity": "DEGREE",
+        "word": "硕士及以上"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "电子"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "AI"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责大语言模型 / 多模态模型的预训练、微调、对齐、RAG、Agent等全链路研发"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "参与模型架构优化、分布式训练、推理加速、量化蒸馏、稀疏化等性能提升工作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "设计实验、复现前沿论文、推动 SOTA 技术落地产品"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "与产品 / 工程团队协作，完成模型从训练到上线的完整闭环"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "顶会论文 / 开源项目贡献者优先"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "2 年 + 大模型 / 深度学习实际项目经验"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘AI算法科学家 / AI Algorithm Scientist​",
+    "companyName": "某知名公司",
+    "matched": [
+      {
+        "entity": "MAJOR",
+        "original": "计算机科学",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "人工智能",
+        "canonical": "人工智能"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "统计学",
+        "canonical": "统计学"
+      },
+      {
+        "entity": "DEGREE",
+        "original": "博士",
+        "canonical": "博士"
+      },
+      {
+        "entity": "DEGREE",
+        "original": "硕士",
+        "canonical": "硕士"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "DEGREE",
+        "word": "学历不限"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责基于宏基因组与耐药数据库的AI模型开发，包括物种识别、耐药表型预测、特征筛选"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "设计并实现机器学习与深度学习模型（LightGBM、XGBoost、CNN、Transformer 等）"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "优化特征工程与数据增强策略，提升模型泛化能力与临床适用性"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "与生信、实验组协作，推动模型临床验证与性能评估"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "输出可解释性分析报告（SHAP、LIME、特征重要性矩阵）并支撑论文与专利撰写"
+      },
+      {
+        "entity": "SKILL",
+        "word": "生物数据AI建模经验"
+      },
+      {
+        "entity": "SKILL",
+        "word": "机器学习/深度学习算法及模型优化流程"
+      },
+      {
+        "entity": "SKILL",
+        "word": "特征工程与模型可解释性分析能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "跨学科协作能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "科研产出经验"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "生物信息"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "至少3年AI建模经验"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "专业技术服务"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘音频算法工程师（Audio Algorithm Engineer）",
+    "companyName": "深圳亮源新创科技有限公司",
+    "matched": [
+      {
+        "entity": "MAJOR",
+        "original": "信号处理",
+        "canonical": "信号与信息处理"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "声学",
+        "canonical": "声学"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "自动化",
+        "canonical": "自动化"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "DEGREE",
+        "word": "硕士及以上"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "电子"
+      },
+      {
+        "entity": "SKILL",
+        "word": "语音增强"
+      },
+      {
+        "entity": "SKILL",
+        "word": "降噪"
+      },
+      {
+        "entity": "SKILL",
+        "word": "回声消除"
+      },
+      {
+        "entity": "SKILL",
+        "word": "声源定位"
+      },
+      {
+        "entity": "SKILL",
+        "word": "波束成形"
+      },
+      {
+        "entity": "SKILL",
+        "word": "声学围栏"
+      },
+      {
+        "entity": "SKILL",
+        "word": "距离检测"
+      },
+      {
+        "entity": "SKILL",
+        "word": "FFT"
+      },
+      {
+        "entity": "SKILL",
+        "word": "滤波器"
+      },
+      {
+        "entity": "SKILL",
+        "word": "自适应滤波"
+      },
+      {
+        "entity": "SKILL",
+        "word": "阵列信号处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "时频分析"
+      },
+      {
+        "entity": "SKILL",
+        "word": "C/C++"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Python/MATLAB"
+      },
+      {
+        "entity": "SKILL",
+        "word": "ARM/Linux"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责语音增强、降噪、回声消除、声源定位、波束成形、声学围栏、距离检测等算法研发与优化"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责音频算法原型设计、仿真验证、工程化移植（ARM/Linux）、性能与功耗优化"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责算法指标定义、数据集构建、客观评测与主观听评体系建设"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "跟踪前沿音频 / 语音 AI 技术，完成技术预研与产品化落地"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "输出算法设计文档、接口说明、测试报告与专利 / 技术沉淀"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘激光感知算法工程师（Lidar Perception Algorithm Engineer）",
+    "companyName": "深圳市锐明技术股份有限公司",
+    "matched": [
+      {
+        "entity": "MAJOR",
+        "original": "通信",
+        "canonical": "通信工程"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "信号处理",
+        "canonical": "信号与信息处理"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Python",
+        "canonical": "Python"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "DEGREE",
+        "word": "硕士以上学历"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "电子"
+      },
+      {
+        "entity": "SKILL",
+        "word": "激光雷达信号处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "激光雷达三维点云"
+      },
+      {
+        "entity": "SKILL",
+        "word": "目标检测"
+      },
+      {
+        "entity": "SKILL",
+        "word": "识别"
+      },
+      {
+        "entity": "SKILL",
+        "word": "分割"
+      },
+      {
+        "entity": "SKILL",
+        "word": "深度神经网络模型"
+      },
+      {
+        "entity": "SKILL",
+        "word": "激光雷达点云数据集"
+      },
+      {
+        "entity": "SKILL",
+        "word": "激光雷达系统建模与仿真"
+      },
+      {
+        "entity": "SKILL",
+        "word": "链路分析"
+      },
+      {
+        "entity": "SKILL",
+        "word": "信噪比评估"
+      },
+      {
+        "entity": "SKILL",
+        "word": "功能参数量化研究"
+      },
+      {
+        "entity": "SKILL",
+        "word": "相干探测系统"
+      },
+      {
+        "entity": "SKILL",
+        "word": "信号处理流程"
+      },
+      {
+        "entity": "SKILL",
+        "word": "仿真模型"
+      },
+      {
+        "entity": "SKILL",
+        "word": "点云处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "降噪"
+      },
+      {
+        "entity": "SKILL",
+        "word": "匹配"
+      },
+      {
+        "entity": "SKILL",
+        "word": "分类"
+      },
+      {
+        "entity": "SKILL",
+        "word": "雷达信号处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数学功底"
+      },
+      {
+        "entity": "SKILL",
+        "word": "系统建模"
+      },
+      {
+        "entity": "SKILL",
+        "word": "C/C++"
+      },
+      {
+        "entity": "SKILL",
+        "word": "算法与数据结构"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "开展激光雷达信号处理核心模块的算法研发与性能优化工作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "研发基于激光雷达三维点云的目标检测、识别与分割等关键算法，并推动相关技术难点攻关"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "结合自动驾驶场景的激光雷达感知需求，完成深度神经网络模型的设计、训练与验证"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "参与激光雷达点云数据集的标注流程，为模型训练提供高质量数据支持"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责激光雷达系统建模与仿真，开展链路分析、信噪比评估及功能参数量化研究，为各模块指标设定提供依据"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "熟悉相干探测系统的信号处理流程，具备根据系统架构搭建仿真模型的能力"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "3 年以上"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘算法工程师 | Algorithm Engineer(J17940)",
+    "companyName": "长鑫存储技术有限公司",
+    "matched": [
+      {
+        "entity": "SKILL",
+        "original": "图像分割",
+        "canonical": "计算机视觉"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Python",
+        "canonical": "Python"
+      },
+      {
+        "entity": "SKILL",
+        "original": "PyTorch",
+        "canonical": "PyTorch"
+      },
+      {
+        "entity": "SKILL",
+        "original": "TensorFlow",
+        "canonical": "TensorFlow"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Linux",
+        "canonical": "Linux"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Docker",
+        "canonical": "Docker"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "软件工程",
+        "canonical": "软件工程"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "数学",
+        "canonical": "数学"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "SKILL",
+        "word": "算法设计与研发"
+      },
+      {
+        "entity": "SKILL",
+        "word": "计算机图像视觉核心算法"
+      },
+      {
+        "entity": "SKILL",
+        "word": "图像分类"
+      },
+      {
+        "entity": "SKILL",
+        "word": "目标检测"
+      },
+      {
+        "entity": "SKILL",
+        "word": "语义分割"
+      },
+      {
+        "entity": "SKILL",
+        "word": "实例分割"
+      },
+      {
+        "entity": "SKILL",
+        "word": "全景分割"
+      },
+      {
+        "entity": "SKILL",
+        "word": "图像生成"
+      },
+      {
+        "entity": "SKILL",
+        "word": "AIGC"
+      },
+      {
+        "entity": "SKILL",
+        "word": "光学字符识别"
+      },
+      {
+        "entity": "SKILL",
+        "word": "OCR"
+      },
+      {
+        "entity": "SKILL",
+        "word": "图像增强"
+      },
+      {
+        "entity": "SKILL",
+        "word": "超分辨率"
+      },
+      {
+        "entity": "SKILL",
+        "word": "工程化"
+      },
+      {
+        "entity": "SKILL",
+        "word": "部署"
+      },
+      {
+        "entity": "SKILL",
+        "word": "模型部署"
+      },
+      {
+        "entity": "SKILL",
+        "word": "上线"
+      },
+      {
+        "entity": "SKILL",
+        "word": "监控"
+      },
+      {
+        "entity": "SKILL",
+        "word": "图像数据采集"
+      },
+      {
+        "entity": "SKILL",
+        "word": "清洗"
+      },
+      {
+        "entity": "SKILL",
+        "word": "标注"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数据增强策略设计"
+      },
+      {
+        "entity": "SKILL",
+        "word": "训练数据集构建"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Bad Case分析"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数据问题挖掘"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数据迭代方向指导"
+      },
+      {
+        "entity": "SKILL",
+        "word": "技术文档撰写"
+      },
+      {
+        "entity": "SKILL",
+        "word": "设计方案撰写"
+      },
+      {
+        "entity": "SKILL",
+        "word": "C/C++"
+      },
+      {
+        "entity": "SKILL",
+        "word": "OpenCV"
+      },
+      {
+        "entity": "SKILL",
+        "word": "scikit-learn"
+      },
+      {
+        "entity": "SKILL",
+        "word": "NumPy"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Git"
+      },
+      {
+        "entity": "SKILL",
+        "word": "模型部署"
+      },
+      {
+        "entity": "SKILL",
+        "word": "性能优化"
+      },
+      {
+        "entity": "DEGREE",
+        "word": "硕士及以上学历"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "图像识别"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责计算机图像视觉核心算法的研发与实现"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "将算法模型工程化，与工程团队协作，推动算法在产品中的落地应用"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责模型的部署、上线和监控，解决实际部署中遇到的问题，保障线上服务的稳定性和高效性"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "参与图像数据的采集、清洗、标注和数据增强策略的设计，构建高质量的训练数据集"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "分析算法在真实场景下的Bad Case，挖掘数据问题，并指导数据迭代方向"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "撰写清晰的技术文档、设计方案，与产品、开发、测试等团队紧密沟通，共同推进项目进展"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "电子/半导体/集成电路"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "电子/半导体/集成电路"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "1-3年以上"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘AI算法科学家 / AI Algorithm Scientist",
+    "companyName": "某知名公司",
+    "matched": [
+      {
+        "entity": "SKILL",
+        "original": "机器学习",
+        "canonical": "机器学习"
+      },
+      {
+        "entity": "DEGREE",
+        "original": "博士",
+        "canonical": "博士"
+      },
+      {
+        "entity": "DEGREE",
+        "original": "硕士",
+        "canonical": "硕士"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机科学",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "人工智能",
+        "canonical": "人工智能"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "统计学",
+        "canonical": "统计学"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "SKILL",
+        "word": "AI模型开发"
+      },
+      {
+        "entity": "SKILL",
+        "word": "物种识别"
+      },
+      {
+        "entity": "SKILL",
+        "word": "耐药表型预测"
+      },
+      {
+        "entity": "SKILL",
+        "word": "特征筛选"
+      },
+      {
+        "entity": "SKILL",
+        "word": "深度学习模型"
+      },
+      {
+        "entity": "SKILL",
+        "word": "LightGBM"
+      },
+      {
+        "entity": "SKILL",
+        "word": "XGBoost"
+      },
+      {
+        "entity": "SKILL",
+        "word": "CNN"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Transformer"
+      },
+      {
+        "entity": "SKILL",
+        "word": "特征工程"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数据增强策略"
+      },
+      {
+        "entity": "SKILL",
+        "word": "模型泛化能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "临床适用性"
+      },
+      {
+        "entity": "SKILL",
+        "word": "可解释性分析"
+      },
+      {
+        "entity": "SKILL",
+        "word": "SHAP"
+      },
+      {
+        "entity": "SKILL",
+        "word": "LIME"
+      },
+      {
+        "entity": "SKILL",
+        "word": "特征重要性矩阵"
+      },
+      {
+        "entity": "SKILL",
+        "word": "论文撰写"
+      },
+      {
+        "entity": "SKILL",
+        "word": "专利撰写"
+      },
+      {
+        "entity": "SKILL",
+        "word": "生物数据AI建模"
+      },
+      {
+        "entity": "SKILL",
+        "word": "基因组数据"
+      },
+      {
+        "entity": "SKILL",
+        "word": "宏基因组数据"
+      },
+      {
+        "entity": "SKILL",
+        "word": "模型优化流程"
+      },
+      {
+        "entity": "SKILL",
+        "word": "跨学科协作能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "科研产出"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "生物信息"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责基于宏基因组与耐药数据库的AI模型开发"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "设计并实现机器学习与深度学习模型"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "优化特征工程与数据增强策略"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "与生信、实验组协作，推动模型临床验证与性能评估"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "输出可解释性分析报告并支撑论文与专利撰写"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "专业技术服务"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "不限"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "不限"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "至少3年"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘自动驾驶预测算法工程师（Prediction Algorithm Engineer）",
+    "companyName": "深圳市锐明技术股份有限公司",
+    "matched": [
+      {
+        "entity": "DEGREE",
+        "original": "博士",
+        "canonical": "博士"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "自动化",
+        "canonical": "自动化"
+      },
+      {
+        "entity": "SKILL",
+        "original": "深度学习",
+        "canonical": "深度学习"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Python",
+        "canonical": "Python"
+      },
+      {
+        "entity": "SKILL",
+        "original": "C++",
+        "canonical": "C++"
+      },
+      {
+        "entity": "SKILL",
+        "original": "PyTorch",
+        "canonical": "PyTorch"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "MAJOR",
+        "word": "交通工程"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "机器人"
+      },
+      {
+        "entity": "SKILL",
+        "word": "轨迹预测"
+      },
+      {
+        "entity": "SKILL",
+        "word": "行为建模"
+      },
+      {
+        "entity": "SKILL",
+        "word": "时空序列预测"
+      },
+      {
+        "entity": "SKILL",
+        "word": "概率论"
+      },
+      {
+        "entity": "SKILL",
+        "word": "优化理论"
+      },
+      {
+        "entity": "SKILL",
+        "word": "TensorRT"
+      },
+      {
+        "entity": "SKILL",
+        "word": "ROS2"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Pandas"
+      },
+      {
+        "entity": "SKILL",
+        "word": "GeoPandas"
+      },
+      {
+        "entity": "SKILL",
+        "word": "scikit-learn"
+      },
+      {
+        "entity": "SKILL",
+        "word": "PyG"
+      },
+      {
+        "entity": "SKILL",
+        "word": "时空 Transformer"
+      },
+      {
+        "entity": "SKILL",
+        "word": "GNN"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Diffusion Model"
+      },
+      {
+        "entity": "SKILL",
+        "word": "MPC"
+      },
+      {
+        "entity": "SKILL",
+        "word": "强化学习"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "开展多模态交通参与者（机动车、两轮车、行人等）行为意图与长时域轨迹预测核心算法研发与性能优化"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "融合激光雷达、摄像头、毫米波雷达及高精地图语义，研发基于时空 Transformer、GNN、Diffusion Model 等前沿架构的交互式预测模型，持续提升复杂城口场景预测准确率"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "构建数据闭环：设计自动标注与难例挖掘流程，搭建千万级交互场景数据集，支持模型周级迭代"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责预测不确定性建模与风险评估，输出预测置信度、碰撞概率及可行驶区域，为下游决策规划提供安全约束"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "参与预测-规划一体化联合优化，将预测结果直接嵌入 MPC/强化学习代价函数，实现“预测即决策”的端到端验证"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "跟踪 CV/ML/Robotics 会议最新成果，快速完成原型验证并推动量产落地"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "3 年以上"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘图形图像算法工程师 TD Graphics and Image Algorithm Engineer",
+    "companyName": "长鑫存储技术有限公司",
+    "matched": [
+      {
+        "entity": "SKILL",
+        "original": "算法",
+        "canonical": "算法开发"
+      },
+      {
+        "entity": "SKILL",
+        "original": "机器学习",
+        "canonical": "机器学习"
+      },
+      {
+        "entity": "SKILL",
+        "original": "python",
+        "canonical": "Python"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "数学",
+        "canonical": "数学"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "物理",
+        "canonical": "物理学"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "SKILL",
+        "word": "SEM"
+      },
+      {
+        "entity": "SKILL",
+        "word": "TEM"
+      },
+      {
+        "entity": "SKILL",
+        "word": "图像数据"
+      },
+      {
+        "entity": "SKILL",
+        "word": "设计版图数据"
+      },
+      {
+        "entity": "SKILL",
+        "word": "异常识别"
+      },
+      {
+        "entity": "SKILL",
+        "word": "精确表征"
+      },
+      {
+        "entity": "SKILL",
+        "word": "版图图形检查规则优化"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数据驱动模型"
+      },
+      {
+        "entity": "SKILL",
+        "word": "计算机图形学算法"
+      },
+      {
+        "entity": "SKILL",
+        "word": "几何变换"
+      },
+      {
+        "entity": "SKILL",
+        "word": "拓扑分析"
+      },
+      {
+        "entity": "SKILL",
+        "word": "特征提取"
+      },
+      {
+        "entity": "SKILL",
+        "word": "自动对齐"
+      },
+      {
+        "entity": "SKILL",
+        "word": "异常检测"
+      },
+      {
+        "entity": "SKILL",
+        "word": "AI增强的规则引擎"
+      },
+      {
+        "entity": "SKILL",
+        "word": "DRC规则库"
+      },
+      {
+        "entity": "SKILL",
+        "word": "图像诊断闭环系统"
+      },
+      {
+        "entity": "SKILL",
+        "word": "GPU加速的图像处理流水线"
+      },
+      {
+        "entity": "SKILL",
+        "word": "超大规模版图数据"
+      },
+      {
+        "entity": "SKILL",
+        "word": "统计分析实践"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数学建模"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数据处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Web前后端技术"
+      },
+      {
+        "entity": "SKILL",
+        "word": "大数据系统技术"
+      },
+      {
+        "entity": "SKILL",
+        "word": "NOI"
+      },
+      {
+        "entity": "SKILL",
+        "word": "IOI"
+      },
+      {
+        "entity": "SKILL",
+        "word": "ACM"
+      },
+      {
+        "entity": "DEGREE",
+        "word": "硕士及以上学历"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "软件"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "基于半导体SEM/TEM等图像数据，与设计版图数据，实现图像中的异常识别，精确表征，版图图形检查规则优化"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "开发数据驱动模型和算法，分析半导体版图设计与实际晶圆图像的差异，识别光刻畸变、缺陷热点等制造风险"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "构建计算机图形学算法（如几何变换、拓扑分析、特征提取），实现版图与SEM/TEM图像的自动对齐，精确表征，异常检测等"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "设计AI增强的规则引擎，结合机器学习优化DRC规则库，提升对图形边缘失真、层间偏移等复杂问题的预测准确性"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "建立图像诊断闭环系统，将识别结果反馈至工艺设计，驱动版图优化与制程改进"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "开发GPU加速的图像处理流水线，处理超大规模版图数据（TB级）"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "云计算/大数据"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "半导体"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "实习工作经历"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "2年以上相关工作经验"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘Data Scientist - Algorithm（模型算法方向）",
+    "companyName": "腾讯",
+    "matched": [
+      {
+        "entity": "MAJOR",
+        "original": "计算机科学",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "统计学",
+        "canonical": "统计学"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "人工智能",
+        "canonical": "人工智能"
+      },
+      {
+        "entity": "DEGREE",
+        "original": "硕士",
+        "canonical": "硕士"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Python",
+        "canonical": "Python"
+      },
+      {
+        "entity": "SKILL",
+        "original": "PyTorch",
+        "canonical": "PyTorch"
+      },
+      {
+        "entity": "SKILL",
+        "original": "TensorFlow",
+        "canonical": "TensorFlow"
+      },
+      {
+        "entity": "SKILL",
+        "original": "机器学习",
+        "canonical": "机器学习"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责游戏场景下的用户分层、商品推荐、生命周期预测、流失预警与价值评估等建模任务"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "研发并优化匹配机制、平衡性算法及动态定价策略，提升游戏体验与变现效率"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "构建可复用的算法框架与服务部署，支持多游戏项目的规模化应用"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "探索LLM，机器学习，因果推断等在游戏实验与智能运营中的前沿应用"
+      },
+      {
+        "entity": "DEGREE",
+        "word": "本科及以上学历"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Scikit-learn"
+      },
+      {
+        "entity": "SKILL",
+        "word": "统计建模"
+      },
+      {
+        "entity": "SKILL",
+        "word": "因果推断"
+      },
+      {
+        "entity": "SKILL",
+        "word": "强化学习"
+      },
+      {
+        "entity": "SKILL",
+        "word": "运筹优化"
+      },
+      {
+        "entity": "SKILL",
+        "word": "分布式计算"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Spark"
+      },
+      {
+        "entity": "SKILL",
+        "word": "算法工程"
+      },
+      {
+        "entity": "SKILL",
+        "word": "问题抽象"
+      },
+      {
+        "entity": "SKILL",
+        "word": "模型优化"
+      },
+      {
+        "entity": "SKILL",
+        "word": "跨团队协作"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "3年以上"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "休闲游戏行业"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "硕士优先"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘人工智能应用联合创新中心-运营经理",
+    "companyName": "清大创新研究院",
+    "matched": [
+      {
+        "entity": "MAJOR",
+        "original": "计算机",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "人工智能",
+        "canonical": "人工智能"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "自动化",
+        "canonical": "自动化"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "数据科学",
+        "canonical": "数据科学"
+      },
+      {
+        "entity": "SKILL",
+        "original": "大模型",
+        "canonical": "大模型"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "DEGREE",
+        "word": "本科及以上学历"
+      },
+      {
+        "entity": "SKILL",
+        "word": "AI工具"
+      },
+      {
+        "entity": "SKILL",
+        "word": "机器学习平台"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数据分析工具"
+      },
+      {
+        "entity": "SKILL",
+        "word": "组织协调与沟通能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "项目管理经验"
+      },
+      {
+        "entity": "SKILL",
+        "word": "学习能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "创新意识"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责人工智能应用联合创新中心的日常运营与管理"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "协调各合作单位的资源对接与项目推进"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "组织策划技术交流、项目对接、成果展示等各类活动"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "统筹建立“AI工具包”与“技术能力清单”"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "系统梳理合作企业的AI技术与产品"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "推动AI技术在研究院内部管理中的应用落地"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "联合技术经理人团队，深入挖掘东莞本地制造业企业的智能化转型需求"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "推动AI技术与应用场景的精准匹配"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "促成项目合作与成果转化"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "东莞"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "3年以上"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "统招"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘人工智能/算法工程师（博士）",
+    "companyName": "杰能科世",
+    "matched": [
+      {
+        "entity": "SKILL",
+        "original": "深度学习",
+        "canonical": "深度学习"
+      },
+      {
+        "entity": "SKILL",
+        "original": "机器学习",
+        "canonical": "机器学习"
+      },
+      {
+        "entity": "SKILL",
+        "original": "PyTorch",
+        "canonical": "PyTorch"
+      },
+      {
+        "entity": "SKILL",
+        "original": "TensorFlow",
+        "canonical": "TensorFlow"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Python",
+        "canonical": "Python"
+      },
+      {
+        "entity": "SKILL",
+        "original": "数据分析",
+        "canonical": "数据分析"
+      },
+      {
+        "entity": "SKILL",
+        "original": "机器学习",
+        "canonical": "机器学习"
+      },
+      {
+        "entity": "SKILL",
+        "original": "Docker",
+        "canonical": "Docker"
+      },
+      {
+        "entity": "DEGREE",
+        "original": "博士",
+        "canonical": "博士"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机科学",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "人工智能",
+        "canonical": "人工智能"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "数学",
+        "canonical": "数学"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "电子工程",
+        "canonical": "电子信息工程"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "SKILL",
+        "word": "指令微调(SFT)"
+      },
+      {
+        "entity": "SKILL",
+        "word": "强化学习(RLHF/DPO)"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Transformer架构"
+      },
+      {
+        "entity": "SKILL",
+        "word": "LLM原理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "分布式训练"
+      },
+      {
+        "entity": "SKILL",
+        "word": "大规模数据处理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "SFT"
+      },
+      {
+        "entity": "SKILL",
+        "word": "强化学习"
+      },
+      {
+        "entity": "SKILL",
+        "word": "GPT"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Qwen"
+      },
+      {
+        "entity": "SKILL",
+        "word": "LLaMA"
+      },
+      {
+        "entity": "SKILL",
+        "word": "GLM系列"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Qwen-VL"
+      },
+      {
+        "entity": "SKILL",
+        "word": "InternVL"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Kubernetes"
+      },
+      {
+        "entity": "SKILL",
+        "word": "ACT"
+      },
+      {
+        "entity": "SKILL",
+        "word": "OpenVLA"
+      },
+      {
+        "entity": "SKILL",
+        "word": "pi0"
+      },
+      {
+        "entity": "SKILL",
+        "word": "RT2"
+      },
+      {
+        "entity": "SKILL",
+        "word": "视觉-语言-导航大模型"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "设计和构建基于大模型的AI应用系统"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "运用指令微调(SFT)、强化学习(RLHF/DPO)等技术优化模型在特定场景的表现"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "构建完整的AI应用架构"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "参与大模型基座研发与优化"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "构建面向具身，特别是低空领域的多模态基座大模型"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "设计和实现智能Agent系统"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "构建多Agent协同框架"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "探索Agent在复杂业务场景中的应用模式"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "深入理解业务需求，将AI技术与实际场景深度结合"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "优化AI应用在多轮对话、知识问答、决策支持等场景的效果和效率"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "与产品和工程团队协作，推动AI应用从原型到生产的完整落地"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "地面算力中心"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "空中机器人"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "低空领域"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "经验不限"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "应届（2026年6月前可拿毕业证）"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘人工智能助理研究人员（外包）",
+    "companyName": "宁波诺丁汉大学",
+    "matched": [],
+    "unmatched": [
+      {
+        "entity": "DEGREE",
+        "word": "Degree"
+      },
+      {
+        "entity": "DEGREE",
+        "word": "Master’s Degree"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "Artificial Intelligence"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "conduct work using approaches or methodologies and techniques appropriate to the type of research"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "writing up their work for publication"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "develop research methods and extend their research portfolio"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "undertake supervised research which may include planning, preparing, setting up, conducting and recording the outcome of experiments and fieldwork, developing questionnaires and conducting surveys within the framework of an agreed programme"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Conduct literature and database searches and carry out analyses and/or tests and/or critical evaluations using specified and agreed techniques, approaches and/or models and document findings"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Contribute to the production of research reports and publications"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Prepare and present papers on research progress and outcomes to relevant groups including external bodies"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "continue to develop skills in and knowledge of research methods and techniques and contribute to the development of/or choice of techniques, models, methods, critiques and approaches"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Communicate information and ideas to other staff and advise and assist other staff within area of expertise"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Build relationships with internal and external contacts to develop knowledge and understanding and form relationships for future collaborations"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Work in conjunction with others in the research team, achieve objectives and deadlines of the research project"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Participate in training and staff development events, as trainer or trainee, as appropriate"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Maintain appropriate professional development, expertise and awareness"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "Undertake other tasks and responsibilities as may reasonably be required"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "University of Nottingham Ningbo China"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "Ningbo"
+      },
+      {
+        "entity": "SKILL",
+        "word": "oral and written communication skills"
+      },
+      {
+        "entity": "SKILL",
+        "word": "research skills"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Analytical ability"
+      },
+      {
+        "entity": "SKILL",
+        "word": "ability to build relationships and collaborate with others"
+      },
+      {
+        "entity": "SKILL",
+        "word": "research methodologies and techniques"
+      },
+      {
+        "entity": "SKILL",
+        "word": "specialist skills approaches and techniques"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "full-time"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘人工智能咨询顾问",
+    "companyName": "北京国网信通埃森哲信息技术有限公司",
+    "matched": [
+      {
+        "entity": "DEGREE",
+        "original": "本科",
+        "canonical": "本科"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机科学",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "人工智能",
+        "canonical": "人工智能"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "MAJOR",
+        "word": "电力系统自动化"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责开展人工智能政策、产业的前沿研究工作，定期提供专项研究报告，为集团人工智能发展提供决策支撑"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "参与人工智能平台建设，承担平台发展战略研究等工作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责人工智能平台运营模式研究，包括商业模式设计、产品模式设计以及生态圈构建等内容"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责提供人工智能方面的专业咨询策划方案，并对AI应用场景提出建设性意见"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "对电力业务具备较强的学习能力，能快速理解电网特定专业领域，掌握电力行业前沿趋势，深入挖掘并引导用户需求"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "能负责行业客户需求的对接并参与和技术团队的深度沟通，为客户提供咨询策划方案并顺利落地负责，能够独立撰写相关规划、调研报告、分析报告等文件"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "具有较强的沟通表达能力，能够讲解咨询设计方案，向客户进行工作汇报"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "能够适应不定期出差"
+      },
+      {
+        "entity": "SKILL",
+        "word": "咨询顾问"
+      },
+      {
+        "entity": "SKILL",
+        "word": "业务策划能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "咨询方法论"
+      },
+      {
+        "entity": "SKILL",
+        "word": "电网调度"
+      },
+      {
+        "entity": "SKILL",
+        "word": "设备"
+      },
+      {
+        "entity": "SKILL",
+        "word": "营销"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数字化"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "5年以上"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘人工智能规划与管理（双休）",
+    "companyName": "中智信通",
+    "matched": [
+      {
+        "entity": "DEGREE",
+        "original": "研究生",
+        "canonical": "硕士"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "数据科学",
+        "canonical": "数据科学"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "人工智能",
+        "canonical": "人工智能"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "统计学",
+        "canonical": "统计学"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "DEGREE",
+        "word": "本科及以上学历"
+      },
+      {
+        "entity": "SKILL",
+        "word": "战略规划"
+      },
+      {
+        "entity": "SKILL",
+        "word": "AI项目规划与落地"
+      },
+      {
+        "entity": "SKILL",
+        "word": "AI技术体系和发展趋势"
+      },
+      {
+        "entity": "SKILL",
+        "word": "主流机器学习框架"
+      },
+      {
+        "entity": "SKILL",
+        "word": "云计算平台"
+      },
+      {
+        "entity": "SKILL",
+        "word": "沟通协调"
+      },
+      {
+        "entity": "SKILL",
+        "word": "逻辑思维"
+      },
+      {
+        "entity": "SKILL",
+        "word": "文字表达能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "改革创新意识"
+      },
+      {
+        "entity": "SKILL",
+        "word": "系统性思维"
+      },
+      {
+        "entity": "SKILL",
+        "word": "自我学习能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "抗压能力"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责围绕公司战略编制人工智能总体规划及年度工作要点"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责制定人工智能管理体系和架构"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责各单位人工智能实施计划的指导、监督及结果管理"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责人工智能投资管理，包括项目从立项、交付到项目后评估及成果转化，统筹搭建相关管理平台"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责牵头人工智能文化宣贯和人才培养工作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责上级交办的其他工作"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "公司"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "3年以上"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘人工智能方案产品经理（教育）",
+    "companyName": "某北京计算机硬件上市公司",
+    "matched": [
+      {
+        "entity": "DEGREE",
+        "original": "硕士",
+        "canonical": "硕士"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "自动化",
+        "canonical": "自动化"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "机械工程",
+        "canonical": "机械工程"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "DEGREE",
+        "word": "统招"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责人工智能专业方向的校企合作专业共建整体方案的制定"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责人工智能专业方向的人才培养方案的制定"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "牵头制定人工智能专业方向的营销方案"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责相关方案模块的组织开发"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "参与教师选拔"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "联想"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "北京市海淀区"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "联想总部东区E1"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "不到3年"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘法规专家（网络安全 / 人工智能）",
+    "companyName": "某北京大型计算机软件公司",
+    "matched": [
+      {
+        "entity": "SKILL",
+        "original": "人工智能",
+        "canonical": "人工智能"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "电子工程",
+        "canonical": "电子信息工程"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机科学",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "DEGREE",
+        "original": "本科",
+        "canonical": "本科"
+      },
+      {
+        "entity": "DEGREE",
+        "original": "硕士",
+        "canonical": "硕士"
+      },
+      {
+        "entity": "DEGREE",
+        "original": "博士",
+        "canonical": "博士"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "SKILL",
+        "word": "网络安全"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责网络安全、人工智能及其他服务领域的产品法规合规相关工作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "与资深项目经理、法规合规工程师、厂商及第三方供应商团队协同办公"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "研究分析中国境内网络安全、人工智能相关法律法规、政策及行业标准"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "协同跨部门团队，编制监管机构要求的合规文件资料"
+      },
+      {
+        "entity": "SKILL",
+        "word": "熟悉国家网信办、工信部在网络安全、人工智能领域的法规合规要求，有相关实操经验"
+      },
+      {
+        "entity": "SKILL",
+        "word": "掌握网络安全、人工智能 / 机器学习、软件系统基础知识"
+      },
+      {
+        "entity": "SKILL",
+        "word": "中英文口语及书面沟通能力优秀"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "中国"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "国家网信办"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "工信部"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "其他信息"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "语言要求：普通话 + 英语"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "行业要求：计算机软件"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘人工智能应用中心负责人",
+    "companyName": "某上海大型咨询服务公司",
+    "matched": [
+      {
+        "entity": "MAJOR",
+        "original": "计算机科学",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "人工智能",
+        "canonical": "人工智能"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "数据科学",
+        "canonical": "数据科学"
+      },
+      {
+        "entity": "SKILL",
+        "original": "人工智能",
+        "canonical": "人工智能"
+      },
+      {
+        "entity": "SKILL",
+        "original": "大数据",
+        "canonical": "数据分析"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "DEGREE",
+        "word": "本科及以上学历"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "机器学习"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "制定并执行公司人工智能应用战略与发展路线图，确保与公司整体业务战略对齐"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "领导团队深入分析相关领域业务场景与痛点，设计并交付具有行业竞争力的智能化应用方案"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "支持集团子公司，海外分行及相关总分行机构探索，建立与外部企业客户的合作模式，推动AI解决方案的外部商业化，开拓新的增长点"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "跟踪全球人工智能技术发展趋势，确保公司技术栈与应用实践处于行业前沿"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责研发中心的日常运营管理，包括团队搭建，人才培养，绩效管理，技术文化建设及研发效能的持续提升"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "公司"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "海外"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "5年以上"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "至少3年以上"
+      },
+      {
+        "entity": "SKILL",
+        "word": "金融科技"
+      },
+      {
+        "entity": "SKILL",
+        "word": "团队管理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "AI技术"
+      },
+      {
+        "entity": "SKILL",
+        "word": "业务理解能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "结果导向"
+      },
+      {
+        "entity": "SKILL",
+        "word": "价值创造"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "无违纪违规记录"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘人工智能研究院院长",
+    "companyName": "安东石油技术(集团)有限公司",
+    "matched": [
+      {
+        "entity": "MAJOR",
+        "original": "计算机科学",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "人工智能",
+        "canonical": "人工智能"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "DEGREE",
+        "word": "硕士以上学历"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "油气相关领域"
+      },
+      {
+        "entity": "SKILL",
+        "word": "英语可作为工作语言"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责制定安东集团整体人工智能技术与应用的发展战略与实施路径"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责制定人工智能研究院长期发展路线"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "主导油气与AI深度融合的技术平台建设"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "通过构建外部技术生态和布局高价值专利，构筑公司的核心技术壁垒与行业标准话语权"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "领导团队将技术转化为覆盖油气全场景的标准化AI产品与解决方案"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "核心打造多个安东人工智能应用平台，推动产品的快速复制与商业化"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "制定并执行全球市场拓展策略"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "通过渠道建设、品牌发声和线上营销，将创新产品和解决方案转化为全球市场的商业成功"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "安东集团"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "全球"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "10年以上技术研发及管理经验"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "5年以上数智化团队管理经验"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘区域销售经理",
+    "companyName": "星逻智能",
+    "matched": [],
+    "unmatched": [
+      {
+        "entity": "DEGREE",
+        "word": "本科及以上学历"
+      },
+      {
+        "entity": "SKILL",
+        "word": "市场开拓"
+      },
+      {
+        "entity": "SKILL",
+        "word": "客户开发"
+      },
+      {
+        "entity": "SKILL",
+        "word": "营销方案"
+      },
+      {
+        "entity": "SKILL",
+        "word": "商务谈判"
+      },
+      {
+        "entity": "SKILL",
+        "word": "关系维护"
+      },
+      {
+        "entity": "SKILL",
+        "word": "项目招投标"
+      },
+      {
+        "entity": "SKILL",
+        "word": "客户维护"
+      },
+      {
+        "entity": "SKILL",
+        "word": "市场拓展能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "商务谈判能力和技巧"
+      },
+      {
+        "entity": "SKILL",
+        "word": "技术理解能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "人际沟通能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "亲和力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "抗压能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "执行力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "主观能动性"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "新能源"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "无人机智能巡检"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "运维解决方案"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "无人机智能运维"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "无人机智慧巡检"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "自动化清洁"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "智能运维"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "制定所负责区域的市场开拓和客户开发计划、营销方案，并有效落地以实现公司市场占有率和业绩增长目标"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "了解新能源市场和行业发展动态，深入洞察客户需求，为目标客户提供无人机新能源“发电界面”智能巡检和运维解决方案"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责新能源/安防/电网/管网等目标行业客户的开拓、商务谈判和关系维护工作，及项目招投标、推进和落地工作，确保项目有效验收、交付和及时回款"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责产品销售跟踪及持续的客户维护工作，定期拜访客户，收集有效信息、分析客户潜在需求，实现二次甚至多次的老客户新增"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "组织和协调内外部资源，为客户提供全生命周期服务，提高客户满意度，建立长期、良好、稳固的客户关系"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "公司"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "华东"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "华南"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "华北"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "底薪+绩效+TC"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "5年以上"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘AI技术负责人/应用人工智能方向（高级副总裁）",
+    "companyName": "某广州大型计算机软件公司",
+    "matched": [
+      {
+        "entity": "MAJOR",
+        "original": "计算机科学",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "SKILL",
+        "original": "大模型",
+        "canonical": "大模型"
+      },
+      {
+        "entity": "SKILL",
+        "original": "机器学习",
+        "canonical": "机器学习"
+      },
+      {
+        "entity": "SKILL",
+        "original": "图像处理",
+        "canonical": "计算机视觉"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "LOCATION",
+        "word": "广州"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "主导DTC领域未来就绪技术的技术战略制定与执行"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "主导部门应用人工智能战略的规划与执行"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "将大模型能力应用于核心业务及内部效能场景"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "推动产品与服务研发过程中的持续创新"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "持续探索并利用外部合作资源"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "保障未来就绪技术领域内技术平台的稳定性、可扩展性及安全性"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "推动技术协同与优化"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "改善客户及员工的全流程体验"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责AI智能体平台及开发系统的技术方向与落地工作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "推动人工智能驱动的流程自动化及数字化工作流系统落地"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "设计并落地企业级人工智能安全架构"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "建立人工智能系统可观测性、可追溯性及评估机制"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "主导人工智能治理及风险管理相关工作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "推动人工智能与协同工具的融合"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责语音相关人工智能技术方向"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "领导、指导并培养一支高效的技术专业团队"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "带领技术团队，与新加坡团队紧密协作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "推动DTC内部及集团技术部门间的知识共享与经验交流"
+      },
+      {
+        "entity": "DEGREE",
+        "word": "本科及以上学历"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "工程"
+      },
+      {
+        "entity": "SKILL",
+        "word": "应用人工智能"
+      },
+      {
+        "entity": "SKILL",
+        "word": "智能体人工智能"
+      },
+      {
+        "entity": "SKILL",
+        "word": "工作流自动化"
+      },
+      {
+        "entity": "SKILL",
+        "word": "语音技术"
+      },
+      {
+        "entity": "SKILL",
+        "word": "协同智能"
+      },
+      {
+        "entity": "SKILL",
+        "word": "生成式人工智能"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Claude Code"
+      },
+      {
+        "entity": "SKILL",
+        "word": "DIFY"
+      },
+      {
+        "entity": "SKILL",
+        "word": "谷歌ADK"
+      },
+      {
+        "entity": "SKILL",
+        "word": "LangChain"
+      },
+      {
+        "entity": "SKILL",
+        "word": "LangGraph"
+      },
+      {
+        "entity": "SKILL",
+        "word": "Claude Agent SDK"
+      },
+      {
+        "entity": "SKILL",
+        "word": "OAuth授权"
+      },
+      {
+        "entity": "SKILL",
+        "word": "权限管理"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数据访问控制"
+      },
+      {
+        "entity": "SKILL",
+        "word": "微软365"
+      },
+      {
+        "entity": "SKILL",
+        "word": "谷歌Workspace"
+      },
+      {
+        "entity": "SKILL",
+        "word": "语音转文字"
+      },
+      {
+        "entity": "SKILL",
+        "word": "文字转语音"
+      },
+      {
+        "entity": "SKILL",
+        "word": "视频生成"
+      },
+      {
+        "entity": "SKILL",
+        "word": "提示工程"
+      },
+      {
+        "entity": "SKILL",
+        "word": "工作流设计"
+      },
+      {
+        "entity": "SKILL",
+        "word": "企业级系统"
+      },
+      {
+        "entity": "SKILL",
+        "word": "英语"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "DTC"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "新加坡团队"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "10年及以上"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "学历不限"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘人工智能管理岗(J30154)",
+    "companyName": "招商局金融科技有限公司",
+    "matched": [],
+    "unmatched": [
+      {
+        "entity": "DEGREE",
+        "word": "全日制研究生以上学历"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "IT"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责国家部委人工智能相关政策、人工智能行业进展、人工智能技术趋势等方面开展跟踪研究"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责集团人工智能战略规划体系建设，组织有关单位开展人工智能在场景规划及技术规划的编制"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "站在集团全局视角，深入研究各产业板块经营管理模式，制定差异化人工智能转型策略"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "负责集团人工智能重大项目监督管理，组织开展人工智能专项调研检查，定期编制整体运营报告及向主要领导汇报的材料"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "完成领导交办的其他工作"
+      },
+      {
+        "entity": "SKILL",
+        "word": "战略规划"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数字化转型"
+      },
+      {
+        "entity": "SKILL",
+        "word": "逻辑思维"
+      },
+      {
+        "entity": "SKILL",
+        "word": "快速学习"
+      },
+      {
+        "entity": "SKILL",
+        "word": "策划组织"
+      },
+      {
+        "entity": "SKILL",
+        "word": "团队协作"
+      },
+      {
+        "entity": "SKILL",
+        "word": "数字化咨询"
+      }
+    ]
+  },
+  {
+    "jobName": "招聘（高级）投资经理-人工智能方向",
+    "companyName": "小苗基金",
+    "matched": [
+      {
+        "entity": "DEGREE",
+        "original": "本科",
+        "canonical": "本科"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "计算机",
+        "canonical": "计算机科学与技术"
+      },
+      {
+        "entity": "MAJOR",
+        "original": "人工智能",
+        "canonical": "人工智能"
+      }
+    ],
+    "unmatched": [
+      {
+        "entity": "MAJOR",
+        "word": "理工科"
+      },
+      {
+        "entity": "MAJOR",
+        "word": "电子通信"
+      },
+      {
+        "entity": "SKILL",
+        "word": "技术评估"
+      },
+      {
+        "entity": "SKILL",
+        "word": "业务尽调"
+      },
+      {
+        "entity": "SKILL",
+        "word": "行业及产品竞争力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "尽职调查"
+      },
+      {
+        "entity": "SKILL",
+        "word": "项目分析"
+      },
+      {
+        "entity": "SKILL",
+        "word": "方案设计"
+      },
+      {
+        "entity": "SKILL",
+        "word": "商业谈判"
+      },
+      {
+        "entity": "SKILL",
+        "word": "逻辑思维能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "行业调研能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "自主学习能力"
+      },
+      {
+        "entity": "SKILL",
+        "word": "沟通交流能力"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "对接和维护AGI、AI infra、LLM、GenAI、智能硬件等人工智能领域的渠道人脉"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "主动开发潜在的优质投资项目和新渠道资源"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "对潜在投资项目开展技术评估、业务尽调、行业及产品竞争力等尽职调查工作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "配合推进项目分析、方案设计、商业谈判、交割与投后等环节的执行"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "参与人工智能领域的研究工作"
+      },
+      {
+        "entity": "RESPONSIBILITY",
+        "word": "定期更新国内外热门AI应用、智能硬件、大厂新产品、科研院所及高校实验室、完成融资项目的mapping"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "知名科技大厂"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "智能消费品牌"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "科研院所"
+      },
+      {
+        "entity": "COMPANY",
+        "word": "VC/PE"
+      },
+      {
+        "entity": "LOCATION",
+        "word": "国内外"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "英语"
+      },
+      {
+        "entity": "BENEFIT",
+        "word": "普通话"
+      },
+      {
+        "entity": "WORKTIME",
+        "word": "统招"
+      }
+    ]
+  }
+]

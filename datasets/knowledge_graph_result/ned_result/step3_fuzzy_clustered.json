@@ -1,0 +1,254 @@
+{
+  "SKILL": {
+    "total_unique": 686,
+    "merged_groups": 30,
+    "groups": {
+      "计算机视觉": [
+        "计算机视觉",
+        "CV",
+        "图像处理",
+        "图像分割"
+      ],
+      "人工智能": [
+        "AI",
+        "人工智能"
+      ],
+      "机器学习": [
+        "ML",
+        "机器学习"
+      ],
+      "MATLAB": [
+        "Matlab",
+        "MATLAB"
+      ],
+      "Python": [
+        "Python",
+        "python"
+      ],
+      "PyTorch": [
+        "PyTorch",
+        "Pytorch"
+      ],
+      "算法开发": [
+        "算法开发",
+        "算法"
+      ],
+      "软件工程": [
+        "需求分析",
+        "测试"
+      ],
+      "数据分析": [
+        "数据分析",
+        "大数据"
+      ],
+      "大模型": [
+        "LLM",
+        "大模型"
+      ],
+      "Transformer": [
+        "Transformer",
+        "transformer",
+        "时空 Transformer",
+        "Transformer架构"
+      ],
+      "ROS": [
+        "ROS",
+        "ROS2"
+      ],
+      "Git": [
+        "Git",
+        "git"
+      ],
+      "数据处理": [
+        "数据处理",
+        "数据预处理"
+      ],
+      "scikit-learn": [
+        "scikit-learn",
+        "Scikit-learn"
+      ],
+      "计算机图形学": [
+        "计算机图形学",
+        "计算机图形学算法"
+      ],
+      "有项目管理经验": [
+        "有项目管理经验",
+        "项目管理经验"
+      ],
+      "Inter-cultural competence": [
+        "Inter-cultural competence",
+        "inter-cultural competence"
+      ],
+      "Independent and proactive working style": [
+        "Independent and proactive working style",
+        "independent and proactive working style"
+      ],
+      "77GHz/79GHz 毫米波雷达信号处理算法开发": [
+        "77GHz/79GHz 毫米波雷达信号处理算法开发",
+        "77GHz/79GHz 毫米波雷达数据处理算法开发"
+      ],
+      "传统图像处理算法": [
+        "传统图像处理算法",
+        "图像处理算法"
+      ],
+      "AI 工具": [
+        "AI 工具",
+        "AI工具"
+      ],
+      "AI 技术": [
+        "AI 技术",
+        "AI技术"
+      ],
+      "结构化数据": [
+        "结构化数据",
+        "非结构化数据"
+      ],
+      "LoRA": [
+        "LoRA",
+        "QLoRA"
+      ],
+      "生物数据AI建模经验": [
+        "生物数据AI建模经验",
+        "生物数据AI建模"
+      ],
+      "激光雷达信号处理": [
+        "激光雷达信号处理",
+        "雷达信号处理"
+      ],
+      "数据增强策略设计": [
+        "数据增强策略设计",
+        "数据增强策略"
+      ],
+      "基因组数据": [
+        "基因组数据",
+        "宏基因组数据"
+      ],
+      "跨团队协作": [
+        "跨团队协作",
+        "团队协作"
+      ]
+    }
+  },
+  "DEGREE": {
+    "total_unique": 25,
+    "merged_groups": 6,
+    "groups": {
+      "硕士": [
+        "硕士",
+        "研究生"
+      ],
+      "博士": [
+        "博士",
+        "PhD"
+      ],
+      "本科": [
+        "Bachelor",
+        "本科",
+        "学士"
+      ],
+      "硕士及以上学历": [
+        "硕士及以上学历",
+        "硕士以上学历"
+      ],
+      "硕士研究生及以上学历": [
+        "硕士研究生及以上学历",
+        "硕士研究生及以上"
+      ],
+      "Master's degree": [
+        "Master's degree",
+        "Master’s Degree"
+      ]
+    }
+  },
+  "MAJOR": {
+    "total_unique": 75,
+    "merged_groups": 9,
+    "groups": {
+      "计算机科学与技术": [
+        "计算机科学",
+        "计算机",
+        "计算机科学与技术"
+      ],
+      "计算机视觉": [
+        "计算机视觉",
+        "图像处理"
+      ],
+      "电子信息工程": [
+        "电子工程",
+        "电子信息工程"
+      ],
+      "通信工程": [
+        "通信",
+        "通信工程"
+      ],
+      "数学": [
+        "数学",
+        "应用数学"
+      ],
+      "统计学": [
+        "统计",
+        "统计学"
+      ],
+      "信号与信息处理": [
+        "信号与信息处理",
+        "信号处理"
+      ],
+      "生物信息": [
+        "生物信息",
+        "生物信息学"
+      ],
+      "无人机智能巡检": [
+        "无人机智能巡检",
+        "无人机智慧巡检"
+      ]
+    }
+  },
+  "RESPONSIBILITY": {
+    "total_unique": 318,
+    "merged_groups": 1,
+    "groups": {
+      "音频算法设计与开发": [
+        "音频算法设计与开发",
+        "算法设计与开发"
+      ]
+    }
+  },
+  "COMPANY": {
+    "total_unique": 38,
+    "merged_groups": 0,
+    "groups": {}
+  },
+  "LOCATION": {
+    "total_unique": 24,
+    "merged_groups": 0,
+    "groups": {}
+  },
+  "BENEFIT": {
+    "total_unique": 31,
+    "merged_groups": 0,
+    "groups": {}
+  },
+  "WORKTIME": {
+    "total_unique": 37,
+    "merged_groups": 3,
+    "groups": {
+      "3年以上": [
+        "3年以上",
+        "3 年以上"
+      ],
+      "2年以上的相关工作经历": [
+        "2年以上的相关工作经历",
+        "2年以上相关工作经验"
+      ],
+      "3+ years": [
+        "3+ years",
+        "2+ years"
+      ]
+    }
+  },
+  "DEPARTMENT": {
+    "total_unique": 1,
+    "merged_groups": 0,
+    "groups": {}
+  }
+}

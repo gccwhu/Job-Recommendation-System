@@ -1,0 +1,8 @@
+{
+  "input_records": 47,
+  "output_records": 47,
+  "total_unique_entities": 1239,
+  "merged_pairs": 599,
+  "llm_groups": 673,
+  "time_seconds": 259.27
+}

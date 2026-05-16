@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 @dataclass(slots=True)
 class Settings:
-    data_file: Path = Path("datasets/processed/jobs.json")
+    data_file: Path = Path("datasets/data_collect_result/processed/jobs.json")
     neo4j_uri: str = ""
     neo4j_user: str = ""
     neo4j_password: str = ""
@@ -27,7 +27,7 @@ class Settings:
         load_dotenv()
 
         return cls(
-            data_file=Path(os.getenv("KG_DATA_FILE", "datasets/processed/jobs.json")),
+            data_file=Path(os.getenv("KG_DATA_FILE", "datasets/data_collect_result/processed/jobs.json")),
             neo4j_uri=cls._require_env("NEO4J_URI"),
             neo4j_user=cls._require_env("NEO4J_USER"),
             neo4j_password=cls._require_env("NEO4J_PASSWORD"),
