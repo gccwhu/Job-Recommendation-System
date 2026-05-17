@@ -42,7 +42,7 @@ def extract_relations(job_description, entities):
     try:
         # 调用大模型
         response = client.chat.completions.create(
-            model="假流式-gemini-3.1-pro-preview", # 例如 "gpt-3.5-turbo", "deepseek-chat", "qwen-turbo" 等
+            model="", # 例如 "gpt-3.5-turbo", "deepseek-chat", "qwen-turbo" 等
             messages=[
                 {"role": "system", "content": "你是一个严格输出JSON的助手。"},
                 {"role": "user", "content": prompt}
