@@ -700,34 +700,96 @@ class Neo4jGraphRepository(HydratedGraphView):
         limit: int = 10,
     ) -> list[dict]:
         safe_hops = max(1, min(max_hops, 4))
+        candidate_limit = max(limit * 12, 50)
+        relation_score = """
+            CASE type($rel)
+                WHEN 'SIMILAR_TO' THEN coalesce($rel.score, 8.0)
+                WHEN 'REQUIRES_SKILL' THEN 3.0
+                WHEN 'HAS_BENEFIT' THEN 1.2
+                WHEN 'LOCATED_IN' THEN 2.0
+                WHEN 'IN_INDUSTRY' THEN 2.0
+                WHEN 'POSTED_BY' THEN 1.5
+                WHEN 'HAS_KEYWORD' THEN 0.8
+                WHEN 'BELONGS_TO' THEN 0.8
+                WHEN 'REQUIRES_DEGREE' THEN 0.6
+                WHEN 'REQUIRES_EXPERIENCE' THEN 0.6
+                ELSE 0.4
+            END
+        """
         query = f"""
-        MATCH path = (seed:Job {{job_id: $job_id}})-[*1..{safe_hops}]-(target:Job)
-        WHERE target.job_id <> seed.job_id
-          AND ($target_job_id IS NULL OR target.job_id = $target_job_id)
-        WITH target,
-             nodes(path) AS path_nodes,
-             relationships(path) AS rels,
-             length(path) AS hops,
-             reduce(raw = 0.0, r IN relationships(path) |
-                raw + CASE type(r)
-                    WHEN 'SIMILAR_TO' THEN coalesce(r.score, 8.0)
-                    WHEN 'REQUIRES_SKILL' THEN 3.0
-                    WHEN 'HAS_BENEFIT' THEN 1.2
-                    WHEN 'LOCATED_IN' THEN 2.0
-                    WHEN 'IN_INDUSTRY' THEN 2.0
-                    WHEN 'POSTED_BY' THEN 1.5
-                    WHEN 'HAS_KEYWORD' THEN 0.8
-                    WHEN 'BELONGS_TO' THEN 0.8
-                    WHEN 'REQUIRES_DEGREE' THEN 0.6
-                    WHEN 'REQUIRES_EXPERIENCE' THEN 0.6
-                    ELSE 0.4
-                END
-             ) AS raw_score
-        WITH target,
-             [node IN path_nodes | coalesce(node.title, node.name, node.job_id)] AS node_names,
-             [rel IN rels | type(rel)] AS relations,
-             hops,
-             round((raw_score / hops) * (1.0 / hops), 2) AS path_score
+        MATCH (seed:Job {{job_id: $job_id}})
+        CALL (seed) {{
+            MATCH (seed)-[sim:SIMILAR_TO]-(target:Job)
+            WHERE $max_hops >= 1
+              AND target.job_id <> seed.job_id
+              AND ($target_job_id IS NULL OR target.job_id = $target_job_id)
+            WITH target,
+                 [coalesce(seed.title, seed.job_id), coalesce(target.title, target.job_id)] AS node_names,
+                 ['SIMILAR_TO'] AS relations,
+                 1 AS hops,
+                 coalesce(sim.score, 8.0) AS path_score
+            ORDER BY path_score DESC, target.title ASC
+            LIMIT $candidate_limit
+            RETURN target, node_names, relations, hops, round(path_score, 2) AS path_score
+
+            UNION ALL
+
+            MATCH (seed)-[r1]-(entity)-[r2]-(target:Job)
+            WHERE $max_hops >= 2
+              AND target.job_id <> seed.job_id
+              AND ($target_job_id IS NULL OR target.job_id = $target_job_id)
+              AND NOT entity:Job
+              AND type(r1) <> 'SIMILAR_TO'
+              AND type(r2) <> 'SIMILAR_TO'
+            WITH target,
+                 [coalesce(seed.title, seed.job_id), coalesce(entity.name, entity.title, entity.job_id), coalesce(target.title, target.job_id)] AS node_names,
+                 [type(r1), type(r2)] AS relations,
+                 2 AS hops,
+                 ({relation_score.replace("$rel", "r1")} + {relation_score.replace("$rel", "r2")}) AS raw_score
+            WITH target, node_names, relations, hops, round((raw_score / 2.0) * (1.0 / 2.0), 2) AS path_score
+            ORDER BY path_score DESC, target.title ASC
+            LIMIT $candidate_limit
+            RETURN target, node_names, relations, hops, path_score
+
+            UNION ALL
+
+            MATCH (seed)-[sim1:SIMILAR_TO]-(mid:Job)-[sim2:SIMILAR_TO]-(target:Job)
+            WHERE $max_hops >= 2
+              AND mid.job_id <> seed.job_id
+              AND target.job_id <> seed.job_id
+              AND target.job_id <> mid.job_id
+              AND ($target_job_id IS NULL OR target.job_id = $target_job_id)
+            WITH target,
+                 [coalesce(seed.title, seed.job_id), coalesce(mid.title, mid.job_id), coalesce(target.title, target.job_id)] AS node_names,
+                 ['SIMILAR_TO', 'SIMILAR_TO'] AS relations,
+                 2 AS hops,
+                 (coalesce(sim1.score, 8.0) + coalesce(sim2.score, 8.0)) AS raw_score
+            WITH target, node_names, relations, hops, round((raw_score / 2.0) * (1.0 / 2.0), 2) AS path_score
+            ORDER BY path_score DESC, target.title ASC
+            LIMIT $candidate_limit
+            RETURN target, node_names, relations, hops, path_score
+
+            UNION ALL
+
+            MATCH (seed)-[r1]-(entity)-[r2]-(mid:Job)-[sim:SIMILAR_TO]-(target:Job)
+            WHERE $max_hops >= 3
+              AND mid.job_id <> seed.job_id
+              AND target.job_id <> seed.job_id
+              AND target.job_id <> mid.job_id
+              AND ($target_job_id IS NULL OR target.job_id = $target_job_id)
+              AND NOT entity:Job
+              AND type(r1) <> 'SIMILAR_TO'
+              AND type(r2) <> 'SIMILAR_TO'
+            WITH target,
+                 [coalesce(seed.title, seed.job_id), coalesce(entity.name, entity.title, entity.job_id), coalesce(mid.title, mid.job_id), coalesce(target.title, target.job_id)] AS node_names,
+                 [type(r1), type(r2), 'SIMILAR_TO'] AS relations,
+                 3 AS hops,
+                 ({relation_score.replace("$rel", "r1")} + {relation_score.replace("$rel", "r2")} + coalesce(sim.score, 8.0)) AS raw_score
+            WITH target, node_names, relations, hops, round((raw_score / 3.0) * (1.0 / 3.0), 2) AS path_score
+            ORDER BY path_score DESC, target.title ASC
+            LIMIT $candidate_limit
+            RETURN target, node_names, relations, hops, path_score
+        }}
         ORDER BY target.job_id, path_score DESC, hops ASC
         WITH target,
              collect({{
@@ -750,6 +812,8 @@ class Neo4jGraphRepository(HydratedGraphView):
                 query,
                 job_id=job_id,
                 target_job_id=target_job_id,
+                max_hops=safe_hops,
+                candidate_limit=candidate_limit,
                 limit=limit,
             ).data()
 
