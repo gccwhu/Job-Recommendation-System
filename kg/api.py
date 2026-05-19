@@ -2,9 +2,10 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from fastapi import FastAPI, HTTPException, Query
-from fastapi.responses import FileResponse
+from fastapi import FastAPI, HTTPException, Query, Request
+from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
+from neo4j.exceptions import Neo4jError
 
 from .models import (
     GraphInsightsResponse,
@@ -24,6 +25,16 @@ app = FastAPI(title="Knowledge Graph Job Recommendation System", version="1.0.0"
 FRONTEND_DIR = Path(__file__).resolve().parent.parent / "frontend"
 if FRONTEND_DIR.exists():
     app.mount("/frontend", StaticFiles(directory=FRONTEND_DIR), name="frontend")
+
+
+@app.exception_handler(Neo4jError)
+async def neo4j_exception_handler(_request: Request, exc: Neo4jError) -> JSONResponse:
+    return JSONResponse(status_code=503, content={"detail": f"Neo4j 查询失败: {exc}"})
+
+
+@app.exception_handler(RuntimeError)
+async def runtime_exception_handler(_request: Request, exc: RuntimeError) -> JSONResponse:
+    return JSONResponse(status_code=503, content={"detail": str(exc)})
 
 
 @app.get("/", include_in_schema=False)

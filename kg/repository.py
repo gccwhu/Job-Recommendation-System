@@ -345,6 +345,24 @@ class Neo4jGraphRepository(HydratedGraphView):
         return f"{label.lower()}:{digest}"
 
     @staticmethod
+    def _compact_graph_properties(label: str, properties: dict | None) -> dict:
+        properties = properties or {}
+        allowed_keys = {
+            "Job": ["job_id", "title", "salary_min", "salary_max", "salary_mid", "source", "detail_link"],
+            "Company": ["name", "company_type", "company_size"],
+            "City": ["name"],
+            "Industry": ["name"],
+            "Degree": ["name"],
+            "Experience": ["name"],
+            "Skill": ["name"],
+            "Benefit": ["name"],
+            "Keyword": ["name"],
+        }.get(label)
+        if allowed_keys is None:
+            return properties
+        return {key: properties[key] for key in allowed_keys if key in properties and properties[key] not in (None, "")}
+
+    @staticmethod
     def _clean_list(items: list[str | None]) -> list[str]:
         return sorted(item for item in items if item)
 
@@ -598,13 +616,19 @@ class Neo4jGraphRepository(HydratedGraphView):
                     missing_skills=missing_skills,
                     reasons=reasons,
                     score_breakdown=breakdown,
-                    reasoning_paths=self.multi_hop_reasoning(profile.seed_job_id, target_job_id=summary.job_id, max_hops=profile.max_hops, limit=2)
-                    if profile.seed_job_id
-                    else [],
                 )
             )
         items.sort(key=lambda item: (item.score, item.salary_mid, len(item.skills)), reverse=True)
-        return items[: profile.top_k]
+        top_items = items[: profile.top_k]
+        if profile.seed_job_id:
+            for item in top_items:
+                item.reasoning_paths = self.multi_hop_reasoning(
+                    profile.seed_job_id,
+                    target_job_id=item.job_id,
+                    max_hops=profile.max_hops,
+                    limit=2,
+                )
+        return top_items
 
     def similar_jobs(self, job_id: str, top_k: int = 10) -> list[RecommendationItem]:
         query = """
@@ -700,7 +724,7 @@ class Neo4jGraphRepository(HydratedGraphView):
         limit: int = 10,
     ) -> list[dict]:
         safe_hops = max(1, min(max_hops, 4))
-        candidate_limit = max(limit * 12, 50)
+        candidate_limit = min(max(limit * 4, 50), 400)
         relation_score = """
             CASE type($rel)
                 WHEN 'SIMILAR_TO' THEN coalesce($rel.score, 8.0)
@@ -855,45 +879,80 @@ class Neo4jGraphRepository(HydratedGraphView):
         return paths
 
     def job_graph(self, job_id: str) -> GraphResponse | None:
-        query = """
+        source_query = """
         MATCH (j:Job {job_id: $job_id})
-        OPTIONAL MATCH (j)-[r]-(n)
+        RETURN j.job_id AS job_id,
+               j.title AS job_title,
+               properties(j) AS job_props
+        LIMIT 1
+        """
+        neighbor_query = """
+        MATCH (j:Job {job_id: $job_id})
+        MATCH (j)-[r]-(n)
+        WHERE NOT n:Job AND type(r) <> 'SIMILAR_TO'
         RETURN
-            j.job_id AS job_id,
-            j.title AS job_title,
-            properties(j) AS job_props,
             type(r) AS relation,
-            CASE WHEN n IS NULL THEN NULL ELSE labels(n)[0] END AS target_label,
-            CASE WHEN n IS NULL THEN NULL ELSE coalesce(n.name, n.title, n.job_id) END AS target_name,
-            CASE WHEN n IS NULL THEN NULL ELSE properties(n) END AS target_props,
+            labels(n)[0] AS target_label,
+            coalesce(n.name, n.title, n.job_id) AS target_name,
+            n.job_id AS target_job_id,
+            properties(n) AS target_props,
             properties(r) AS relation_props
+        ORDER BY
+            CASE type(r)
+                WHEN 'REQUIRES_SKILL' THEN 1
+                WHEN 'LOCATED_IN' THEN 2
+                WHEN 'IN_INDUSTRY' THEN 3
+                WHEN 'POSTED_BY' THEN 4
+                WHEN 'HAS_BENEFIT' THEN 5
+                WHEN 'HAS_KEYWORD' THEN 6
+                ELSE 7
+            END,
+            target_name ASC
+        LIMIT 80
+        """
+        similar_query = """
+        MATCH (j:Job {job_id: $job_id})-[r:SIMILAR_TO]-(n:Job)
+        RETURN
+            type(r) AS relation,
+            labels(n)[0] AS target_label,
+            coalesce(n.title, n.job_id) AS target_name,
+            n.job_id AS target_job_id,
+            properties(n) AS target_props,
+            properties(r) AS relation_props
+        ORDER BY coalesce(r.score, 0.0) DESC, target_name ASC
+        LIMIT 16
         """
         with self.driver.session(database=self.settings.neo4j_database) as session:
-            records = session.run(query, job_id=job_id).data()
-        if not records:
-            return None
+            source = session.run(source_query, job_id=job_id).single()
+            if source is None:
+                return None
+            records = session.run(neighbor_query, job_id=job_id).data()
+            records.extend(session.run(similar_query, job_id=job_id).data())
 
-        source = records[0]
         source_id = f"job:{job_id}"
         nodes = [
             GraphNode(
                 id=source_id,
                 label="Job",
                 name=source["job_title"],
-                properties=source["job_props"],
+                properties=self._compact_graph_properties("Job", source["job_props"]),
             )
         ]
         edges: list[GraphEdge] = []
         for record in records:
             if not record["target_label"] or not record["target_name"]:
                 continue
-            target_id = self._node_id(record["target_label"], record["target_name"])
+            target_id = (
+                f"job:{record['target_job_id']}"
+                if record["target_label"] == "Job" and record.get("target_job_id")
+                else self._node_id(record["target_label"], record["target_name"])
+            )
             nodes.append(
                 GraphNode(
                     id=target_id,
                     label=record["target_label"],
                     name=record["target_name"],
-                    properties=record["target_props"] or {},
+                    properties=self._compact_graph_properties(record["target_label"], record["target_props"]),
                 )
             )
             edges.append(
@@ -901,7 +960,7 @@ class Neo4jGraphRepository(HydratedGraphView):
                     source=source_id,
                     target=target_id,
                     relation=record["relation"],
-                    properties=record["relation_props"] or {},
+                    properties=self._compact_graph_properties("Relation", record["relation_props"]),
                 )
             )
         unique_nodes = {node.id: node for node in nodes}

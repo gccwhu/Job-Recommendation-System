@@ -140,3 +140,16 @@ def test_api_routes(monkeypatch):
         "/recommend/profile",
         json={"skills": ["Python"], "preferred_benefits": ["带薪年假"], "top_k": 5},
     ).status_code == 200
+
+
+def test_runtime_errors_return_json(monkeypatch):
+    def raise_runtime_error():
+        raise RuntimeError("Neo4j 中尚未导入岗位图谱")
+
+    monkeypatch.setattr("kg.api.create_service", raise_runtime_error)
+    client = TestClient(app, raise_server_exceptions=False)
+
+    response = client.get("/health")
+
+    assert response.status_code == 503
+    assert response.json()["detail"] == "Neo4j 中尚未导入岗位图谱"

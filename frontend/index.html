@@ -537,10 +537,13 @@
 
       async function fetchJson(url, options) {
         const response = await fetch(url, options);
+        const contentType = response.headers.get("content-type") || "";
+        const payload = contentType.includes("application/json") ? await response.json() : null;
         if (!response.ok) {
-          throw new Error(`请求失败 ${response.status}`);
+          const detail = payload && (payload.detail || payload.message);
+          throw new Error(detail ? `请求失败 ${response.status}：${detail}` : `请求失败 ${response.status}`);
         }
-        return response.json();
+        return payload;
       }
 
       function setBusy(buttonId, busy) {
@@ -585,14 +588,16 @@
       }
 
       function getProfilePayload() {
+        const minSalary = Number(document.getElementById("salary").value);
+        const maxHops = Number(document.getElementById("maxHops").value);
         return {
           skills: splitInput(document.getElementById("skills").value),
           desired_city: document.getElementById("city").value.trim() || null,
           desired_industry: document.getElementById("industry").value.trim() || null,
-          min_salary: Number(document.getElementById("salary").value || 0),
+          min_salary: Number.isFinite(minSalary) && minSalary > 0 ? minSalary : null,
           preferred_benefits: splitInput(document.getElementById("benefits").value),
           seed_job_id: document.getElementById("seedJobId").value.trim() || null,
-          max_hops: Number(document.getElementById("maxHops").value || 3),
+          max_hops: Number.isFinite(maxHops) ? Math.min(Math.max(Math.round(maxHops), 1), 4) : 3,
           top_k: 8,
         };
       }
@@ -609,8 +614,17 @@
           state.currentItems = data.items || [];
           document.getElementById("resultCount").textContent = `${data.total || 0} 个岗位`;
           renderResults(state.currentItems);
-          if (state.currentItems.length && !state.selectedJobId) {
+          const selectedStillVisible = state.currentItems.some((item) => item.job_id === state.selectedJobId);
+          if (state.currentItems.length && !selectedStillVisible) {
             selectJob(state.currentItems[0].job_id, false);
+          } else if (!state.currentItems.length) {
+            state.selectedJobId = "";
+            document.getElementById("jobId").value = "";
+            document.getElementById("seedJobId").value = "";
+            document.getElementById("reasoning").innerHTML = `<div class="empty">选择一个岗位后显示推理路径</div>`;
+            document.getElementById("reasoningCount").textContent = "0 条路径";
+            document.getElementById("graphMeta").textContent = "等待选择岗位";
+            graphChart.clear();
           }
         } catch (error) {
           renderError("results", `推荐结果加载失败：${error.message}`);
@@ -654,8 +668,8 @@
             <div class="section-label">技能标签</div>
             <div class="tags">${skills}</div>
             <div class="actions">
-              <button class="secondary" onclick="selectJob('${escapeHtml(item.job_id)}', true)">查看图谱</button>
-              <button class="ghost" onclick="openDetail('${escapeHtml(item.detail_link)}')">打开原岗位</button>
+              <button class="secondary" data-action="graph" data-job-id="${escapeHtml(item.job_id)}">查看图谱</button>
+              <button class="ghost" data-action="detail" data-url="${escapeHtml(item.detail_link)}">打开原岗位</button>
             </div>
           </article>
         `;
@@ -680,6 +694,11 @@
 
       function openDetail(url) {
         if (url) window.open(url, "_blank", "noopener,noreferrer");
+      }
+
+      function compactLabel(value, maxLength = 12) {
+        const text = String(value || "");
+        return text.length > maxLength ? `${text.slice(0, maxLength)}...` : text;
       }
 
       function selectJob(jobId, scrollToGraph) {
@@ -724,9 +743,10 @@
         setBusy("reasoningBtn", true);
         try {
           const jobId = document.getElementById("seedJobId").value.trim() || document.getElementById("jobId").value.trim();
-          const maxHops = Number(document.getElementById("maxHops").value || 3);
+          const requestedHops = Number(document.getElementById("maxHops").value || 3);
+          const maxHops = Number.isFinite(requestedHops) ? Math.min(Math.max(Math.round(requestedHops), 1), 4) : 3;
           if (!jobId) return;
-          const data = await fetchJson(`/jobs/${jobId}/reasoning?max_hops=${maxHops}&limit=8`);
+          const data = await fetchJson(`/jobs/${encodeURIComponent(jobId)}/reasoning?max_hops=${maxHops}&limit=8`);
           const paths = data.paths || [];
           document.getElementById("reasoningCount").textContent = `${paths.length} 条路径`;
           document.getElementById("reasoning").innerHTML = paths.length
@@ -755,7 +775,7 @@
         try {
           const jobId = document.getElementById("jobId").value.trim();
           if (!jobId) return;
-          const data = await fetchJson(`/jobs/${jobId}/graph`);
+          const data = await fetchJson(`/jobs/${encodeURIComponent(jobId)}/graph`);
           document.getElementById("graphMeta").textContent = `${data.nodes.length} 节点 / ${data.edges.length} 关系`;
           const categories = [...new Set(data.nodes.map((node) => node.label))].map((name) => ({ name }));
           graphChart.clear();
@@ -771,8 +791,15 @@
                 layout: "force",
                 roam: true,
                 top: 44,
-                label: { show: true, fontSize: 11, overflow: "truncate", width: 110 },
-                force: { repulsion: 220, edgeLength: 120 },
+                label: { show: false, fontSize: 11, overflow: "truncate", width: 110 },
+                edgeLabel: { show: false },
+                lineStyle: { color: "#94a3b8", opacity: 0.55, width: 1 },
+                emphasis: {
+                  focus: "adjacency",
+                  label: { show: true, formatter: (params) => compactLabel(params.data.name, 16) },
+                  edgeLabel: { show: true, formatter: (params) => params.data.relation },
+                },
+                force: { repulsion: 260, edgeLength: 135 },
                 categories,
                 data: data.nodes.map((node) => ({
                   id: node.id,
@@ -780,12 +807,16 @@
                   category: node.label,
                   value: node.label,
                   symbolSize: node.label === "Job" ? 64 : 40,
+                  label: {
+                    show: node.id === `job:${jobId}` || node.label === "Skill" || node.label === "City",
+                    formatter: () => compactLabel(node.name),
+                  },
                 })),
                 links: data.edges.map((edge) => ({
                   source: edge.source,
                   target: edge.target,
                   relation: edge.relation,
-                  label: { show: true, formatter: edge.relation, fontSize: 10 },
+                  label: { show: false, formatter: edge.relation, fontSize: 10 },
                 })),
               },
             ],
@@ -805,6 +836,17 @@
           setBusy("graphBtn", false);
         }
       }
+
+      document.getElementById("results").addEventListener("click", (event) => {
+        const button = event.target.closest("button[data-action]");
+        if (!button) return;
+        if (button.dataset.action === "graph") {
+          selectJob(button.dataset.jobId, true);
+        }
+        if (button.dataset.action === "detail") {
+          openDetail(button.dataset.url);
+        }
+      });
 
       Promise.all([loadStats(), recommend(), loadInsights()]);
       window.addEventListener("resize", () => graphChart.resize());
