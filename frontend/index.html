@@ -163,87 +163,111 @@
           .filter(Boolean);
       }
 
+      async function fetchJson(url, options) {
+        const response = await fetch(url, options);
+        if (!response.ok) {
+          throw new Error(`请求失败 ${response.status}`);
+        }
+        return response.json();
+      }
+
+      function renderError(targetId, message) {
+        document.getElementById(targetId).innerHTML = `
+          <div class="meta">${message}</div>
+          <div class="tiny">请确认 Neo4j 已启动、.env 连接配置正确，并已执行图谱导入。</div>
+        `;
+      }
+
       async function recommend() {
-        const payload = {
-          skills: splitInput(document.getElementById("skills").value),
-          desired_city: document.getElementById("city").value.trim() || null,
-          min_salary: Number(document.getElementById("salary").value || 0),
-          preferred_benefits: splitInput(document.getElementById("benefits").value),
-          seed_job_id: document.getElementById("seedJobId").value.trim() || null,
-          max_hops: Number(document.getElementById("maxHops").value || 3),
-          top_k: 8,
-        };
-        const response = await fetch("/recommend/profile", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        });
-        const data = await response.json();
-        const html = data.items
-          .map(
-            (item) => `
-              <article class="job">
-                <div class="title">${item.title}</div>
-                <div class="meta">${item.company_name} · ${item.city_name} · ${item.industry_name} · ${item.salary_min}-${item.salary_max}k · 得分 ${item.score}</div>
-                <div>${item.reasons.map((reason) => `<span class="tag">${reason}</span>`).join("")}</div>
-                <div class="section-title">评分拆解</div>
-                <div>${Object.entries(item.score_breakdown || {})
-                  .filter(([, score]) => score > 0)
-                  .map(([name, score]) => `<span class="tag">${name}: ${score}</span>`)
-                  .join("")}</div>
-                <div class="section-title">推理路径</div>
-                <div>${(item.reasoning_paths || [])
-                  .map((path) => `<div class="tiny">${path.hop_count} 跳 · ${path.score} · ${path.explanation}</div>`)
-                  .join("")}</div>
-                <div>${item.skills.slice(0, 8).map((skill) => `<span class="tag">${skill}</span>`).join("")}</div>
-                <button class="secondary" onclick="setGraphJob('${item.job_id}')">查看该岗位图谱</button>
-              </article>
-            `
-          )
-          .join("");
-        document.getElementById("results").innerHTML = html || "暂无匹配岗位";
-      }
-
-      async function loadInsights() {
-        const response = await fetch("/graph/insights?limit=8");
-        const data = await response.json();
-        const sections = [
-          ["热门技能", data.top_skills || []],
-          ["热门城市", data.top_cities || []],
-          ["热门行业", data.top_industries || []],
-          ["热门福利", data.top_benefits || []],
-        ];
-        document.getElementById("insights").innerHTML = sections
-          .map(
-            ([title, items]) => `
-              <div class="section-title">${title}</div>
-              <div>${items
-                .map((item) => `<span class="tag">${item.name} (${item.count})</span>`)
-                .join("")}</div>
-            `
-          )
-          .join("");
-      }
-
-      async function loadReasoning() {
-        const jobId = document.getElementById("seedJobId").value.trim() || document.getElementById("jobId").value.trim();
-        const maxHops = Number(document.getElementById("maxHops").value || 3);
-        if (!jobId) return;
-        const response = await fetch(`/jobs/${jobId}/reasoning?max_hops=${maxHops}&limit=10`);
-        const data = await response.json();
-        document.getElementById("reasoning").innerHTML =
-          (data.paths || [])
+        try {
+          const payload = {
+            skills: splitInput(document.getElementById("skills").value),
+            desired_city: document.getElementById("city").value.trim() || null,
+            min_salary: Number(document.getElementById("salary").value || 0),
+            preferred_benefits: splitInput(document.getElementById("benefits").value),
+            seed_job_id: document.getElementById("seedJobId").value.trim() || null,
+            max_hops: Number(document.getElementById("maxHops").value || 3),
+            top_k: 8,
+          };
+          const data = await fetchJson("/recommend/profile", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+          const html = data.items
             .map(
-              (path) => `
+              (item) => `
                 <article class="job">
-                  <div class="title">${path.target_title}</div>
-                  <div class="meta">${path.hop_count} 跳 · 关联分 ${path.score}</div>
-                  <div>${path.relations.map((relation) => `<span class="tag">${relation}</span>`).join("")}</div>
-                  <div class="tiny">${path.explanation}</div>
+                  <div class="title">${item.title}</div>
+                  <div class="meta">${item.company_name} · ${item.city_name} · ${item.industry_name} · ${item.salary_min}-${item.salary_max}k · 得分 ${item.score}</div>
+                  <div>${item.reasons.map((reason) => `<span class="tag">${reason}</span>`).join("")}</div>
+                  <div class="section-title">评分拆解</div>
+                  <div>${Object.entries(item.score_breakdown || {})
+                    .filter(([, score]) => score > 0)
+                    .map(([name, score]) => `<span class="tag">${name}: ${score}</span>`)
+                    .join("")}</div>
+                  <div class="section-title">推理路径</div>
+                  <div>${(item.reasoning_paths || [])
+                    .map((path) => `<div class="tiny">${path.hop_count} 跳 · ${path.score} · ${path.explanation}</div>`)
+                    .join("")}</div>
+                  <div>${item.skills.slice(0, 8).map((skill) => `<span class="tag">${skill}</span>`).join("")}</div>
+                  <button class="secondary" onclick="setGraphJob('${item.job_id}')">查看该岗位图谱</button>
                 </article>
               `
             )
-            .join("") || "暂无多跳推理结果";
+            .join("");
+          document.getElementById("results").innerHTML = html || "暂无匹配岗位";
+        } catch (error) {
+          renderError("results", `推荐结果加载失败：${error.message}`);
+        }
+      }
+
+      async function loadInsights() {
+        try {
+          const data = await fetchJson("/graph/insights?limit=8");
+          const sections = [
+            ["热门技能", data.top_skills || []],
+            ["热门城市", data.top_cities || []],
+            ["热门行业", data.top_industries || []],
+            ["热门福利", data.top_benefits || []],
+          ];
+          document.getElementById("insights").innerHTML = sections
+            .map(
+              ([title, items]) => `
+                <div class="section-title">${title}</div>
+                <div>${items
+                  .map((item) => `<span class="tag">${item.name} (${item.count})</span>`)
+                  .join("")}</div>
+              `
+            )
+            .join("");
+        } catch (error) {
+          renderError("insights", `图谱洞察加载失败：${error.message}`);
+        }
+      }
+
+      async function loadReasoning() {
+        try {
+          const jobId = document.getElementById("seedJobId").value.trim() || document.getElementById("jobId").value.trim();
+          const maxHops = Number(document.getElementById("maxHops").value || 3);
+          if (!jobId) return;
+          const data = await fetchJson(`/jobs/${jobId}/reasoning?max_hops=${maxHops}&limit=10`);
+          document.getElementById("reasoning").innerHTML =
+            (data.paths || [])
+              .map(
+                (path) => `
+                  <article class="job">
+                    <div class="title">${path.target_title}</div>
+                    <div class="meta">${path.hop_count} 跳 · 关联分 ${path.score}</div>
+                    <div>${path.relations.map((relation) => `<span class="tag">${relation}</span>`).join("")}</div>
+                    <div class="tiny">${path.explanation}</div>
+                  </article>
+                `
+              )
+              .join("") || "暂无多跳推理结果";
+        } catch (error) {
+          renderError("reasoning", `多跳推理加载失败：${error.message}`);
+        }
       }
 
       function setGraphJob(jobId) {
@@ -254,37 +278,48 @@
       }
 
       async function drawGraph() {
-        const jobId = document.getElementById("jobId").value.trim();
-        if (!jobId) return;
-        const response = await fetch(`/jobs/${jobId}/graph`);
-        const data = await response.json();
-        const categories = [...new Set(data.nodes.map((node) => node.label))].map((name) => ({ name }));
-        graphChart.setOption({
-          tooltip: {},
-          legend: [{ data: categories.map((item) => item.name) }],
-          series: [
-            {
-              type: "graph",
-              layout: "force",
-              roam: true,
-              label: { show: true },
-              force: { repulsion: 180, edgeLength: 110 },
-              categories,
-              data: data.nodes.map((node) => ({
-                id: node.id,
-                name: node.name,
-                category: node.label,
-                value: node.label,
-                symbolSize: node.label === "Job" ? 58 : 42,
-              })),
-              links: data.edges.map((edge) => ({
-                source: edge.source,
-                target: edge.target,
-                label: { show: true, formatter: edge.relation },
-              })),
+        try {
+          const jobId = document.getElementById("jobId").value.trim();
+          if (!jobId) return;
+          const data = await fetchJson(`/jobs/${jobId}/graph`);
+          const categories = [...new Set(data.nodes.map((node) => node.label))].map((name) => ({ name }));
+          graphChart.setOption({
+            tooltip: {},
+            legend: [{ data: categories.map((item) => item.name) }],
+            series: [
+              {
+                type: "graph",
+                layout: "force",
+                roam: true,
+                label: { show: true },
+                force: { repulsion: 180, edgeLength: 110 },
+                categories,
+                data: data.nodes.map((node) => ({
+                  id: node.id,
+                  name: node.name,
+                  category: node.label,
+                  value: node.label,
+                  symbolSize: node.label === "Job" ? 58 : 42,
+                })),
+                links: data.edges.map((edge) => ({
+                  source: edge.source,
+                  target: edge.target,
+                  label: { show: true, formatter: edge.relation },
+                })),
+              },
+            ],
+          });
+        } catch (error) {
+          graphChart.clear();
+          graphChart.setOption({
+            title: {
+              text: `岗位图谱加载失败：${error.message}`,
+              subtext: "请确认 Neo4j 已启动并完成图谱导入",
+              left: "center",
+              top: "middle",
             },
-          ],
-        });
+          });
+        }
       }
 
       Promise.all([recommend(), drawGraph(), loadInsights(), loadReasoning()]);
