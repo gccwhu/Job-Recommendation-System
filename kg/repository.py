@@ -722,6 +722,7 @@ class Neo4jGraphRepository(HydratedGraphView):
         target_job_id: str | None = None,
         max_hops: int = 3,
         limit: int = 10,
+        prefer_multi_hop: bool = False,
     ) -> list[dict]:
         safe_hops = max(1, min(max_hops, 4))
         candidate_limit = min(max(limit * 4, 50), 400)
@@ -751,10 +752,11 @@ class Neo4jGraphRepository(HydratedGraphView):
                  [coalesce(seed.title, seed.job_id), coalesce(target.title, target.job_id)] AS node_names,
                  ['SIMILAR_TO'] AS relations,
                  1 AS hops,
-                 coalesce(sim.score, 8.0) AS path_score
+                 coalesce(sim.score, 8.0) AS path_score,
+                 3 AS path_rank
             ORDER BY path_score DESC, target.title ASC
             LIMIT $candidate_limit
-            RETURN target, node_names, relations, hops, round(path_score, 2) AS path_score
+            RETURN target, node_names, relations, hops, round(path_score, 2) AS path_score, path_rank
 
             UNION ALL
 
@@ -769,11 +771,12 @@ class Neo4jGraphRepository(HydratedGraphView):
                  [coalesce(seed.title, seed.job_id), coalesce(entity.name, entity.title, entity.job_id), coalesce(target.title, target.job_id)] AS node_names,
                  [type(r1), type(r2)] AS relations,
                  2 AS hops,
+                 0 AS path_rank,
                  ({relation_score.replace("$rel", "r1")} + {relation_score.replace("$rel", "r2")}) AS raw_score
-            WITH target, node_names, relations, hops, round((raw_score / 2.0) * (1.0 / 2.0), 2) AS path_score
+            WITH target, node_names, relations, hops, path_rank, round((raw_score / 2.0) * (1.0 / 2.0), 2) AS path_score
             ORDER BY path_score DESC, target.title ASC
             LIMIT $candidate_limit
-            RETURN target, node_names, relations, hops, path_score
+            RETURN target, node_names, relations, hops, path_score, path_rank
 
             UNION ALL
 
@@ -787,11 +790,12 @@ class Neo4jGraphRepository(HydratedGraphView):
                  [coalesce(seed.title, seed.job_id), coalesce(mid.title, mid.job_id), coalesce(target.title, target.job_id)] AS node_names,
                  ['SIMILAR_TO', 'SIMILAR_TO'] AS relations,
                  2 AS hops,
+                 2 AS path_rank,
                  (coalesce(sim1.score, 8.0) + coalesce(sim2.score, 8.0)) AS raw_score
-            WITH target, node_names, relations, hops, round((raw_score / 2.0) * (1.0 / 2.0), 2) AS path_score
+            WITH target, node_names, relations, hops, path_rank, round((raw_score / 2.0) * (1.0 / 2.0), 2) AS path_score
             ORDER BY path_score DESC, target.title ASC
             LIMIT $candidate_limit
-            RETURN target, node_names, relations, hops, path_score
+            RETURN target, node_names, relations, hops, path_score, path_rank
 
             UNION ALL
 
@@ -808,27 +812,36 @@ class Neo4jGraphRepository(HydratedGraphView):
                  [coalesce(seed.title, seed.job_id), coalesce(entity.name, entity.title, entity.job_id), coalesce(mid.title, mid.job_id), coalesce(target.title, target.job_id)] AS node_names,
                  [type(r1), type(r2), 'SIMILAR_TO'] AS relations,
                  3 AS hops,
+                 1 AS path_rank,
                  ({relation_score.replace("$rel", "r1")} + {relation_score.replace("$rel", "r2")} + coalesce(sim.score, 8.0)) AS raw_score
-            WITH target, node_names, relations, hops, round((raw_score / 3.0) * (1.0 / 3.0), 2) AS path_score
+            WITH target, node_names, relations, hops, path_rank, round((raw_score / 3.0) * (1.0 / 3.0), 2) AS path_score
             ORDER BY path_score DESC, target.title ASC
             LIMIT $candidate_limit
-            RETURN target, node_names, relations, hops, path_score
+            RETURN target, node_names, relations, hops, path_score, path_rank
         }}
-        ORDER BY target.job_id, path_score DESC, hops ASC
+        ORDER BY target.job_id,
+                 CASE WHEN $prefer_multi_hop THEN path_rank ELSE 0 END,
+                 path_score DESC,
+                 hops ASC
         WITH target,
              collect({{
                 node_names: node_names,
                 relations: relations,
                 hop_count: hops,
-                score: path_score
+                score: path_score,
+                path_rank: path_rank
              }})[0] AS best
         RETURN target.job_id AS target_job_id,
                target.title AS target_title,
                best.node_names AS node_names,
                best.relations AS relations,
                best.hop_count AS hop_count,
-               best.score AS score
-        ORDER BY score DESC, hop_count ASC, target_title ASC
+               best.score AS score,
+               best.path_rank AS path_rank
+        ORDER BY CASE WHEN $prefer_multi_hop THEN path_rank ELSE 0 END,
+                 score DESC,
+                 hop_count ASC,
+                 target_title ASC
         LIMIT $limit
         """
         with self.driver.session(database=self.settings.neo4j_database) as session:
@@ -838,6 +851,7 @@ class Neo4jGraphRepository(HydratedGraphView):
                 target_job_id=target_job_id,
                 max_hops=safe_hops,
                 candidate_limit=candidate_limit,
+                prefer_multi_hop=prefer_multi_hop,
                 limit=limit,
             ).data()
 
@@ -860,6 +874,7 @@ class Neo4jGraphRepository(HydratedGraphView):
             target_job_id=target_job_id,
             max_hops=max_hops,
             limit=limit,
+            prefer_multi_hop=True,
         )
         paths: list[ReasoningPath] = []
         for record in records:
