@@ -722,28 +722,25 @@ class Neo4jGraphRepository(HydratedGraphView):
         target_job_id: str | None = None,
         max_hops: int = 3,
         limit: int = 10,
-        prefer_multi_hop: bool = False,
     ) -> list[dict]:
         safe_hops = max(1, min(max_hops, 4))
         candidate_limit = min(max(limit * 4, 50), 400)
-        relation_score = """
-            CASE type($rel)
-                WHEN 'SIMILAR_TO' THEN coalesce($rel.score, 8.0)
-                WHEN 'REQUIRES_SKILL' THEN 3.0
-                WHEN 'HAS_BENEFIT' THEN 1.2
-                WHEN 'LOCATED_IN' THEN 2.0
-                WHEN 'IN_INDUSTRY' THEN 2.0
-                WHEN 'POSTED_BY' THEN 1.5
-                WHEN 'HAS_KEYWORD' THEN 0.8
-                WHEN 'BELONGS_TO' THEN 0.8
-                WHEN 'REQUIRES_DEGREE' THEN 0.6
-                WHEN 'REQUIRES_EXPERIENCE' THEN 0.6
-                ELSE 0.4
-            END
+        entity_candidate_limit = min(max(limit * 4, 40), 120)
+        mid_candidate_limit = min(max(limit * 6, 40), 160)
+        similarity_support = """
+            log(1.0 + toFloat(
+                size(coalesce($rel.shared_skills, []))
+                + size(coalesce($rel.shared_benefits, []))
+                + CASE WHEN coalesce($rel.same_city, false) THEN 1 ELSE 0 END
+                + CASE WHEN coalesce($rel.same_industry, false) THEN 1 ELSE 0 END
+                + CASE WHEN coalesce($rel.same_company, false) THEN 1 ELSE 0 END
+            ))
         """
         query = f"""
         MATCH (seed:Job {{job_id: $job_id}})
-        CALL (seed) {{
+        MATCH (job_count:Job)
+        WITH seed, count(job_count) AS total_jobs
+        CALL (seed, total_jobs) {{
             MATCH (seed)-[sim:SIMILAR_TO]-(target:Job)
             WHERE $max_hops >= 1
               AND target.job_id <> seed.job_id
@@ -752,31 +749,41 @@ class Neo4jGraphRepository(HydratedGraphView):
                  [coalesce(seed.title, seed.job_id), coalesce(target.title, target.job_id)] AS node_names,
                  ['SIMILAR_TO'] AS relations,
                  1 AS hops,
-                 coalesce(sim.score, 8.0) AS path_score,
-                 3 AS path_rank
+                 [{similarity_support.replace("$rel", "sim")}] AS support_scores
+            WITH target, node_names, relations, hops,
+                 reduce(raw = 0.0, support IN support_scores | raw + support) AS raw_score
+            WITH target, node_names, relations, hops, round(raw_score / sqrt(toFloat(hops)), 4) AS path_score
             ORDER BY path_score DESC, target.title ASC
             LIMIT $candidate_limit
-            RETURN target, node_names, relations, hops, round(path_score, 2) AS path_score, path_rank
+            RETURN target, node_names, relations, hops, path_score
 
             UNION ALL
 
-            MATCH (seed)-[r1]-(entity)-[r2]-(target:Job)
+            MATCH (seed)-[r1]-(entity)
             WHERE $max_hops >= 2
-              AND target.job_id <> seed.job_id
-              AND ($target_job_id IS NULL OR target.job_id = $target_job_id)
               AND NOT entity:Job
               AND type(r1) <> 'SIMILAR_TO'
+            WITH seed, total_jobs, entity, r1, COUNT {{ (entity)--(:Job) }} AS entity_job_count
+            ORDER BY entity_job_count ASC, coalesce(entity.name, entity.title, entity.job_id) ASC
+            LIMIT $entity_candidate_limit
+            MATCH (entity)-[r2]-(target:Job)
+            WHERE target.job_id <> seed.job_id
+              AND ($target_job_id IS NULL OR target.job_id = $target_job_id)
               AND type(r2) <> 'SIMILAR_TO'
             WITH target,
                  [coalesce(seed.title, seed.job_id), coalesce(entity.name, entity.title, entity.job_id), coalesce(target.title, target.job_id)] AS node_names,
                  [type(r1), type(r2)] AS relations,
                  2 AS hops,
-                 0 AS path_rank,
-                 ({relation_score.replace("$rel", "r1")} + {relation_score.replace("$rel", "r2")}) AS raw_score
-            WITH target, node_names, relations, hops, path_rank, round((raw_score / 2.0) * (1.0 / 2.0), 2) AS path_score
+                 total_jobs,
+                 COUNT {{ (entity)--(:Job) }} AS entity_job_count
+            WITH target, node_names, relations, hops,
+                 [log((toFloat(total_jobs) + 1.0) / (toFloat(entity_job_count) + 1.0))] AS support_scores
+            WITH target, node_names, relations, hops,
+                 reduce(raw = 0.0, support IN support_scores | raw + support) AS raw_score
+            WITH target, node_names, relations, hops, round(raw_score / sqrt(toFloat(hops)), 4) AS path_score
             ORDER BY path_score DESC, target.title ASC
             LIMIT $candidate_limit
-            RETURN target, node_names, relations, hops, path_score, path_rank
+            RETURN target, node_names, relations, hops, path_score
 
             UNION ALL
 
@@ -790,56 +797,65 @@ class Neo4jGraphRepository(HydratedGraphView):
                  [coalesce(seed.title, seed.job_id), coalesce(mid.title, mid.job_id), coalesce(target.title, target.job_id)] AS node_names,
                  ['SIMILAR_TO', 'SIMILAR_TO'] AS relations,
                  2 AS hops,
-                 2 AS path_rank,
-                 (coalesce(sim1.score, 8.0) + coalesce(sim2.score, 8.0)) AS raw_score
-            WITH target, node_names, relations, hops, path_rank, round((raw_score / 2.0) * (1.0 / 2.0), 2) AS path_score
+                 [{similarity_support.replace("$rel", "sim1")}, {similarity_support.replace("$rel", "sim2")}] AS support_scores
+            WITH target, node_names, relations, hops,
+                 reduce(raw = 0.0, support IN support_scores | raw + support) AS raw_score
+            WITH target, node_names, relations, hops, round(raw_score / sqrt(toFloat(hops)), 4) AS path_score
             ORDER BY path_score DESC, target.title ASC
             LIMIT $candidate_limit
-            RETURN target, node_names, relations, hops, path_score, path_rank
+            RETURN target, node_names, relations, hops, path_score
 
             UNION ALL
 
-            MATCH (seed)-[r1]-(entity)-[r2]-(mid:Job)-[sim:SIMILAR_TO]-(target:Job)
+            MATCH (seed)-[r1]-(entity)
             WHERE $max_hops >= 3
-              AND mid.job_id <> seed.job_id
-              AND target.job_id <> seed.job_id
-              AND target.job_id <> mid.job_id
-              AND ($target_job_id IS NULL OR target.job_id = $target_job_id)
               AND NOT entity:Job
               AND type(r1) <> 'SIMILAR_TO'
+            WITH seed, total_jobs, entity, r1, COUNT {{ (entity)--(:Job) }} AS entity_job_count
+            ORDER BY entity_job_count ASC, coalesce(entity.name, entity.title, entity.job_id) ASC
+            LIMIT $entity_candidate_limit
+            MATCH (entity)-[r2]-(mid:Job)
+            WHERE mid.job_id <> seed.job_id
               AND type(r2) <> 'SIMILAR_TO'
+            WITH seed,
+                 total_jobs,
+                 entity,
+                 r1,
+                 r2,
+                 mid,
+                 entity_job_count,
+                 log((toFloat(total_jobs) + 1.0) / (toFloat(entity_job_count) + 1.0)) AS entity_support
+            ORDER BY entity_support DESC, mid.job_id ASC
+            LIMIT $mid_candidate_limit
+            MATCH (mid)-[sim:SIMILAR_TO]-(target:Job)
+            WHERE target.job_id <> seed.job_id
+              AND target.job_id <> mid.job_id
+              AND ($target_job_id IS NULL OR target.job_id = $target_job_id)
             WITH target,
                  [coalesce(seed.title, seed.job_id), coalesce(entity.name, entity.title, entity.job_id), coalesce(mid.title, mid.job_id), coalesce(target.title, target.job_id)] AS node_names,
                  [type(r1), type(r2), 'SIMILAR_TO'] AS relations,
                  3 AS hops,
-                 1 AS path_rank,
-                 ({relation_score.replace("$rel", "r1")} + {relation_score.replace("$rel", "r2")} + coalesce(sim.score, 8.0)) AS raw_score
-            WITH target, node_names, relations, hops, path_rank, round((raw_score / 3.0) * (1.0 / 3.0), 2) AS path_score
+                 entity_support,
+                 sim
+            WITH target, node_names, relations, hops,
+                 [
+                    entity_support,
+                    {similarity_support.replace("$rel", "sim")}
+                 ] AS support_scores
+            WITH target, node_names, relations, hops,
+                 reduce(raw = 0.0, support IN support_scores | raw + support) AS raw_score
+            WITH target, node_names, relations, hops, round(raw_score / sqrt(toFloat(hops)), 4) AS path_score
             ORDER BY path_score DESC, target.title ASC
             LIMIT $candidate_limit
-            RETURN target, node_names, relations, hops, path_score, path_rank
+            RETURN target, node_names, relations, hops, path_score
         }}
-        ORDER BY target.job_id,
-                 CASE WHEN $prefer_multi_hop THEN path_rank ELSE 0 END,
-                 path_score DESC,
-                 hops ASC
-        WITH target,
-             collect({{
-                node_names: node_names,
-                relations: relations,
-                hop_count: hops,
-                score: path_score,
-                path_rank: path_rank
-             }})[0] AS best
         RETURN target.job_id AS target_job_id,
                target.title AS target_title,
-               best.node_names AS node_names,
-               best.relations AS relations,
-               best.hop_count AS hop_count,
-               best.score AS score,
-               best.path_rank AS path_rank
-        ORDER BY CASE WHEN $prefer_multi_hop THEN path_rank ELSE 0 END,
-                 score DESC,
+               node_names AS node_names,
+               relations AS relations,
+               hops AS hop_count,
+               path_score AS score
+        ORDER BY score DESC,
                  hop_count ASC,
                  target_title ASC
         LIMIT $limit
@@ -851,15 +867,21 @@ class Neo4jGraphRepository(HydratedGraphView):
                 target_job_id=target_job_id,
                 max_hops=safe_hops,
                 candidate_limit=candidate_limit,
-                prefer_multi_hop=prefer_multi_hop,
+                entity_candidate_limit=entity_candidate_limit,
+                mid_candidate_limit=mid_candidate_limit,
                 limit=limit,
             ).data()
 
     def _multi_hop_score_rows(self, job_id: str | None, *, max_hops: int = 3) -> list[dict[str, object]]:
         if not job_id:
             return []
-        records = self._multi_hop_records(job_id, max_hops=max_hops, limit=200)
-        return [{"job_id": record["target_job_id"], "score": record["score"]} for record in records]
+        records = self._multi_hop_records(job_id, max_hops=max_hops, limit=600)
+        best_scores: dict[str, float] = {}
+        for record in records:
+            job_key = record["target_job_id"]
+            score = record["score"] or 0.0
+            best_scores[job_key] = max(score, best_scores.get(job_key, 0.0))
+        return [{"job_id": job_id, "score": score} for job_id, score in best_scores.items()]
 
     def multi_hop_reasoning(
         self,
@@ -874,7 +896,6 @@ class Neo4jGraphRepository(HydratedGraphView):
             target_job_id=target_job_id,
             max_hops=max_hops,
             limit=limit,
-            prefer_multi_hop=True,
         )
         paths: list[ReasoningPath] = []
         for record in records:
