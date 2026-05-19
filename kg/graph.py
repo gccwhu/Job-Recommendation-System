@@ -7,6 +7,7 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any, Iterable
 
+from .disambiguation import normalize_city_name, normalize_company_name, normalize_industry_name, normalize_text
 from .models import KnowledgeGraph, NormalizedJob
 from .taxonomy import extract_entities
 
@@ -76,9 +77,9 @@ def _stable_job_id(item: dict[str, Any]) -> str:
         return existing
     base = "|".join(
         [
-            item.get("jobName", "").strip(),
-            item.get("companyName", "").strip(),
-            item.get("jobAreaString", "").strip(),
+            normalize_text(item.get("jobName", "")),
+            normalize_company_name(item.get("companyName") or ""),
+            normalize_city_name(item.get("jobAreaString") or ""),
         ]
     )
     return hashlib.md5(base.encode("utf-8")).hexdigest()
@@ -87,7 +88,7 @@ def _stable_job_id(item: dict[str, Any]) -> str:
 def _safe_text(value: Any) -> str:
     if value is None:
         return ""
-    return str(value).strip()
+    return normalize_text(str(value))
 
 
 def _safe_salary(value: Any) -> int:
@@ -111,9 +112,9 @@ def normalize_jobs(raw_jobs: Iterable[dict[str, Any]]) -> list[NormalizedJob]:
     for item in raw_jobs:
         job_id = _stable_job_id(item)
         title = _safe_text(item.get("jobName"))
-        company_name = _safe_text(item.get("companyName"))
-        city_name = _safe_text(item.get("jobAreaString")) or "未知"
-        industry_name = _safe_text(item.get("industryType1Str")) or "未知行业"
+        company_name = normalize_company_name(_safe_text(item.get("companyName"))) or "未知公司"
+        city_name = normalize_city_name(_safe_text(item.get("jobAreaString"))) or "未知"
+        industry_name = normalize_industry_name(_safe_text(item.get("industryType1Str"))) or "未知行业"
         degree_name = normalize_degree(_safe_text(item.get("degreeString")))
         experience_name = normalize_experience(_safe_text(item.get("workYearString")))
         salary_min = _safe_salary(item.get("salaryMin"))

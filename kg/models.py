@@ -66,6 +66,9 @@ class RecommendationRequest(BaseModel):
     experience: str | None = None
     min_salary: int | None = None
     keywords: list[str] = Field(default_factory=list)
+    preferred_benefits: list[str] = Field(default_factory=list)
+    seed_job_id: str | None = None
+    max_hops: int = Field(default=3, ge=1, le=4)
     top_k: int = 10
 
 
@@ -74,6 +77,8 @@ class RecommendationItem(JobSummary):
     matched_skills: list[str] = Field(default_factory=list)
     missing_skills: list[str] = Field(default_factory=list)
     reasons: list[str] = Field(default_factory=list)
+    score_breakdown: dict[str, float] = Field(default_factory=dict)
+    reasoning_paths: list["ReasoningPath"] = Field(default_factory=list)
 
 
 class SearchResponse(BaseModel):
@@ -106,6 +111,21 @@ class GraphResponse(BaseModel):
     edges: list[GraphEdge]
 
 
+class ReasoningPath(BaseModel):
+    target_job_id: str
+    target_title: str
+    hop_count: int
+    score: float
+    node_names: list[str] = Field(default_factory=list)
+    relations: list[str] = Field(default_factory=list)
+    explanation: str
+
+
+class MultiHopReasoningResponse(BaseModel):
+    job_id: str
+    paths: list[ReasoningPath] = Field(default_factory=list)
+
+
 class StatsResponse(BaseModel):
     backend: str
     total_jobs: int
@@ -116,8 +136,17 @@ class StatsResponse(BaseModel):
     total_cities: int
     total_industries: int
     average_skills_per_job: float
+    average_benefits_per_job: float = 0.0
+    total_similarity_edges: int = 0
 
 
 class TopItem(BaseModel):
     name: str
     count: int
+
+
+class GraphInsightsResponse(BaseModel):
+    top_skills: list[TopItem] = Field(default_factory=list)
+    top_cities: list[TopItem] = Field(default_factory=list)
+    top_industries: list[TopItem] = Field(default_factory=list)
+    top_benefits: list[TopItem] = Field(default_factory=list)

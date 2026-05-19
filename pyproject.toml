@@ -22,4 +22,4 @@ dependencies = [
 ]
 
 [tool.setuptools]
-packages = ["job_kg", "data_pipeline", "data_pipeline.crawler"]
+packages = ["kg", "kg.ned", "kg.relation_extract", "data_pipeline", "data_pipeline.crawler"]

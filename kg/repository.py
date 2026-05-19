@@ -7,7 +7,20 @@ from neo4j.exceptions import Neo4jError
 
 from .config import Settings
 from .graph import build_knowledge_graph, degree_meets, experience_meets
-from .models import GraphResponse, GraphEdge, GraphNode, JobSummary, KnowledgeGraph, NormalizedJob, RecommendationItem, RecommendationRequest, StatsResponse, TopItem
+from .models import (
+    GraphEdge,
+    GraphInsightsResponse,
+    GraphNode,
+    GraphResponse,
+    JobSummary,
+    KnowledgeGraph,
+    NormalizedJob,
+    ReasoningPath,
+    RecommendationItem,
+    RecommendationRequest,
+    StatsResponse,
+    TopItem,
+)
 
 
 class HydratedGraphView:
@@ -23,6 +36,10 @@ class HydratedGraphView:
             sum(len(job.skills) for job in self.graph.jobs.values()) / max(len(self.graph.jobs), 1),
             2,
         )
+        avg_benefits = round(
+            sum(len(job.benefits) for job in self.graph.jobs.values()) / max(len(self.graph.jobs), 1),
+            2,
+        )
         return StatsResponse(
             backend=self.backend_name,
             total_jobs=len(self.graph.jobs),
@@ -33,6 +50,7 @@ class HydratedGraphView:
             total_cities=len(self.graph.indexes["cities"]),
             total_industries=len(self.graph.indexes["industries"]),
             average_skills_per_job=avg_skills,
+            average_benefits_per_job=avg_benefits,
         )
 
 
@@ -52,6 +70,8 @@ class Neo4jGraphRepository(HydratedGraphView):
                 session.run("RETURN 1").consume()
                 self._create_constraints(session)
                 hydrated_graph = self._hydrate_graph(session)
+                if hydrated_graph.jobs:
+                    self._ensure_similarity_graph(session, hydrated_graph)
         except Neo4jError as exc:
             self.driver.close()
             raise RuntimeError(f"Neo4j 初始化失败: {exc}") from exc
@@ -146,11 +166,76 @@ class Neo4jGraphRepository(HydratedGraphView):
         ]
         session.run(query, rows=rows).consume()
 
+    @staticmethod
+    def _similarity_rows(graph: KnowledgeGraph) -> list[dict[str, object]]:
+        jobs = list(graph.jobs.values())
+        rows: list[dict[str, object]] = []
+        for index, left in enumerate(jobs):
+            left_skills = set(left.skills)
+            left_benefits = set(left.benefits)
+            for right in jobs[index + 1:]:
+                shared_skills = sorted(left_skills.intersection(right.skills))
+                shared_benefits = sorted(left_benefits.intersection(right.benefits))
+                same_city = left.city_name == right.city_name
+                same_industry = left.industry_name == right.industry_name
+                same_company = left.company_name == right.company_name
+                score = (
+                    len(shared_skills) * 3.0
+                    + len(shared_benefits) * 0.6
+                    + (1.5 if same_city else 0.0)
+                    + (1.5 if same_industry else 0.0)
+                    + (1.0 if same_company else 0.0)
+                )
+                if score < 3.0:
+                    continue
+                rows.append(
+                    {
+                        "left_job_id": left.job_id,
+                        "right_job_id": right.job_id,
+                        "score": round(score, 4),
+                        "shared_skills": shared_skills,
+                        "shared_benefits": shared_benefits,
+                        "same_city": same_city,
+                        "same_industry": same_industry,
+                        "same_company": same_company,
+                    }
+                )
+        return rows
+
+    def _build_similarity_graph(self, session, graph: KnowledgeGraph) -> None:
+        session.run("MATCH ()-[r:SIMILAR_TO]-() DELETE r").consume()
+        rows = self._similarity_rows(graph)
+        if not rows:
+            return
+        session.run(
+            """
+            UNWIND $rows AS row
+            MATCH (a:Job {job_id: row.left_job_id})
+            MATCH (b:Job {job_id: row.right_job_id})
+            MERGE (a)-[r:SIMILAR_TO]->(b)
+            SET r.score = row.score,
+                r.shared_skills = row.shared_skills,
+                r.shared_benefits = row.shared_benefits,
+                r.same_city = row.same_city,
+                r.same_industry = row.same_industry,
+                r.same_company = row.same_company
+            """,
+            rows=rows,
+        ).consume()
+
+    def _ensure_similarity_graph(self, session, graph: KnowledgeGraph) -> None:
+        count = session.run(
+            "MATCH ()-[r:SIMILAR_TO]-() RETURN count(DISTINCT r) AS count"
+        ).single()["count"]
+        if count == 0:
+            self._build_similarity_graph(session, graph)
+
     def sync_graph(self, graph: KnowledgeGraph) -> None:
         try:
             with self.driver.session(database=self.settings.neo4j_database) as session:
                 self._create_constraints(session)
                 self._replace_graph(session, graph)
+                self._build_similarity_graph(session, graph)
         except Neo4jError as exc:
             raise RuntimeError(f"Neo4j 图谱同步失败: {exc}") from exc
         self.graph = graph
@@ -215,6 +300,45 @@ class Neo4jGraphRepository(HydratedGraphView):
     def close(self) -> None:
         self.driver.close()
 
+    def stats(self) -> StatsResponse:
+        with self.driver.session(database=self.settings.neo4j_database) as session:
+            counts = {
+                "total_jobs": session.run("MATCH (n:Job) RETURN count(n) AS count").single()["count"],
+                "total_companies": session.run("MATCH (n:Company) RETURN count(n) AS count").single()["count"],
+                "total_skills": session.run("MATCH (n:Skill) RETURN count(n) AS count").single()["count"],
+                "total_benefits": session.run("MATCH (n:Benefit) RETURN count(n) AS count").single()["count"],
+                "total_keywords": session.run("MATCH (n:Keyword) RETURN count(n) AS count").single()["count"],
+                "total_cities": session.run("MATCH (n:City) RETURN count(n) AS count").single()["count"],
+                "total_industries": session.run("MATCH (n:Industry) RETURN count(n) AS count").single()["count"],
+                "total_similarity_edges": session.run("MATCH ()-[r:SIMILAR_TO]-() RETURN count(DISTINCT r) AS count").single()["count"],
+            }
+            averages = session.run(
+                """
+                MATCH (j:Job)
+                OPTIONAL MATCH (j)-[:REQUIRES_SKILL]->(skill:Skill)
+                WITH j, count(DISTINCT skill) AS skill_count
+                OPTIONAL MATCH (j)-[:HAS_BENEFIT]->(benefit:Benefit)
+                WITH j, skill_count, count(DISTINCT benefit) AS benefit_count
+                RETURN round(avg(skill_count), 2) AS average_skills_per_job,
+                       round(avg(benefit_count), 2) AS average_benefits_per_job
+                """
+            ).single()
+        if averages is None:
+            return super().stats()
+        return StatsResponse(
+            backend=self.backend_name,
+            total_jobs=counts["total_jobs"] or 0,
+            total_companies=counts["total_companies"] or 0,
+            total_skills=counts["total_skills"] or 0,
+            total_benefits=counts["total_benefits"] or 0,
+            total_keywords=counts["total_keywords"] or 0,
+            total_cities=counts["total_cities"] or 0,
+            total_industries=counts["total_industries"] or 0,
+            average_skills_per_job=averages["average_skills_per_job"] or 0.0,
+            average_benefits_per_job=averages["average_benefits_per_job"] or 0.0,
+            total_similarity_edges=counts["total_similarity_edges"] or 0,
+        )
+
     @staticmethod
     def _node_id(label: str, name: str) -> str:
         digest = hashlib.md5(f"{label}:{name}".encode("utf-8")).hexdigest()[:12]
@@ -223,6 +347,10 @@ class Neo4jGraphRepository(HydratedGraphView):
     @staticmethod
     def _clean_list(items: list[str | None]) -> list[str]:
         return sorted(item for item in items if item)
+
+    @staticmethod
+    def _breakdown_total(breakdown: dict[str, float]) -> float:
+        return round(sum(breakdown.values()), 2)
 
     @classmethod
     def _record_to_summary(cls, record) -> JobSummary:
@@ -335,8 +463,10 @@ class Neo4jGraphRepository(HydratedGraphView):
         return self._record_to_summary(record) if record else None
 
     def recommend_by_profile(self, profile: RecommendationRequest) -> list[RecommendationItem]:
+        path_scores = self._multi_hop_score_rows(profile.seed_job_id, max_hops=profile.max_hops) if profile.seed_job_id else []
         query = """
         MATCH (j:Job)
+        WHERE ($seed_job_id IS NULL OR j.job_id <> $seed_job_id)
         OPTIONAL MATCH (j)-[:POSTED_BY]->(c:Company)
         OPTIONAL MATCH (j)-[:LOCATED_IN]->(city:City)
         OPTIONAL MATCH (j)-[:IN_INDUSTRY]->(industry:Industry)
@@ -353,17 +483,28 @@ class Neo4jGraphRepository(HydratedGraphView):
         WITH j, c, city, industry, degree, exp, skills, benefits, keywords,
              [item IN $skills WHERE item IN skills] AS matched_skills,
              [item IN $skills WHERE NOT item IN skills] AS missing_skills,
-             [item IN $keywords WHERE item IN keywords OR item IN skills] AS matched_keywords
+             [item IN $keywords WHERE item IN keywords OR item IN skills] AS matched_keywords,
+             [item IN $preferred_benefits WHERE item IN benefits] AS matched_benefits,
+             coalesce([row IN $path_scores WHERE row.job_id = j.job_id | row.score][0], 0.0) AS path_score
         WITH j, c, city, industry, degree, exp, skills, benefits, keywords,
-             matched_skills, missing_skills,
+             matched_skills, missing_skills, matched_keywords, matched_benefits, path_score,
              size(matched_skills) * 4.0
+             + CASE WHEN size($skills) = 0 THEN 0.0 ELSE (toFloat(size(matched_skills)) / size($skills)) * 2.0 END
              + size(matched_keywords) * 1.5
+             + size(matched_benefits) * 1.2
              + CASE WHEN $desired_city IS NOT NULL AND city.name = $desired_city THEN 3.0 ELSE 0.0 END
              + CASE WHEN $desired_industry IS NOT NULL AND industry.name = $desired_industry THEN 2.5 ELSE 0.0 END
              + CASE WHEN $min_salary IS NOT NULL AND j.salary_max >= $min_salary THEN 1.0 ELSE 0.0 END
-             AS score
-        WHERE score > 0
-          AND (size($skills) = 0 OR size(matched_skills) > 0 OR score >= 4.0)
+             + path_score * 0.35
+             AS pre_score
+        WHERE pre_score > 0
+          AND (
+                size($skills) = 0
+                OR size(matched_skills) > 0
+                OR size(matched_keywords) > 0
+                OR size(matched_benefits) > 0
+                OR path_score > 0
+              )
         RETURN
             j.job_id AS job_id,
             j.title AS title,
@@ -384,17 +525,23 @@ class Neo4jGraphRepository(HydratedGraphView):
             j.detail_link AS detail_link,
             matched_skills AS matched_skills,
             missing_skills AS missing_skills,
-            score AS score
-        ORDER BY score DESC, j.salary_mid DESC, size(skills) DESC
-        LIMIT $top_k
+            matched_keywords AS matched_keywords,
+            matched_benefits AS matched_benefits,
+            path_score AS path_score,
+            pre_score AS pre_score
+        ORDER BY pre_score DESC, j.salary_mid DESC, size(skills) DESC
+        LIMIT $candidate_limit
         """
         params = {
             "skills": profile.skills,
             "keywords": profile.keywords,
+            "preferred_benefits": profile.preferred_benefits,
             "desired_city": profile.desired_city,
             "desired_industry": profile.desired_industry,
             "min_salary": profile.min_salary,
-            "top_k": profile.top_k,
+            "seed_job_id": profile.seed_job_id,
+            "path_scores": path_scores,
+            "candidate_limit": min(max(profile.top_k * 8, 30), 200),
         }
         with self.driver.session(database=self.settings.neo4j_database) as session:
             records = session.run(query, **params).data()
@@ -402,11 +549,33 @@ class Neo4jGraphRepository(HydratedGraphView):
         items: list[RecommendationItem] = []
         for record in records:
             summary = self._record_to_summary(record)
+            if profile.degree and not degree_meets(profile.degree, summary.degree_name):
+                continue
+            if profile.experience and not experience_meets(profile.experience, summary.experience_name):
+                continue
             reasons = []
             matched_skills = self._clean_list(record["matched_skills"])
             missing_skills = self._clean_list(record["missing_skills"])
+            matched_keywords = self._clean_list(record["matched_keywords"])
+            matched_benefits = self._clean_list(record["matched_benefits"])
+            breakdown = {
+                "skills": round(len(matched_skills) * 4.0, 2),
+                "skill_coverage": round((len(matched_skills) / len(profile.skills)) * 2.0, 2) if profile.skills else 0.0,
+                "keywords": round(len(matched_keywords) * 1.5, 2),
+                "benefits": round(len(matched_benefits) * 1.2, 2),
+                "city": 3.0 if profile.desired_city and summary.city_name == profile.desired_city else 0.0,
+                "industry": 2.5 if profile.desired_industry and summary.industry_name == profile.desired_industry else 0.0,
+                "salary": 1.0 if profile.min_salary is not None and summary.salary_max >= profile.min_salary else 0.0,
+                "degree": 1.0 if profile.degree and degree_meets(profile.degree, summary.degree_name) else 0.0,
+                "experience": 1.0 if profile.experience and experience_meets(profile.experience, summary.experience_name) else 0.0,
+                "multi_hop": round((record["path_score"] or 0.0) * 0.35, 2),
+            }
             if matched_skills:
                 reasons.append(f"匹配技能 {', '.join(matched_skills)}")
+            if matched_keywords:
+                reasons.append(f"关键词命中 {', '.join(matched_keywords[:4])}")
+            if matched_benefits:
+                reasons.append(f"福利匹配 {', '.join(matched_benefits[:4])}")
             if profile.desired_city and summary.city_name == profile.desired_city:
                 reasons.append(f"城市匹配 {summary.city_name}")
             if profile.desired_industry and summary.industry_name == profile.desired_industry:
@@ -417,29 +586,29 @@ class Neo4jGraphRepository(HydratedGraphView):
                 reasons.append(f"学历匹配 {summary.degree_name}")
             if profile.experience and experience_meets(profile.experience, summary.experience_name):
                 reasons.append(f"经验匹配 {summary.experience_name}")
+            if profile.seed_job_id and (record["path_score"] or 0) > 0:
+                reasons.append(f"{profile.max_hops} 跳内图谱关联度 {record['path_score']:.1f}")
             if not reasons:
-                reasons.append(f"Cypher 图谱得分 {record['score']:.1f}")
+                reasons.append(f"综合得分 {self._breakdown_total(breakdown):.1f}")
             items.append(
                 RecommendationItem(
                     **summary.model_dump(),
-                    score=round(record["score"], 2),
+                    score=self._breakdown_total(breakdown),
                     matched_skills=matched_skills,
                     missing_skills=missing_skills,
                     reasons=reasons,
+                    score_breakdown=breakdown,
+                    reasoning_paths=self.multi_hop_reasoning(profile.seed_job_id, target_job_id=summary.job_id, max_hops=profile.max_hops, limit=2)
+                    if profile.seed_job_id
+                    else [],
                 )
             )
-        return items
+        items.sort(key=lambda item: (item.score, item.salary_mid, len(item.skills)), reverse=True)
+        return items[: profile.top_k]
 
     def similar_jobs(self, job_id: str, top_k: int = 10) -> list[RecommendationItem]:
         query = """
-        MATCH (base:Job {job_id: $job_id})
-        OPTIONAL MATCH (base)-[:POSTED_BY]->(base_company:Company)
-        OPTIONAL MATCH (base)-[:LOCATED_IN]->(base_city:City)
-        OPTIONAL MATCH (base)-[:IN_INDUSTRY]->(base_industry:Industry)
-        OPTIONAL MATCH (base)-[:REQUIRES_SKILL]->(base_skill:Skill)
-        WITH base, base_company, base_city, base_industry, collect(DISTINCT base_skill.name) AS base_skills
-        MATCH (j:Job)
-        WHERE j.job_id <> base.job_id
+        MATCH (base:Job {job_id: $job_id})-[sim:SIMILAR_TO]-(j:Job)
         OPTIONAL MATCH (j)-[:POSTED_BY]->(c:Company)
         OPTIONAL MATCH (j)-[:LOCATED_IN]->(city:City)
         OPTIONAL MATCH (j)-[:IN_INDUSTRY]->(industry:Industry)
@@ -448,21 +617,10 @@ class Neo4jGraphRepository(HydratedGraphView):
         OPTIONAL MATCH (j)-[:REQUIRES_SKILL]->(skill:Skill)
         OPTIONAL MATCH (j)-[:HAS_BENEFIT]->(benefit:Benefit)
         OPTIONAL MATCH (j)-[:HAS_KEYWORD]->(keyword:Keyword)
-        WITH base, base_company, base_city, base_industry, base_skills,
-             j, c, city, industry, degree, exp,
+        WITH sim, j, c, city, industry, degree, exp,
              collect(DISTINCT skill.name) AS skills,
              collect(DISTINCT benefit.name) AS benefits,
              collect(DISTINCT keyword.name) AS keywords
-        WITH j, c, city, industry, degree, exp, skills, benefits, keywords,
-             [item IN skills WHERE item IN base_skills] AS matched_skills,
-             base_company, base_city, base_industry, base_skills
-        WITH j, c, city, industry, degree, exp, skills, benefits, keywords, matched_skills, base_skills,
-             size(matched_skills) * 3.0
-             + CASE WHEN base_city IS NOT NULL AND city.name = base_city.name THEN 2.0 ELSE 0.0 END
-             + CASE WHEN base_industry IS NOT NULL AND industry.name = base_industry.name THEN 2.0 ELSE 0.0 END
-             + CASE WHEN base_company IS NOT NULL AND c.name = base_company.name THEN 1.0 ELSE 0.0 END
-             AS score
-        WHERE score > 0
         RETURN
             j.job_id AS job_id,
             j.title AS title,
@@ -481,10 +639,13 @@ class Neo4jGraphRepository(HydratedGraphView):
             keywords AS keywords,
             j.source AS source,
             j.detail_link AS detail_link,
-            matched_skills AS matched_skills,
-            [item IN base_skills WHERE NOT item IN matched_skills] AS missing_skills,
-            score AS score
-        ORDER BY score DESC, j.salary_mid DESC
+            sim.shared_skills AS matched_skills,
+            sim.shared_benefits AS matched_benefits,
+            sim.same_city AS same_city,
+            sim.same_industry AS same_industry,
+            sim.same_company AS same_company,
+            sim.score AS score
+        ORDER BY sim.score DESC, j.salary_mid DESC
         LIMIT $top_k
         """
         with self.driver.session(database=self.settings.neo4j_database) as session:
@@ -494,37 +655,154 @@ class Neo4jGraphRepository(HydratedGraphView):
         for record in records:
             summary = self._record_to_summary(record)
             matched_skills = self._clean_list(record["matched_skills"])
-            missing_skills = self._clean_list(record["missing_skills"])
+            matched_benefits = self._clean_list(record["matched_benefits"])
             reasons = []
             if matched_skills:
                 reasons.append(f"共享技能 {', '.join(matched_skills)}")
-            if summary.city_name:
+            if matched_benefits:
+                reasons.append(f"共享福利 {', '.join(matched_benefits[:3])}")
+            if record["same_city"]:
                 reasons.append(f"同城候选 {summary.city_name}")
-            if summary.industry_name:
+            if record["same_industry"]:
                 reasons.append(f"行业关联 {summary.industry_name}")
+            if record["same_company"]:
+                reasons.append(f"同公司 {summary.company_name}")
             items.append(
                 RecommendationItem(
                     **summary.model_dump(),
                     score=round(record["score"], 2),
                     matched_skills=matched_skills,
-                    missing_skills=missing_skills,
+                    missing_skills=[],
                     reasons=reasons,
+                    score_breakdown={"similarity_edge": round(record["score"], 2)},
+                    reasoning_paths=self.multi_hop_reasoning(job_id, target_job_id=summary.job_id, max_hops=3, limit=2),
                 )
             )
         return items
 
+    @staticmethod
+    def _path_explanation(node_names: list[str], relations: list[str]) -> str:
+        if not relations:
+            return ""
+        steps: list[str] = []
+        for index, relation in enumerate(relations):
+            source = node_names[index] if index < len(node_names) else ""
+            target = node_names[index + 1] if index + 1 < len(node_names) else ""
+            steps.append(f"{source} -[{relation}]- {target}")
+        return "；".join(steps)
+
+    def _multi_hop_records(
+        self,
+        job_id: str,
+        *,
+        target_job_id: str | None = None,
+        max_hops: int = 3,
+        limit: int = 10,
+    ) -> list[dict]:
+        safe_hops = max(1, min(max_hops, 4))
+        query = f"""
+        MATCH path = (seed:Job {{job_id: $job_id}})-[*1..{safe_hops}]-(target:Job)
+        WHERE target.job_id <> seed.job_id
+          AND ($target_job_id IS NULL OR target.job_id = $target_job_id)
+        WITH target,
+             nodes(path) AS path_nodes,
+             relationships(path) AS rels,
+             length(path) AS hops,
+             reduce(raw = 0.0, r IN relationships(path) |
+                raw + CASE type(r)
+                    WHEN 'SIMILAR_TO' THEN coalesce(r.score, 8.0)
+                    WHEN 'REQUIRES_SKILL' THEN 3.0
+                    WHEN 'HAS_BENEFIT' THEN 1.2
+                    WHEN 'LOCATED_IN' THEN 2.0
+                    WHEN 'IN_INDUSTRY' THEN 2.0
+                    WHEN 'POSTED_BY' THEN 1.5
+                    WHEN 'HAS_KEYWORD' THEN 0.8
+                    WHEN 'BELONGS_TO' THEN 0.8
+                    WHEN 'REQUIRES_DEGREE' THEN 0.6
+                    WHEN 'REQUIRES_EXPERIENCE' THEN 0.6
+                    ELSE 0.4
+                END
+             ) AS raw_score
+        WITH target,
+             [node IN path_nodes | coalesce(node.title, node.name, node.job_id)] AS node_names,
+             [rel IN rels | type(rel)] AS relations,
+             hops,
+             round((raw_score / hops) * (1.0 / hops), 2) AS path_score
+        ORDER BY target.job_id, path_score DESC, hops ASC
+        WITH target,
+             collect({{
+                node_names: node_names,
+                relations: relations,
+                hop_count: hops,
+                score: path_score
+             }})[0] AS best
+        RETURN target.job_id AS target_job_id,
+               target.title AS target_title,
+               best.node_names AS node_names,
+               best.relations AS relations,
+               best.hop_count AS hop_count,
+               best.score AS score
+        ORDER BY score DESC, hop_count ASC, target_title ASC
+        LIMIT $limit
+        """
+        with self.driver.session(database=self.settings.neo4j_database) as session:
+            return session.run(
+                query,
+                job_id=job_id,
+                target_job_id=target_job_id,
+                limit=limit,
+            ).data()
+
+    def _multi_hop_score_rows(self, job_id: str | None, *, max_hops: int = 3) -> list[dict[str, object]]:
+        if not job_id:
+            return []
+        records = self._multi_hop_records(job_id, max_hops=max_hops, limit=200)
+        return [{"job_id": record["target_job_id"], "score": record["score"]} for record in records]
+
+    def multi_hop_reasoning(
+        self,
+        job_id: str,
+        *,
+        target_job_id: str | None = None,
+        max_hops: int = 3,
+        limit: int = 10,
+    ) -> list[ReasoningPath]:
+        records = self._multi_hop_records(
+            job_id,
+            target_job_id=target_job_id,
+            max_hops=max_hops,
+            limit=limit,
+        )
+        paths: list[ReasoningPath] = []
+        for record in records:
+            node_names = [item for item in record["node_names"] if item]
+            relations = [item for item in record["relations"] if item]
+            paths.append(
+                ReasoningPath(
+                    target_job_id=record["target_job_id"],
+                    target_title=record["target_title"] or "",
+                    hop_count=record["hop_count"] or 0,
+                    score=record["score"] or 0.0,
+                    node_names=node_names,
+                    relations=relations,
+                    explanation=self._path_explanation(node_names, relations),
+                )
+            )
+        return paths
+
     def job_graph(self, job_id: str) -> GraphResponse | None:
         query = """
         MATCH (j:Job {job_id: $job_id})
-        OPTIONAL MATCH (j)-[r]->(n)
+        OPTIONAL MATCH (j)-[r]-(n)
         RETURN
             j.job_id AS job_id,
             j.title AS job_title,
             properties(j) AS job_props,
             type(r) AS relation,
             CASE WHEN n IS NULL THEN NULL ELSE labels(n)[0] END AS target_label,
-            CASE WHEN n IS NULL THEN NULL ELSE coalesce(n.name, n.job_id) END AS target_name,
-            CASE WHEN n IS NULL THEN NULL ELSE properties(n) END AS target_props
+            CASE WHEN n IS NULL THEN NULL ELSE coalesce(n.name, n.title, n.job_id) END AS target_name,
+            CASE WHEN n IS NULL THEN NULL ELSE properties(n) END AS target_props,
+            properties(r) AS relation_props
         """
         with self.driver.session(database=self.settings.neo4j_database) as session:
             records = session.run(query, job_id=job_id).data()
@@ -559,16 +837,27 @@ class Neo4jGraphRepository(HydratedGraphView):
                     source=source_id,
                     target=target_id,
                     relation=record["relation"],
-                    properties={},
+                    properties=record["relation_props"] or {},
                 )
             )
         unique_nodes = {node.id: node for node in nodes}
         return GraphResponse(job_id=job_id, nodes=list(unique_nodes.values()), edges=edges)
 
     def top_skills(self, limit: int = 20) -> list[TopItem]:
-        query = """
-        MATCH (:Job)-[:REQUIRES_SKILL]->(s:Skill)
-        RETURN s.name AS name, count(*) AS count
+        return self._top_entities("Skill", "REQUIRES_SKILL", limit)
+
+    def graph_insights(self, limit: int = 10) -> GraphInsightsResponse:
+        return GraphInsightsResponse(
+            top_skills=self.top_skills(limit=limit),
+            top_cities=self._top_entities("City", "LOCATED_IN", limit),
+            top_industries=self._top_entities("Industry", "IN_INDUSTRY", limit),
+            top_benefits=self._top_entities("Benefit", "HAS_BENEFIT", limit),
+        )
+
+    def _top_entities(self, label: str, relation: str, limit: int) -> list[TopItem]:
+        query = f"""
+        MATCH (:Job)-[:{relation}]->(n:{label})
+        RETURN n.name AS name, count(*) AS count
         ORDER BY count DESC, name ASC
         LIMIT $limit
         """
