@@ -6,9 +6,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from job_kg.config import Settings
-from job_kg.graph import load_graph_from_file
-from job_kg.repository import Neo4jGraphRepository
+from kg.config import Settings
+from kg.graph import load_graph_from_file
+from kg.repository import Neo4jGraphRepository
 
 
 def main() -> None:

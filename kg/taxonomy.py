@@ -3,6 +3,8 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 
+from .disambiguation import normalize_benefit, normalize_text
+
 
 SKILL_ALIASES: dict[str, tuple[str, ...]] = {
     "人工智能": ("人工智能", "ai", "人工智能算法"),
@@ -33,50 +35,6 @@ SKILL_ALIASES: dict[str, tuple[str, ...]] = {
     "物联网": ("物联网", "智能制造"),
     "机器人": ("机器人", "具身机器人"),
     "医学AI": ("医疗", "医学", "生物医学工程", "医疗信息化"),
-}
-
-BENEFIT_KEYWORDS = {
-    "五险一金",
-    "六险一金",
-    "五险",
-    "补充医疗保险",
-    "医疗保险",
-    "子女医疗保险",
-    "带薪年假",
-    "带薪病假",
-    "年终奖金",
-    "年终奖",
-    "绩效奖金",
-    "项目奖金",
-    "股票期权",
-    "定期体检",
-    "员工旅游",
-    "专业培训",
-    "培训",
-    "交通补贴",
-    "通讯补贴",
-    "餐饮补贴",
-    "有餐补",
-    "餐补",
-    "周末双休",
-    "双休",
-    "免费班车",
-    "弹性工作",
-    "节日福利",
-    "法定节假",
-    "零食下午茶",
-    "下午茶",
-    "工伤保险",
-    "公积金",
-    "社保",
-    "包住",
-    "包吃住",
-    "出差补贴",
-    "晋升空间大",
-    "体检",
-    "底薪",
-    "提成",
-    "大小周",
 }
 
 STOP_KEYWORDS = {
@@ -118,16 +76,30 @@ class ExtractionResult:
 
 
 def _normalize_token(token: str) -> str:
-    return re.sub(r"\s+", " ", token.strip()).lower()
+    return normalize_text(token).lower()
+
+
+def _is_latin_alias(alias: str) -> bool:
+    return bool(re.search(r"[a-z0-9+#]", alias, flags=re.IGNORECASE))
+
+
+def _contains_alias(content: str, alias: str) -> bool:
+    normalized_alias = _normalize_token(alias)
+    if not normalized_alias:
+        return False
+    if _is_latin_alias(normalized_alias):
+        pattern = rf"(?<![a-z0-9+#]){re.escape(normalized_alias)}(?![a-z0-9+#])"
+        return re.search(pattern, content) is not None
+    return normalized_alias in content
 
 
 def split_tags(value: str) -> list[str]:
     if not value:
         return []
-    parts = re.split(r"[,，/|、;；]+", value)
+    parts = re.split(r"[,，/|、;；]+", normalize_text(value))
     result: list[str] = []
     for part in parts:
-        cleaned = re.sub(r"\s+", " ", part).strip()
+        cleaned = normalize_text(part)
         if cleaned:
             result.append(cleaned)
     return result
@@ -145,7 +117,7 @@ def normalize_skill(token: str) -> str | None:
 
 def extract_entities(title: str, tags: str, description: str = "") -> ExtractionResult:
     raw_tokens = split_tags(tags)
-    content = " ".join([title or "", description or ""]).lower()
+    content = " ".join([normalize_text(title), normalize_text(description)]).lower()
 
     skills: set[str] = set()
     benefits: set[str] = set()
@@ -156,15 +128,16 @@ def extract_entities(title: str, tags: str, description: str = "") -> Extraction
         if canonical_skill:
             skills.add(canonical_skill)
             continue
-        if token in BENEFIT_KEYWORDS:
-            benefits.add(token)
+        canonical_benefit = normalize_benefit(token)
+        if canonical_benefit:
+            benefits.add(canonical_benefit)
             continue
         if token not in STOP_KEYWORDS and 1 < len(token) <= 20:
             keywords.add(token)
 
     for canonical, aliases in SKILL_ALIASES.items():
-        all_aliases = (_normalize_token(canonical),) + tuple(_normalize_token(alias) for alias in aliases)
-        if any(alias in content for alias in all_aliases):
+        all_aliases = (canonical,) + aliases
+        if any(_contains_alias(content, alias) for alias in all_aliases):
             skills.add(canonical)
 
     ordered_raw_tags = sorted(dict.fromkeys(raw_tokens))

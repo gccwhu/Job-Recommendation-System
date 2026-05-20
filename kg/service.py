@@ -21,6 +21,15 @@ class KnowledgeGraphService:
         # 初始化图数据库操作对象，接管所有与 Neo4j 的底层通信
         self.repository = Neo4jGraphRepository(settings)
 
+    @staticmethod
+    def _dedupe(values: list[str]) -> list[str]:
+        normalized: list[str] = []
+        for value in values:
+            cleaned = value.strip()
+            if cleaned and cleaned not in normalized:
+                normalized.append(cleaned)
+        return normalized
+
     def normalize_skills(self, skills: list[str]) -> list[str]:
         """
         技能实体归一化 (Entity Normalization)
@@ -42,6 +51,12 @@ class KnowledgeGraphService:
                 normalized.append(canonical)
                 
         return normalized
+
+    def normalize_keywords(self, keywords: list[str]) -> list[str]:
+        return self._dedupe(keywords)
+
+    def normalize_benefits(self, benefits: list[str]) -> list[str]:
+        return self._dedupe(benefits)
 
 
 # 【架构优化】：单例模式 (Singleton Pattern) 注入

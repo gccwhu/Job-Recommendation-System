@@ -9,126 +9,520 @@
       :root {
         color-scheme: light;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        background: #f6f8fb;
+        background: #f5f7fb;
         color: #172033;
+        --panel: #fff;
+        --line: #dce3ef;
+        --muted: #64748b;
+        --blue: #2458d3;
+        --green: #12826c;
+        --amber: #ad6a00;
+        --red: #b42318;
+      }
+      * {
+        box-sizing: border-box;
       }
       body {
         margin: 0;
       }
-      header {
-        background: linear-gradient(135deg, #2557d6, #26a69a);
-        color: #fff;
-        padding: 28px 8vw;
+      button,
+      input {
+        font: inherit;
+      }
+      .app-header {
+        align-items: center;
+        background: #fff;
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        gap: 18px;
+        justify-content: space-between;
+        padding: 18px 28px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+      .brand h1 {
+        font-size: 20px;
+        letter-spacing: 0;
+        margin: 0 0 4px;
+      }
+      .brand p,
+      .muted {
+        color: var(--muted);
+        margin: 0;
+      }
+      .status-pill {
+        align-items: center;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        display: inline-flex;
+        gap: 8px;
+        padding: 8px 12px;
+        white-space: nowrap;
+      }
+      .dot {
+        background: var(--amber);
+        border-radius: 999px;
+        height: 8px;
+        width: 8px;
+      }
+      .dot.ok {
+        background: var(--green);
       }
       main {
-        padding: 24px 8vw 48px;
-      }
-      h1,
-      h2 {
-        margin: 0 0 12px;
-      }
-      .grid {
         display: grid;
-        grid-template-columns: 360px 1fr;
-        gap: 20px;
+        gap: 16px;
+        grid-template-columns: 330px minmax(420px, 1fr) 360px;
+        padding: 18px 28px 32px;
       }
-      .card {
-        background: #fff;
-        border-radius: 16px;
-        box-shadow: 0 10px 30px rgb(30 48 90 / 8%);
-        padding: 20px;
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        min-width: 0;
+      }
+      .panel-head {
+        align-items: center;
+        border-bottom: 1px solid #edf1f7;
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 16px;
+      }
+      .panel-head h2,
+      .panel-head h3 {
+        font-size: 15px;
+        margin: 0;
+      }
+      .panel-body {
+        padding: 16px;
+      }
+      .filters {
+        align-self: start;
+        position: sticky;
+        top: 76px;
       }
       label {
+        color: #334155;
         display: block;
-        font-weight: 600;
+        font-size: 13px;
+        font-weight: 700;
         margin: 14px 0 6px;
       }
       input {
-        box-sizing: border-box;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        color: #172033;
+        outline: 0;
+        padding: 10px 11px;
         width: 100%;
-        border: 1px solid #dce3ef;
-        border-radius: 10px;
-        padding: 10px 12px;
-        font-size: 14px;
+      }
+      input:focus {
+        border-color: var(--blue);
+        box-shadow: 0 0 0 3px rgb(36 88 211 / 12%);
+      }
+      .field-row {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr;
+      }
+      .actions {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 16px;
       }
       button {
-        width: 100%;
+        align-items: center;
         border: 0;
-        border-radius: 10px;
-        background: #2557d6;
-        color: #fff;
+        border-radius: 6px;
         cursor: pointer;
-        font-weight: 700;
-        margin-top: 16px;
-        padding: 11px 14px;
+        display: inline-flex;
+        font-weight: 800;
+        gap: 8px;
+        justify-content: center;
+        min-height: 40px;
+        padding: 10px 12px;
+      }
+      button.primary {
+        background: var(--blue);
+        color: #fff;
       }
       button.secondary {
-        background: #26a69a;
+        background: #e8f3f0;
+        color: var(--green);
       }
-      .job {
-        border-bottom: 1px solid #eef2f7;
-        padding: 14px 0;
+      button.ghost {
+        background: #f1f5f9;
+        color: #334155;
       }
-      .job:last-child {
-        border-bottom: 0;
+      button:disabled {
+        cursor: wait;
+        opacity: 0.65;
       }
-      .title {
-        font-size: 17px;
-        font-weight: 800;
+      .stats-grid {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 16px;
       }
-      .meta {
-        color: #5d6b82;
-        line-height: 1.7;
+      .stat {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 12px;
       }
-      .tag {
-        display: inline-block;
+      .stat-value {
+        font-size: 22px;
+        font-weight: 900;
+      }
+      .stat-label {
+        color: var(--muted);
+        font-size: 12px;
+        margin-top: 2px;
+      }
+      .result-toolbar {
+        align-items: center;
+        display: flex;
+        gap: 10px;
+      }
+      .count-pill {
         background: #eef4ff;
         border-radius: 999px;
-        color: #2557d6;
+        color: var(--blue);
         font-size: 12px;
-        margin: 6px 6px 0 0;
+        font-weight: 800;
+        padding: 5px 8px;
+      }
+      .job-list {
+        display: grid;
+        gap: 10px;
+      }
+      .job-card {
+        border: 1px solid #e6edf6;
+        border-radius: 8px;
+        padding: 14px;
+      }
+      .job-card.active {
+        border-color: var(--blue);
+        box-shadow: inset 3px 0 0 var(--blue);
+      }
+      .job-main {
+        align-items: flex-start;
+        display: flex;
+        gap: 14px;
+        justify-content: space-between;
+      }
+      .job-title {
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 1.35;
+        margin-bottom: 5px;
+      }
+      .job-meta {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.6;
+      }
+      .score-box {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        min-width: 70px;
+        padding: 8px;
+        text-align: center;
+      }
+      .score-box strong {
+        display: block;
+        font-size: 19px;
+      }
+      .section-label {
+        color: #475569;
+        font-size: 12px;
+        font-weight: 900;
+        margin-top: 12px;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 7px;
+      }
+      .tag {
+        background: #eef4ff;
+        border-radius: 999px;
+        color: var(--blue);
+        font-size: 12px;
         padding: 4px 8px;
       }
-      #graph {
-        height: 520px;
+      .tag.green {
+        background: #e8f3f0;
+        color: var(--green);
       }
-      @media (max-width: 980px) {
-        .grid {
+      .tag.amber {
+        background: #fff4df;
+        color: var(--amber);
+      }
+      .tag.gray {
+        background: #f1f5f9;
+        color: #475569;
+      }
+      .breakdown {
+        display: grid;
+        gap: 8px;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 10px;
+      }
+      .bar-row {
+        min-width: 0;
+      }
+      .bar-row span {
+        color: var(--muted);
+        display: flex;
+        font-size: 12px;
+        justify-content: space-between;
+      }
+      .bar {
+        background: #eef2f7;
+        border-radius: 999px;
+        height: 6px;
+        margin-top: 4px;
+        overflow: hidden;
+      }
+      .bar i {
+        background: var(--blue);
+        display: block;
+        height: 100%;
+      }
+      .side-stack {
+        display: grid;
+        gap: 16px;
+      }
+      .insight-group + .insight-group {
+        margin-top: 14px;
+      }
+      .insight-title {
+        color: #334155;
+        font-size: 13px;
+        font-weight: 900;
+        margin-bottom: 7px;
+      }
+      .reasoning-list {
+        display: grid;
+        gap: 10px;
+      }
+      .path-card {
+        border: 1px solid #e6edf6;
+        border-radius: 8px;
+        padding: 10px;
+      }
+      .path-card strong {
+        display: block;
+        font-size: 13px;
+        margin-bottom: 4px;
+      }
+      .path-text {
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.6;
+      }
+      .graph-panel {
+        grid-column: 1 / -1;
+      }
+      #graph {
+        height: 560px;
+      }
+      .notice {
+        background: #fff7ed;
+        border: 1px solid #fed7aa;
+        border-radius: 8px;
+        color: #9a3412;
+        line-height: 1.6;
+        padding: 12px;
+      }
+      .empty {
+        color: var(--muted);
+        padding: 22px;
+        text-align: center;
+      }
+      @media (max-width: 1180px) {
+        main {
+          grid-template-columns: 320px minmax(0, 1fr);
+        }
+        .side-stack {
+          grid-column: 1 / -1;
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 820px) {
+        .app-header,
+        main {
+          padding-left: 14px;
+          padding-right: 14px;
+        }
+        main,
+        .side-stack,
+        .stats-grid {
           grid-template-columns: 1fr;
+        }
+        .filters {
+          position: static;
+        }
+        .job-main,
+        .app-header {
+          align-items: stretch;
+          flex-direction: column;
+        }
+        .score-box {
+          align-self: flex-start;
         }
       }
     </style>
   </head>
   <body>
-    <header>
-      <h1>基于知识图谱的职位推荐系统</h1>
-      <p>使用职位、公司、技能、城市、行业等实体关系完成岗位推荐与图谱展示。</p>
+    <header class="app-header">
+      <div class="brand">
+        <h1>知识图谱职位推荐工作台</h1>
+        <p>基于 Neo4j 图谱、画像评分与多跳推理筛选 AI 相关岗位。</p>
+      </div>
+      <div class="status-pill" id="serviceStatus">
+        <span class="dot"></span>
+        <span>连接中</span>
+      </div>
     </header>
-    <main class="grid">
-      <section class="card">
-        <h2>用户画像推荐</h2>
-        <label>技能（逗号分隔）</label>
-        <input id="skills" value="Python, PyTorch, 机器学习" />
-        <label>期望城市</label>
-        <input id="city" value="上海" />
-        <label>最低薪资 k/月</label>
-        <input id="salary" value="10" />
-        <button onclick="recommend()">生成推荐</button>
-        <label>岗位 ID 图谱</label>
-        <input id="jobId" value="171714274" />
-        <button class="secondary" onclick="drawGraph()">查看岗位图谱</button>
+
+    <main>
+      <section class="panel filters">
+        <div class="panel-head">
+          <h2>画像条件</h2>
+          <span class="count-pill">Profile</span>
+        </div>
+        <div class="panel-body">
+          <label for="skills">技能</label>
+          <input id="skills" value="Python, PyTorch, 机器学习" />
+
+          <div class="field-row">
+            <div>
+              <label for="city">期望城市</label>
+              <input id="city" value="上海" />
+            </div>
+            <div>
+              <label for="salary">最低薪资 k/月</label>
+              <input id="salary" value="10" />
+            </div>
+          </div>
+
+          <label for="industry">期望行业</label>
+          <input id="industry" placeholder="可留空" />
+
+          <label for="benefits">偏好福利</label>
+          <input id="benefits" value="带薪年假, 弹性工作" />
+
+          <div class="field-row">
+            <div>
+              <label for="seedJobId">种子岗位 ID</label>
+              <input id="seedJobId" placeholder="点击推荐结果自动填入" />
+            </div>
+            <div>
+              <label for="maxHops">最大跳数</label>
+              <input id="maxHops" value="3" />
+            </div>
+          </div>
+
+          <label for="jobId">图谱岗位 ID</label>
+          <input id="jobId" placeholder="点击推荐结果自动填入" />
+
+          <div class="actions">
+            <button class="primary" id="recommendBtn" onclick="recommend()">生成推荐</button>
+            <button class="secondary" id="graphBtn" onclick="drawGraph()">查看图谱</button>
+          </div>
+          <button class="ghost" id="reasoningBtn" onclick="loadReasoning()">刷新推理路径</button>
+        </div>
       </section>
-      <section class="card">
-        <h2>推荐结果</h2>
-        <div id="results">正在加载推荐结果...</div>
+
+      <section>
+        <div class="stats-grid" id="statsGrid">
+          <div class="stat"><div class="stat-value">--</div><div class="stat-label">岗位</div></div>
+          <div class="stat"><div class="stat-value">--</div><div class="stat-label">公司</div></div>
+          <div class="stat"><div class="stat-value">--</div><div class="stat-label">技能</div></div>
+          <div class="stat"><div class="stat-value">--</div><div class="stat-label">相似边</div></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h2>推荐结果</h2>
+            <div class="result-toolbar">
+              <span class="count-pill" id="resultCount">0 个岗位</span>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div id="results" class="job-list">
+              <div class="empty">正在加载推荐结果...</div>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="card" style="grid-column: 1 / -1">
-        <h2>岗位一跳知识图谱</h2>
+
+      <aside class="side-stack">
+        <section class="panel">
+          <div class="panel-head">
+            <h3>图谱洞察</h3>
+            <span class="count-pill">Top 8</span>
+          </div>
+          <div class="panel-body" id="insights">
+            <div class="empty">正在加载图谱洞察...</div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h3>多跳推理</h3>
+            <span class="count-pill" id="reasoningCount">0 条路径</span>
+          </div>
+          <div class="panel-body">
+            <div id="reasoning" class="reasoning-list">
+              <div class="empty">点击推荐结果后查看推理路径</div>
+            </div>
+          </div>
+        </section>
+      </aside>
+
+      <section class="panel graph-panel">
+        <div class="panel-head">
+          <h2>岗位一跳知识图谱</h2>
+          <span class="count-pill" id="graphMeta">等待选择岗位</span>
+        </div>
         <div id="graph"></div>
       </section>
     </main>
+
     <script>
       const graphChart = echarts.init(document.getElementById("graph"));
+      const state = {
+        selectedJobId: "",
+        currentItems: [],
+      };
+
+      const scoreLabels = {
+        skills: "技能",
+        skill_coverage: "覆盖",
+        keywords: "关键词",
+        benefits: "福利",
+        city: "城市",
+        industry: "行业",
+        salary: "薪资",
+        degree: "学历",
+        experience: "经验",
+        multi_hop: "多跳",
+      };
+
+      function escapeHtml(value) {
+        return String(value ?? "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#39;");
+      }
 
       function splitInput(value) {
         return value
@@ -137,75 +531,324 @@
           .filter(Boolean);
       }
 
-      async function recommend() {
-        const payload = {
-          skills: splitInput(document.getElementById("skills").value),
-          desired_city: document.getElementById("city").value.trim() || null,
-          min_salary: Number(document.getElementById("salary").value || 0),
-          top_k: 8,
-        };
-        const response = await fetch("/recommend/profile", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        });
-        const data = await response.json();
-        const html = data.items
-          .map(
-            (item) => `
-              <article class="job">
-                <div class="title">${item.title}</div>
-                <div class="meta">${item.company_name} · ${item.city_name} · ${item.industry_name} · ${item.salary_min}-${item.salary_max}k · 得分 ${item.score}</div>
-                <div>${item.reasons.map((reason) => `<span class="tag">${reason}</span>`).join("")}</div>
-                <div>${item.skills.slice(0, 8).map((skill) => `<span class="tag">${skill}</span>`).join("")}</div>
-                <button class="secondary" onclick="setGraphJob('${item.job_id}')">查看该岗位图谱</button>
-              </article>
-            `
-          )
-          .join("");
-        document.getElementById("results").innerHTML = html || "暂无匹配岗位";
+      function formatNumber(value) {
+        return Number(value || 0).toLocaleString("zh-CN");
       }
 
-      function setGraphJob(jobId) {
+      async function fetchJson(url, options) {
+        const response = await fetch(url, options);
+        const contentType = response.headers.get("content-type") || "";
+        const payload = contentType.includes("application/json") ? await response.json() : null;
+        if (!response.ok) {
+          const detail = payload && (payload.detail || payload.message);
+          throw new Error(detail ? `请求失败 ${response.status}：${detail}` : `请求失败 ${response.status}`);
+        }
+        return payload;
+      }
+
+      function setBusy(buttonId, busy) {
+        const button = document.getElementById(buttonId);
+        if (button) button.disabled = busy;
+      }
+
+      function renderError(targetId, message) {
+        document.getElementById(targetId).innerHTML = `
+          <div class="notice">
+            <strong>${escapeHtml(message)}</strong>
+            <div>请确认 Neo4j 已启动、.env 连接配置正确，并已执行图谱导入。</div>
+          </div>
+        `;
+      }
+
+      function setServiceStatus(ok, text) {
+        const status = document.getElementById("serviceStatus");
+        status.innerHTML = `<span class="dot ${ok ? "ok" : ""}"></span><span>${escapeHtml(text)}</span>`;
+      }
+
+      async function loadStats() {
+        try {
+          const [health, stats] = await Promise.all([fetchJson("/health"), fetchJson("/stats")]);
+          setServiceStatus(true, `${health.backend} 已连接`);
+          document.getElementById("statsGrid").innerHTML = `
+            ${renderStat(stats.total_jobs, "岗位")}
+            ${renderStat(stats.total_companies, "公司")}
+            ${renderStat(stats.total_skills, "技能")}
+            ${renderStat(stats.total_similarity_edges, "相似边")}
+          `;
+        } catch (error) {
+          setServiceStatus(false, "服务不可用");
+          document.getElementById("statsGrid").innerHTML = `
+            <div class="stat"><div class="stat-value">--</div><div class="stat-label">后端未就绪</div></div>
+          `;
+        }
+      }
+
+      function renderStat(value, label) {
+        return `<div class="stat"><div class="stat-value">${formatNumber(value)}</div><div class="stat-label">${label}</div></div>`;
+      }
+
+      function getProfilePayload() {
+        const minSalary = Number(document.getElementById("salary").value);
+        const maxHops = Number(document.getElementById("maxHops").value);
+        return {
+          skills: splitInput(document.getElementById("skills").value),
+          desired_city: document.getElementById("city").value.trim() || null,
+          desired_industry: document.getElementById("industry").value.trim() || null,
+          min_salary: Number.isFinite(minSalary) && minSalary > 0 ? minSalary : null,
+          preferred_benefits: splitInput(document.getElementById("benefits").value),
+          seed_job_id: document.getElementById("seedJobId").value.trim() || null,
+          max_hops: Number.isFinite(maxHops) ? Math.min(Math.max(Math.round(maxHops), 1), 4) : 3,
+          top_k: 8,
+        };
+      }
+
+      async function recommend() {
+        setBusy("recommendBtn", true);
+        document.getElementById("results").innerHTML = `<div class="empty">正在计算推荐...</div>`;
+        try {
+          const data = await fetchJson("/recommend/profile", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(getProfilePayload()),
+          });
+          state.currentItems = data.items || [];
+          document.getElementById("resultCount").textContent = `${data.total || 0} 个岗位`;
+          renderResults(state.currentItems);
+          const selectedStillVisible = state.currentItems.some((item) => item.job_id === state.selectedJobId);
+          if (state.currentItems.length && !selectedStillVisible) {
+            selectJob(state.currentItems[0].job_id, false);
+          } else if (!state.currentItems.length) {
+            state.selectedJobId = "";
+            document.getElementById("jobId").value = "";
+            document.getElementById("seedJobId").value = "";
+            document.getElementById("reasoning").innerHTML = `<div class="empty">选择一个岗位后显示推理路径</div>`;
+            document.getElementById("reasoningCount").textContent = "0 条路径";
+            document.getElementById("graphMeta").textContent = "等待选择岗位";
+            graphChart.clear();
+          }
+        } catch (error) {
+          renderError("results", `推荐结果加载失败：${error.message}`);
+        } finally {
+          setBusy("recommendBtn", false);
+        }
+      }
+
+      function renderResults(items) {
+        if (!items.length) {
+          document.getElementById("results").innerHTML = `<div class="empty">暂无匹配岗位</div>`;
+          return;
+        }
+        document.getElementById("results").innerHTML = items.map(renderJobCard).join("");
+      }
+
+      function renderJobCard(item) {
+        const active = item.job_id === state.selectedJobId ? " active" : "";
+        const reasons = (item.reasons || []).map((reason) => `<span class="tag green">${escapeHtml(reason)}</span>`).join("");
+        const skills = (item.skills || []).slice(0, 9).map((skill) => `<span class="tag">${escapeHtml(skill)}</span>`).join("");
+        return `
+          <article class="job-card${active}" id="job-${escapeHtml(item.job_id)}">
+            <div class="job-main">
+              <div>
+                <div class="job-title">${escapeHtml(item.title)}</div>
+                <div class="job-meta">
+                  ${escapeHtml(item.company_name)} · ${escapeHtml(item.city_name)} · ${escapeHtml(item.industry_name)}
+                  <br />
+                  ${escapeHtml(item.degree_name)} · ${escapeHtml(item.experience_name)} · ${item.salary_min}-${item.salary_max}k
+                </div>
+              </div>
+              <div class="score-box">
+                <strong>${item.score}</strong>
+                <span class="muted">得分</span>
+              </div>
+            </div>
+            <div class="section-label">推荐理由</div>
+            <div class="tags">${reasons || `<span class="tag gray">综合图谱匹配</span>`}</div>
+            <div class="section-label">评分拆解</div>
+            <div class="breakdown">${renderBreakdown(item.score_breakdown || {})}</div>
+            <div class="section-label">技能标签</div>
+            <div class="tags">${skills}</div>
+            <div class="actions">
+              <button class="secondary" data-action="graph" data-job-id="${escapeHtml(item.job_id)}">查看图谱</button>
+              <button class="ghost" data-action="detail" data-url="${escapeHtml(item.detail_link)}">打开原岗位</button>
+            </div>
+          </article>
+        `;
+      }
+
+      function renderBreakdown(breakdown) {
+        const positive = Object.entries(breakdown).filter(([, score]) => score > 0);
+        if (!positive.length) return `<div class="muted">暂无分项得分</div>`;
+        const maxScore = Math.max(...positive.map(([, score]) => score), 1);
+        return positive
+          .map(([key, score]) => {
+            const width = Math.max(8, Math.round((score / maxScore) * 100));
+            return `
+              <div class="bar-row">
+                <span><b>${escapeHtml(scoreLabels[key] || key)}</b><b>${score}</b></span>
+                <div class="bar"><i style="width: ${width}%"></i></div>
+              </div>
+            `;
+          })
+          .join("");
+      }
+
+      function openDetail(url) {
+        if (url) window.open(url, "_blank", "noopener,noreferrer");
+      }
+
+      function compactLabel(value, maxLength = 12) {
+        const text = String(value || "");
+        return text.length > maxLength ? `${text.slice(0, maxLength)}...` : text;
+      }
+
+      function selectJob(jobId, scrollToGraph) {
+        state.selectedJobId = jobId;
         document.getElementById("jobId").value = jobId;
+        document.getElementById("seedJobId").value = jobId;
+        renderResults(state.currentItems);
         drawGraph();
+        loadReasoning();
+        if (scrollToGraph) {
+          document.querySelector(".graph-panel").scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+
+      async function loadInsights() {
+        try {
+          const data = await fetchJson("/graph/insights?limit=8");
+          const sections = [
+            ["热门技能", data.top_skills || [], "blue"],
+            ["热门城市", data.top_cities || [], "green"],
+            ["热门行业", data.top_industries || [], "amber"],
+            ["热门福利", data.top_benefits || [], "gray"],
+          ];
+          document.getElementById("insights").innerHTML = sections.map(renderInsightGroup).join("");
+        } catch (error) {
+          renderError("insights", `图谱洞察加载失败：${error.message}`);
+        }
+      }
+
+      function renderInsightGroup([title, items, color]) {
+        return `
+          <div class="insight-group">
+            <div class="insight-title">${escapeHtml(title)}</div>
+            <div class="tags">
+              ${items.map((item) => `<span class="tag ${color}">${escapeHtml(item.name)} (${item.count})</span>`).join("")}
+            </div>
+          </div>
+        `;
+      }
+
+      async function loadReasoning() {
+        setBusy("reasoningBtn", true);
+        try {
+          const jobId = document.getElementById("seedJobId").value.trim() || document.getElementById("jobId").value.trim();
+          const requestedHops = Number(document.getElementById("maxHops").value || 3);
+          const maxHops = Number.isFinite(requestedHops) ? Math.min(Math.max(Math.round(requestedHops), 1), 4) : 3;
+          if (!jobId) return;
+          const data = await fetchJson(`/jobs/${encodeURIComponent(jobId)}/reasoning?max_hops=${maxHops}&limit=8`);
+          const paths = data.paths || [];
+          document.getElementById("reasoningCount").textContent = `${paths.length} 条路径`;
+          document.getElementById("reasoning").innerHTML = paths.length
+            ? paths.map(renderPath).join("")
+            : `<div class="empty">暂无多跳推理结果</div>`;
+        } catch (error) {
+          renderError("reasoning", `多跳推理加载失败：${error.message}`);
+        } finally {
+          setBusy("reasoningBtn", false);
+        }
+      }
+
+      function renderPath(path) {
+        const relations = (path.relations || []).map((relation) => `<span class="tag gray">${escapeHtml(relation)}</span>`).join("");
+        return `
+          <article class="path-card">
+            <strong>${escapeHtml(path.target_title)} · ${path.hop_count} 跳 · ${path.score}</strong>
+            <div class="tags">${relations}</div>
+            <div class="path-text">${escapeHtml(path.explanation)}</div>
+          </article>
+        `;
       }
 
       async function drawGraph() {
-        const jobId = document.getElementById("jobId").value.trim();
-        if (!jobId) return;
-        const response = await fetch(`/jobs/${jobId}/graph`);
-        const data = await response.json();
-        const categories = [...new Set(data.nodes.map((node) => node.label))].map((name) => ({ name }));
-        graphChart.setOption({
-          tooltip: {},
-          legend: [{ data: categories.map((item) => item.name) }],
-          series: [
-            {
-              type: "graph",
-              layout: "force",
-              roam: true,
-              label: { show: true },
-              force: { repulsion: 180, edgeLength: 110 },
-              categories,
-              data: data.nodes.map((node) => ({
-                id: node.id,
-                name: node.name,
-                category: node.label,
-                value: node.label,
-                symbolSize: node.label === "Job" ? 58 : 42,
-              })),
-              links: data.edges.map((edge) => ({
-                source: edge.source,
-                target: edge.target,
-                label: { show: true, formatter: edge.relation },
-              })),
+        setBusy("graphBtn", true);
+        try {
+          const jobId = document.getElementById("jobId").value.trim();
+          if (!jobId) return;
+          const data = await fetchJson(`/jobs/${encodeURIComponent(jobId)}/graph`);
+          document.getElementById("graphMeta").textContent = `${data.nodes.length} 节点 / ${data.edges.length} 关系`;
+          const categories = [...new Set(data.nodes.map((node) => node.label))].map((name) => ({ name }));
+          graphChart.clear();
+          graphChart.setOption({
+            color: ["#2458d3", "#12826c", "#ad6a00", "#7c3aed", "#475569", "#be123c"],
+            tooltip: {
+              formatter: (params) => escapeHtml(params.data.name || params.data.relation || ""),
             },
-          ],
-        });
+            legend: [{ top: 6, data: categories.map((item) => item.name) }],
+            series: [
+              {
+                type: "graph",
+                layout: "force",
+                roam: true,
+                top: 44,
+                label: { show: false, fontSize: 11, overflow: "truncate", width: 110 },
+                edgeLabel: { show: false },
+                lineStyle: { color: "#94a3b8", opacity: 0.55, width: 1 },
+                emphasis: {
+                  focus: "adjacency",
+                  label: { show: true, formatter: (params) => compactLabel(params.data.name, 16) },
+                  edgeLabel: { show: true, formatter: (params) => params.data.relation },
+                },
+                force: { repulsion: 260, edgeLength: 135 },
+                categories,
+                data: data.nodes.map((node) => ({
+                  id: node.id,
+                  name: node.name,
+                  category: node.label,
+                  value: node.label,
+                  symbolSize: node.label === "Job" ? 64 : 40,
+                  label: {
+                    show: node.id === `job:${jobId}` || node.label === "Skill" || node.label === "City",
+                    formatter: () => compactLabel(node.name),
+                  },
+                })),
+                links: data.edges.map((edge) => ({
+                  source: edge.source,
+                  target: edge.target,
+                  relation: edge.relation,
+                  label: { show: false, formatter: edge.relation, fontSize: 10 },
+                })),
+              },
+            ],
+          });
+        } catch (error) {
+          document.getElementById("graphMeta").textContent = "加载失败";
+          graphChart.clear();
+          graphChart.setOption({
+            title: {
+              text: `岗位图谱加载失败：${error.message}`,
+              subtext: "请确认 Neo4j 已启动并完成图谱导入",
+              left: "center",
+              top: "middle",
+            },
+          });
+        } finally {
+          setBusy("graphBtn", false);
+        }
       }
 
-      recommend().then(drawGraph);
+      document.getElementById("results").addEventListener("click", (event) => {
+        const button = event.target.closest("button[data-action]");
+        if (!button) return;
+        if (button.dataset.action === "graph") {
+          selectJob(button.dataset.jobId, true);
+        }
+        if (button.dataset.action === "detail") {
+          openDetail(button.dataset.url);
+        }
+      });
+
+      Promise.all([loadStats(), recommend(), loadInsights()]);
       window.addEventListener("resize", () => graphChart.resize());
     </script>
   </body>

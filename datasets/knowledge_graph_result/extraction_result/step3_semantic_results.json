@@ -1,1 +1,106 @@
-[]
+[
+    {
+        "record_index": 2,
+        "sentence": "行业要求：计算机软件,电子/半导体/集成电路,仪器仪表,工业自动化,医疗器械",
+        "subject": "电子/半导体/集成电路",
+        "relation": "Include",
+        "object": "医疗器械",
+        "matched_detail": "Include"
+    },
+    {
+        "record_index": 2,
+        "sentence": "行业要求：计算机软件,电子/半导体/集成电路,仪器仪表,工业自动化,医疗器械",
+        "subject": "计算机软件",
+        "relation": "Apply_To",
+        "object": "仪器仪表",
+        "matched_detail": "Apply_To"
+    },
+    {
+        "record_index": 2,
+        "sentence": "行业要求：计算机软件,电子/半导体/集成电路,仪器仪表,工业自动化,医疗器械",
+        "subject": "仪器仪表",
+        "relation": "Include",
+        "object": "医疗器械",
+        "matched_detail": "Include"
+    },
+    {
+        "record_index": 11,
+        "sentence": "-        Development experience on ADAS function(e.g, AEB, ACC, LKA, HWA, etc,).",
+        "subject": "AEB",
+        "relation": "Include",
+        "object": "LKA",
+        "matched_detail": "Include"
+    },
+    {
+        "record_index": 11,
+        "sentence": "-        Development experience on ADAS function(e.g, AEB, ACC, LKA, HWA, etc,).",
+        "subject": "AEB",
+        "relation": "Include",
+        "object": "HWA",
+        "matched_detail": "Include"
+    },
+    {
+        "record_index": 11,
+        "sentence": "-        Development experience on ADAS function(e.g, AEB, ACC, LKA, HWA, etc,).",
+        "subject": "ACC",
+        "relation": "Include",
+        "object": "HWA",
+        "matched_detail": "Include"
+    },
+    {
+        "record_index": 11,
+        "sentence": "-        Familiar with start-of-the-art planning (A*, EM, Lattice, etc.) and control (MPC, LQR, PID, etc,) algorithms in autonomous driving with development experience.",
+        "subject": "MPC",
+        "relation": "Include",
+        "object": "PID",
+        "matched_detail": "Include"
+    },
+    {
+        "record_index": 11,
+        "sentence": "-        Hands on development experience AD platforms (ROS, Autoware, Apollo, etc.)",
+        "subject": "ROS",
+        "relation": "Include",
+        "object": "Apollo",
+        "matched_detail": "Include"
+    },
+    {
+        "record_index": 13,
+        "sentence": "-        Familiar with start-of-the-art planning (A*, EM, Lattice, etc.) and control (MPC, LQR, PID, etc,) algorithms in autonomous driving with development experience.",
+        "subject": "MPC",
+        "relation": "Include",
+        "object": "PID",
+        "matched_detail": "Include"
+    },
+    {
+        "record_index": 13,
+        "sentence": "-        Hands on development experience AD platforms (ROS, Autoware, Apollo, etc.)",
+        "subject": "ROS",
+        "relation": "Include",
+        "object": "Apollo",
+        "matched_detail": "Include"
+    },
+    {
+        "record_index": 41,
+        "sentence": "熟悉国家网信办、工信部在网络安全、人工智能领域的法规合规要求，有相关实操经验",
+        "subject": "网络安全",
+        "relation": "Include",
+        "object": "工信部",
+        "matched_detail": "Include"
+    },
+    {
+        "record_index": 43,
+        "sentence": "专业背景及经验：拥有计算机科学、人工智能、或油气相关领域的硕士以上学历",
+        "subject": "油气相关领域",
+        "relation": "Include",
+        "object": "硕士",
+        "matched_detail": "Include"
+    },
+    {
+        "record_index": 47,
+        "sentence": "（1）国内外知名高校理工科专业背景，本科及以上，计算机、人工智能、电子通信等相关专业优先",
+        "subject": "国内外",
+        "relation": "Include",
+        "object": "理工科",
+        "matched_detail": "Include"
+    }
+]

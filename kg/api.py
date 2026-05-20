@@ -2,11 +2,22 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from fastapi import FastAPI, HTTPException, Query
-from fastapi.responses import FileResponse
+from fastapi import FastAPI, HTTPException, Query, Request
+from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
+from neo4j.exceptions import Neo4jError
 
-from .models import GraphResponse, JobSummary, RecommendationRequest, RecommendationResponse, SearchResponse, StatsResponse, TopItem
+from .models import (
+    GraphInsightsResponse,
+    GraphResponse,
+    JobSummary,
+    MultiHopReasoningResponse,
+    RecommendationRequest,
+    RecommendationResponse,
+    SearchResponse,
+    StatsResponse,
+    TopItem,
+)
 from .service import create_service
 
 app = FastAPI(title="Knowledge Graph Job Recommendation System", version="1.0.0")
@@ -14,6 +25,16 @@ app = FastAPI(title="Knowledge Graph Job Recommendation System", version="1.0.0"
 FRONTEND_DIR = Path(__file__).resolve().parent.parent / "frontend"
 if FRONTEND_DIR.exists():
     app.mount("/frontend", StaticFiles(directory=FRONTEND_DIR), name="frontend")
+
+
+@app.exception_handler(Neo4jError)
+async def neo4j_exception_handler(_request: Request, exc: Neo4jError) -> JSONResponse:
+    return JSONResponse(status_code=503, content={"detail": f"Neo4j 查询失败: {exc}"})
+
+
+@app.exception_handler(RuntimeError)
+async def runtime_exception_handler(_request: Request, exc: RuntimeError) -> JSONResponse:
+    return JSONResponse(status_code=503, content={"detail": str(exc)})
 
 
 @app.get("/", include_in_schema=False)
@@ -73,6 +94,19 @@ def get_job_graph(job_id: str) -> GraphResponse:
     return graph
 
 
+@app.get("/jobs/{job_id}/reasoning", response_model=MultiHopReasoningResponse)
+def get_multi_hop_reasoning(
+    job_id: str,
+    max_hops: int = Query(default=3, ge=1, le=4),
+    limit: int = Query(default=10, ge=1, le=50),
+) -> MultiHopReasoningResponse:
+    paths = create_service().repository.multi_hop_reasoning(job_id, max_hops=max_hops, limit=limit)
+    if not paths:
+        if create_service().repository.get_job(job_id) is None:
+            raise HTTPException(status_code=404, detail="岗位不存在")
+    return MultiHopReasoningResponse(job_id=job_id, paths=paths)
+
+
 @app.get("/jobs/{job_id}/similar", response_model=RecommendationResponse)
 def similar_jobs(
     job_id: str,
@@ -88,6 +122,9 @@ def recommend_by_profile(profile: RecommendationRequest) -> RecommendationRespon
     normalized_profile = profile.model_copy(
         update={
             "skills": service.normalize_skills(profile.skills),
+            "keywords": service.normalize_keywords(profile.keywords),
+            "preferred_benefits": service.normalize_benefits(profile.preferred_benefits),
+            "max_hops": max(1, min(profile.max_hops, 4)),
             "top_k": max(1, min(profile.top_k, 50)),
         }
     )
@@ -98,3 +135,8 @@ def recommend_by_profile(profile: RecommendationRequest) -> RecommendationRespon
 @app.get("/skills/top", response_model=list[TopItem])
 def top_skills(limit: int = Query(default=20, ge=1, le=100)) -> list[TopItem]:
     return create_service().repository.top_skills(limit=limit)
+
+
+@app.get("/graph/insights", response_model=GraphInsightsResponse)
+def graph_insights(limit: int = Query(default=10, ge=1, le=50)) -> GraphInsightsResponse:
+    return create_service().repository.graph_insights(limit=limit)
