@@ -90,27 +90,24 @@ class RelationExtractor:
             return None, sub, obj
 
         # ==========================================
-        # 核心升级：构建句法依存无向图并寻找 SDP
+        #构建句法依存无向图并寻找 SDP
         # ==========================================
         edges = []
         for token in doc:
             for child in token.children:
-                # 记录图中边的连接关系 (父节点索引, 子节点索引)
                 edges.append((token.i, child.i))
                 
         # 生成无向图
         graph = nx.Graph(edges)
 
         try:
-            # 获取实体核心词之间的最短路径（返回 Token 的索引列表）
+            # 获取实体核心词之间的最短路径 
             path_indices = nx.shortest_path(graph, source=e_left_token.i, target=e_right_token.i)
         except nx.NetworkXNoPath:
-            # 如果两个节点在树中完全不连通（虽然很少见，但为了代码健壮性），返回 None
             return None, sub, obj
         except nx.NodeNotFound:
             return None, sub, obj
 
-        # 路径长度（边数 = 节点数 - 1）
         path_length = len(path_indices) - 1
 
         # 规则 1：如果两个实体在句法树上相隔太远 (大于4跳)，说明没有直接逻辑关系
@@ -138,9 +135,21 @@ class RelationExtractor:
         # 例如路径是：实体A -> (pobj)介词 -> (prep)动词 -> (dobj)实体B
         if path_length <= 3:
             if any(dep in path_deps for dep in ['prep', 'pobj', 'dobj', 'nmod']):
-                # 判断距离，1跳是直接修饰，2-4跳是隔着动词修饰
-                prefix = "直接" if path_length == 1 else "间接"
-                return f"Apply_To", sub, obj # (SDP动宾/介宾修饰)   
+                # 1. 获取左右实体各自在句子中的具体语法角色
+                left_dep = e_left_token.dep_
+                right_dep = e_right_token.dep_
+                # 2. 如果右实体是动词的宾语(dobj) 或 介词的宾语(pobj) (如 "选用[C++]")
+                # 说明右实体是工具，方向应该是：右实体 -> 应用于 -> 左实体
+                if right_dep in ['dobj', 'pobj']:
+                    return "Apply_To", e_info["right"], e_info["left"]
+                # 3. 如果左实体是宾语 (如 "使用[C++]开发系统")
+                # 说明左实体是工具，方向应该是：左实体 -> 应用于 -> 右实体
+                elif left_dep in ['dobj', 'pobj']:
+                    return "Apply_To", e_info["left"], e_info["right"]
+                # 4. 如果没分出胜负，默认按照原文本出现的先后顺序
+                # 在中文习惯中，"A...用于...B"，A大概率是工具。
+                else:
+                    return "Apply_To", e_info["left"], e_info["right"]  
 
         # 判定 C：如果相距仅1跳，且是复合词从属关系
         if path_length == 1 and 'compound' in path_deps:
@@ -156,7 +165,7 @@ class RelationExtractor:
         marked_text = text[:right_pos] + f"“{right}”" + text[right_pos+len(right):]
         marked_text = marked_text[:left_pos] + f"“{left}”" + marked_text[left_pos+len(left):]
 
-        # 【核心修改】：优化候选标签，提供更自然的句子，并加入方向性判断
+        #优化候选标签，提供更自然的句子，并加入方向性判断
         candidate_labels = [
             f"“{left}”和“{right}”属于并列的同类概念",
             f"使用“{left}”技术应用于“{right}”",
@@ -194,38 +203,36 @@ class RelationExtractor:
         e_info = self._get_entity_positions(text, e1, e2)
         if not e_info: return "None", e1, e2, "None"
         
-        # 1. 距离绝对截断 (超过35字大概率没关系)
+        # 1. 距离绝对截断
         distance = e_info["right_pos"] - (e_info["left_pos"] + len(e_info["left"]))
         if distance > self.max_distance:
             return "None", e1, e2, "None"
 
         # ==========================================
-        # 2. 第一层：规则层 (高优放行)
+        # 2. 第一层：规则层
         # ==========================================
         rel, sub, obj = self.extract_by_rule(text, e_info)
         if rel: return rel, sub, obj, "Rule"
 
         # ==========================================
-        # 3. 智能标点阻断 (仅针对句法和语义层)
+        # 3. 智能标点阻断
         # ==========================================
         gap_text = text[e_info["left_pos"] + len(e_info["left"]) : e_info["right_pos"]]
         
-        # 阻断A：如果中间存在冒号，且没有包含词汇(上面规则已漏空)，说明是强烈的上下文切换(如"硕士生：")
         if ':' in gap_text or '：' in gap_text:
             return "None", e1, e2, "None"
             
-        # 阻断B：如果中间有逗号，且距离较远(>15字)，通常跨越了意群分句
         if (',' in gap_text or '，' in gap_text) and distance > 15:
             return "None", e1, e2, "None"
 
         # ==========================================
-        # 4. 第二层：句法层 (此时传进来的都是短距离、无强阻断符的干净 Pair)
+        # 4. 第二层：句法层
         # ==========================================
         rel, sub, obj = self.extract_by_syntax(text, e_info, sub, obj)
         if rel: return rel, sub, obj, "Syntax"
 
         # ==========================================
-        # 5. 第三层：语义层兜底
+        # 5. 第三层：语义层
         # ==========================================
         rel, sub, obj = self.extract_by_semantic(text, e_info, sub, obj)
         if rel != "None": return rel, sub, obj, "Semantic"
@@ -240,7 +247,7 @@ def process_json_data(json_data, extractor, record_idx):
     raw_sentences = re.split(r'[。；;\n]+', text)
     sentences = [re.sub(r'^\d+[、\.]\s*', '', s.strip()) for s in raw_sentences if len(s.strip()) > 5]
 
-    # 【修改点】建立字典暂存当前 JD 各个阶段的抽取结果
+    #建立字典暂存当前 JD 各个阶段的抽取结果
     categorized_results = {
         "Rule": [],
         "Syntax": [],
