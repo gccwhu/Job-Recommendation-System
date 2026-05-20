@@ -43,7 +43,7 @@ class RelationExtractor:
             "co_occurrence": r"(?:、|/|和|与|及|以及|,|，|\s+)",
             "include_forward": r"(?:包括但不限于|包括|包含|涵盖|如|比如|分为|：|:)",
             "include_backward": r"(?:等|等相关|等基础)",
-            "apply_to": r"(?:用于|进行|实现|支撑|赋能|提升|开发|处理)" # 增加了“处理”
+            "apply_to": r"(?:用于|进行|实现|支撑|赋能|提升|开发|处理)" 
         }
 
     def _get_entity_positions(self, text, e1, e2):
